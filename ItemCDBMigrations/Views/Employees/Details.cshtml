@@ -1,0 +1,130 @@
+﻿@model ItemCDBMigrations.Models.tblEMPLOYEELIST
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblEMPLOYEELIST</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tblEmplStatu.EmplStatusDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblEmplStatu.EmplStatusDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblEthnicity.EthnicDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblEthnicity.EthnicDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblGender.GenderDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblGender.GenderDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblPayLocation.PayLocDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblPayLocation.PayLocDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MiddleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameSuffix)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameSuffix)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SeniorityDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeniorityDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ehrPositionID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ehrPositionID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ehrUnitNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ehrUnitNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SSMA_TimeStamp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SSMA_TimeStamp)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EmplID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
