@@ -21,16 +21,30 @@ namespace ItemCDBMigrations.Controllers
         //    return View(tblEMPLOYEELISTs.ToList());
         //}
 
-        /// Search Employee by Last Name        
+        /// Search Employee by Last Name
         public ActionResult Index(string searchString)
         {
+            // fill the list of properties to search by
+            //List<string> listProperties = new List<string>();
+            //listProperties = (from t in typeof(tblEMPLOYEELIST).GetProperties()
+            //            select t.Name).ToList();
+            //ViewBag.searchProperties = new SelectList(listProperties);
+            
+
             if(!string.IsNullOrEmpty(searchString))
             {
+                // get all employees
                 var tblEMPLOYEELISTs = db.tblEMPLOYEELISTs.Include(t => t.tblEmplStatu).Include(t => t.tblEthnicity).Include(t => t.tblGender).Include(t => t.tblPayLocation);
-                tblEMPLOYEELISTs = tblEMPLOYEELISTs.Where(e => e.FirstName.Contains(searchString));
+
+                // filter down by the search value
+                tblEMPLOYEELISTs = tblEMPLOYEELISTs.Where(e => e.LastName.Contains(searchString));
+
+                // return them as a List
                 List<tblEMPLOYEELIST> listOfEmployees = tblEMPLOYEELISTs.ToList();
                 return View(listOfEmployees);
             }
+
+            // empty view
             return View();
         }
 

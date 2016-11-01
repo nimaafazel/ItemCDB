@@ -4,107 +4,115 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Employees</h2>
+<h2>Employee Search</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<p>    
+    @using (Html.BeginForm())
+    {
+        @*@Html.DropDownList("searchProperties")*@
+        <p> Last Name: @Html.TextBox("searchString") 
+        <input type="submit" value="Search" /></p>
+    }
 
-@if (Model is List<ItemCDBMigrations.Models.tblEMPLOYEELIST> && Model != null && Model.Count() > 0)
-{
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model[0].tblEmplStatu.EmplStatusDesc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[0].tblEthnicity.EthnicDesc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[0].tblGender.GenderDesc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[0].tblPayLocation.PayLocDesc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[0].LastName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[0].FirstName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[0].MiddleName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[0].NameSuffix)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[0].SeniorityDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[0].BirthDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[0].Comments)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[0].ehrPositionID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[0].ehrUnitNumber)
-            </th>
-            <th></th>
-        </tr>
+    <br />
 
-        @foreach (var item in Model)
-        {
+    @Html.ActionLink("Create a New Employee", "Create")
+
+    @if (Model is List<ItemCDBMigrations.Models.tblEMPLOYEELIST> && Model != null && Model.Count() > 0)
+    {
+        <table class="table">
             <tr>
-                <td>
-                    @Html.DisplayFor(mod => item.tblEmplStatu.EmplStatusDesc)
-                </td>
-                <td>
-                    @Html.DisplayFor(mod => item.tblEthnicity.EthnicDesc)
-                </td>
-                <td>
-                    @Html.DisplayFor(mod => item.tblGender.GenderDesc)
-                </td>
-                <td>
-                    @Html.DisplayFor(mod => item.tblPayLocation.PayLocDesc)
-                </td>
-                <td>
-                    @Html.DisplayFor(mod => item.LastName)
-                </td>
-                <td>
-                    @Html.DisplayFor(mod => item.FirstName)
-                </td>
-                <td>
-                    @Html.DisplayFor(mod => item.MiddleName)
-                </td>
-                <td>
-                    @Html.DisplayFor(mod => item.NameSuffix)
-                </td>
-                <td>
-                    @Html.DisplayFor(mod => item.SeniorityDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(mod => item.BirthDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(mod => item.Comments)
-                </td>
-                <td>
-                    @Html.DisplayFor(mod => item.ehrPositionID)
-                </td>
-                <td>
-                    @Html.DisplayFor(mod => item.ehrUnitNumber)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.EmplID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.EmplID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.EmplID })
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].tblEmplStatu.EmplStatusDesc)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].tblEthnicity.EthnicDesc)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].tblGender.GenderDesc)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].tblPayLocation.PayLocDesc)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].LastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].FirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].MiddleName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].NameSuffix)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].SeniorityDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].BirthDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].Comments)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].ehrPositionID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].ehrUnitNumber)
+                </th>
+                <th></th>
             </tr>
-        }
-        
-    </table>
-}        
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(mod => item.tblEmplStatu.EmplStatusDesc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(mod => item.tblEthnicity.EthnicDesc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(mod => item.tblGender.GenderDesc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(mod => item.tblPayLocation.PayLocDesc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(mod => item.LastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(mod => item.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(mod => item.MiddleName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(mod => item.NameSuffix)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(mod => item.SeniorityDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(mod => item.BirthDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(mod => item.Comments)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(mod => item.ehrPositionID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(mod => item.ehrUnitNumber)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.EmplID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.EmplID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.EmplID })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    }
