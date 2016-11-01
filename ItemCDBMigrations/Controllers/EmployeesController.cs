@@ -23,31 +23,91 @@ namespace ItemCDBMigrations.Controllers
         //}
 
         /// Search Employee by Last Name
-        public ActionResult Index(string searchString)
+        //public ActionResult Index(string searchString)
+        //{
+        //    // fill the list of properties to search by
+        //    //List<string> listProperties = new List<string>();
+        //    //listProperties = (from t in typeof(tblEMPLOYEELIST).GetProperties()
+        //    //            select t.Name).ToList();
+        //    //ViewBag.searchProperties = new SelectList(listProperties);
+
+
+        //    if(!string.IsNullOrEmpty(searchString))
+        //    {
+        //        // get all employees
+        //        var tblEMPLOYEELISTs = db.tblEMPLOYEELISTs.Include(t => t.tblEmplStatu).Include(t => t.tblEthnicity).Include(t => t.tblGender).Include(t => t.tblPayLocation);
+
+        //        // filter down by the search value
+        //        tblEMPLOYEELISTs = tblEMPLOYEELISTs.Where(e => e.LastName.Contains(searchString));
+
+        //        // return them as a List
+        //        List<tblEMPLOYEELIST> listOfEmployees = tblEMPLOYEELISTs.ToList();
+        //        return View(listOfEmployees);
+        //    }
+
+        //    // empty view
+        //    return View();
+        //}
+
+        public ActionResult Index(string searchString, string sortOrder)
         {
             // fill the list of properties to search by
             //List<string> listProperties = new List<string>();
             //listProperties = (from t in typeof(tblEMPLOYEELIST).GetProperties()
             //            select t.Name).ToList();
             //ViewBag.searchProperties = new SelectList(listProperties);
-            
 
-            if(!string.IsNullOrEmpty(searchString))
+            ViewBag.SearchString = searchString;  // save the searchString
+
+            // set the sort parameter
+            ViewBag.SortLastNameParam = string.IsNullOrEmpty(sortOrder) ? "lname_desc" : "";
+            ViewBag.SortFirstNameParam = sortOrder == "fname" ? "fname_desc" : "fname";
+            ViewBag.SortDateSeniorParam = sortOrder == "Date" ? "date_desc" : "Date";
+
+            // get all employees
+            var tblEMPLOYEELISTs = db.tblEMPLOYEELISTs.Include(t => t.tblEmplStatu).Include(t => t.tblEthnicity).Include(t => t.tblGender).Include(t => t.tblPayLocation);
+
+            if (!string.IsNullOrEmpty(searchString))
             {
-                // get all employees
-                var tblEMPLOYEELISTs = db.tblEMPLOYEELISTs.Include(t => t.tblEmplStatu).Include(t => t.tblEthnicity).Include(t => t.tblGender).Include(t => t.tblPayLocation);
-
                 // filter down by the search value
-                tblEMPLOYEELISTs = tblEMPLOYEELISTs.Where(e => e.LastName.Contains(searchString));
+                tblEMPLOYEELISTs = tblEMPLOYEELISTs.Where(e => e.LastName.Contains(searchString) || e.FirstName.Contains(searchString));
+            }
+            else
+                return View();
 
-                // return them as a List
-                List<tblEMPLOYEELIST> listOfEmployees = tblEMPLOYEELISTs.ToList();
-                return View(listOfEmployees);
+            // sort the results
+            switch(sortOrder)
+            {
+                case "lname_desc":
+                    tblEMPLOYEELISTs = tblEMPLOYEELISTs.OrderByDescending(emp => emp.LastName);
+                    break;
+
+                case "fname_desc":
+                    tblEMPLOYEELISTs = tblEMPLOYEELISTs.OrderByDescending(emp => emp.FirstName);
+                    break;
+
+                case "fname":
+                    tblEMPLOYEELISTs = tblEMPLOYEELISTs.OrderBy(emp => emp.FirstName);
+                    break;
+
+                case "Date":
+                    tblEMPLOYEELISTs = tblEMPLOYEELISTs.OrderByDescending(emp => emp.SeniorityDate);
+                    break;
+
+                case "date_desc":
+                    tblEMPLOYEELISTs = tblEMPLOYEELISTs.OrderBy(emp => emp.SeniorityDate);
+                    break;
+
+                default:
+                    tblEMPLOYEELISTs = tblEMPLOYEELISTs.OrderBy(emp => emp.LastName);
+                    break;
             }
 
-            // empty view
-            return View();
+            // return them as a List
+            List<tblEMPLOYEELIST> listOfEmployees = tblEMPLOYEELISTs.ToList();
+            return View(listOfEmployees);
         }
+            
 
         // GET: Employees/Details/5
         public ActionResult Details(int? id)

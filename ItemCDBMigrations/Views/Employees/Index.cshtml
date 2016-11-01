@@ -10,7 +10,7 @@
     @using (Html.BeginForm())
     {
         @*@Html.DropDownList("searchProperties")*@
-        <p> Last Name: @Html.TextBox("searchString") 
+        <p> Name: @Html.TextBox("searchString") 
         <input type="submit" value="Search" /></p>
     }
 
@@ -35,10 +35,12 @@
                     @Html.DisplayNameFor(model => model[0].tblPayLocation.PayLocDesc)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model[0].LastName)
+                    @*@Html.DisplayNameFor(model => model[0].LastName)*@
+                    @Html.ActionLink("Last Name", "Index", new { sortOrder = ViewBag.SortLastNameParam, searchString = ViewBag.SearchString })
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model[0].FirstName)
+                    @*@Html.DisplayNameFor(model => model[0].FirstName)*@
+                    @Html.ActionLink("First Name", "Index", new { sortOrder = ViewBag.SortFirstNameParam, searchString = ViewBag.SearchString })
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model[0].MiddleName)
@@ -47,7 +49,8 @@
                     @Html.DisplayNameFor(model => model[0].NameSuffix)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model[0].SeniorityDate)
+                    @*@Html.DisplayNameFor(model => model[0].SeniorityDate)*@
+                    @Html.ActionLink("Seniority Date", "Index", new { sortOrder = ViewBag.SortDateSeniorParam, searchString = ViewBag.SearchString })
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model[0].BirthDate)
