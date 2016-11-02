@@ -3,29 +3,30 @@
 }
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>Item Control</h1>
+    <p class="lead">Item Control is the interface to access the database that has all the information of all the L.A. County Department of Beaches and Harbors employees and positions. 
+    <br />You can add, modify or delete employees and positions.<br />And you can also create and access reports with the information up to date. </p>
+    @*<p><a href="http://asp.net" class="btn btn-primary btn-lg">Let's go! &raquo;</a></p>*@
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>Employees</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            Get all the information and data from all the employees in the Department.
         </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <p>
+            @Html.ActionLink("Go ", "Index", "Employees", null, new { @class = "btn btn-success" })
+        </p>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <h2>Positions</h2>
+        <p>Surf through Budgeted and Regular Positions to see everything the Department has to offer!</p>
+        <p>@Html.ActionLink("Positions not developed yet", "Index", "Home", null, new { @class = "btn btn-danger" })</p>        
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2>Reports</h2>
+        <p>Looking for some compact, meaningful data? Get your KPI's right here!</p>
+        <p>@Html.ActionLink("Reports coming soon!", "Index", "Home", null,   new { @class = "btn btn-warning" })</p>        
     </div>
 </div>
