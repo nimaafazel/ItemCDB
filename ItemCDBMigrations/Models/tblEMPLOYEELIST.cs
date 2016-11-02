@@ -20,16 +20,16 @@ namespace ItemCDBMigrations.Models
         public int EmplID { get; set; }
 
         [Required]
-        [StringLength(20)]
+        [StringLength(30)]
         [Display(Name ="Last Name")]
         public string LastName { get; set; }
 
         [Required]
-        [StringLength(10)]
+        [StringLength(30)]
         [Display(Name ="First Name")]
         public string FirstName { get; set; }
 
-        [StringLength(10)]
+        [StringLength(20)]
         [Display(Name ="Middle Name")]
         public string MiddleName { get; set; }
 

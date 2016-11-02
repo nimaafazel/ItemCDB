@@ -147,6 +147,10 @@
     <Compile Include="Migrations\201610312334292_InitialM.Designer.cs">
       <DependentUpon>201610312334292_InitialM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611022051060_EmployeeNameSizeChange.cs" />
+    <Compile Include="Migrations\201611022051060_EmployeeNameSizeChange.Designer.cs">
+      <DependentUpon>201611022051060_EmployeeNameSizeChange.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ICContext.cs" />
     <Compile Include="Models\tblBargainUnit.cs" />
@@ -233,6 +237,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201610312334292_InitialM.resx">
       <DependentUpon>201610312334292_InitialM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611022051060_EmployeeNameSizeChange.resx">
+      <DependentUpon>201611022051060_EmployeeNameSizeChange.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
