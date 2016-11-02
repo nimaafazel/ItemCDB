@@ -168,8 +168,11 @@ namespace ItemCDBMigrations.Controllers
                     break;
             }
 
+            // get the number of results
+            ViewBag.NumberOfResults = tblEMPLOYEELISTs.Count();
+
             // paginate according to the page number
-            int pageSize = 3;  // set number of results by page
+            int pageSize = 10;  // set number of results by page
             int pageNumber = (page ?? 1);  // page == null ? 1 : page
 
             // return the page with the subset of elements from the query

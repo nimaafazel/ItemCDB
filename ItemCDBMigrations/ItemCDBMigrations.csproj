@@ -175,7 +175,6 @@
     <Compile Include="Models\tblSubItem.cs" />
     <Compile Include="Models\tblUnit.cs" />
     <Compile Include="Models\tblVacant.cs" />
-    <Compile Include="Models\TestModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

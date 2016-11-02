@@ -124,7 +124,8 @@
 
     </table>
 
-    <br />
+    // Show the number of results
+    <h1>@(ViewBag.NumberOfResults != null ? ViewBag.NumberOfResults + " Results" : "")</h1>
     <div>Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount </div>
 
     //When we move to a different page, we are passing everything but the searchString, so that it will be null, and we can stay on our current page
