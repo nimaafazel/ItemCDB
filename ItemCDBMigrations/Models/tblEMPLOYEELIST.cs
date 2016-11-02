@@ -21,29 +21,37 @@ namespace ItemCDBMigrations.Models
 
         [Required]
         [StringLength(20)]
+        [Display(Name ="Last Name")]
         public string LastName { get; set; }
 
         [Required]
         [StringLength(10)]
+        [Display(Name ="First Name")]
         public string FirstName { get; set; }
 
         [StringLength(10)]
+        [Display(Name ="Middle Name")]
         public string MiddleName { get; set; }
 
         [StringLength(10)]
+        [Display(Name ="Name Suffix")]
         public string NameSuffix { get; set; }
 
         [Required]
         [StringLength(1)]
+        [Display(Name ="Status")]
         public string EmplStatus { get; set; }
 
         [Column(TypeName = "datetime2")]
+        [Display(Name ="Seniority Date")]
         public DateTime? SeniorityDate { get; set; }
 
         [StringLength(10)]
+        [Display(Name ="Pay Location")]
         public string PayLoc { get; set; }
 
         [Column(TypeName = "datetime2")]
+        [Display(Name ="Birth Date")]
         public DateTime? BirthDate { get; set; }
 
         [StringLength(1)]

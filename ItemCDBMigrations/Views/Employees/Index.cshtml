@@ -38,7 +38,7 @@
             <th>
                 @Html.DisplayNameFor(model => model[0].tblPayLocation.PayLocDesc)
             </th>
-            @*When we click an ActionLink for sorting, we are passing ONLY the soortOrder and the currentFilter values, so we can return to page 1*@
+            @*When we click an ActionLink for sorting, we are passing ONLY the sortOrder and the currentFilter values, so we can return to page 1*@
             <th>
                 @*@Html.DisplayNameFor(model => model[0].LastName)*@
                 @Html.ActionLink("Last Name", "Index", new { sortOrder = ViewBag.SortLastNameParam, currentFilter = ViewBag.CurrentFilter })
@@ -125,7 +125,7 @@
     </table>
 
     // Show the number of results
-    <h1>@(ViewBag.NumberOfResults != null ? ViewBag.NumberOfResults + " Results" : "")</h1>
+    <h4>@(ViewBag.NumberOfResults != null ? ViewBag.NumberOfResults + " Results" : "")</h4>
     <div>Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount </div>
 
     //When we move to a different page, we are passing everything but the searchString, so that it will be null, and we can stay on our current page
