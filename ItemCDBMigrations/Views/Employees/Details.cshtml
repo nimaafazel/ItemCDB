@@ -1,13 +1,13 @@
 ﻿@model ItemCDBMigrations.Models.tblEMPLOYEELIST
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Employee Details";
 }
 
 <h2>Details</h2>
 
 <div>
-    <h4>tblEMPLOYEELIST</h4>
+    <h4>@Model.FirstName @Model.LastName</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -112,19 +112,11 @@
 
         <dd>
             @Html.DisplayFor(model => model.ehrUnitNumber)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SSMA_TimeStamp)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SSMA_TimeStamp)
-        </dd>
+        </dd>        
 
     </dl>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.EmplID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Search again", "Index")
 </p>
