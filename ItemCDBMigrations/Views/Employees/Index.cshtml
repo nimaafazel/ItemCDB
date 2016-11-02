@@ -1,121 +1,132 @@
-﻿@model List<ItemCDBMigrations.Models.tblEMPLOYEELIST>
+﻿@model PagedList.IPagedList<ItemCDBMigrations.Models.tblEMPLOYEELIST>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Employee Search</h2>
+<p>
+    @Html.ActionLink("Create a New Employee", "Create")
+</p>  
 
-<p>    
-    @using (Html.BeginForm())
-    {
-        @*@Html.DropDownList("searchProperties")*@
-        <p> Name: @Html.TextBox("searchString") 
-        <input type="submit" value="Search" /></p>
-    }
+@*When we search, we ONLY send the searchString parameter to our Action method Indexm so all of the other ones, will be null*@
+@using (Html.BeginForm("Index", "Employees", FormMethod.Get))
+{
+    @*We set the CurrentFilter on the TextBox so the user can see what the filter is*@
+    <p> Name: @Html.TextBox("searchString", ViewBag.CurrentFilter as string) 
+    <input type="submit" value="Search" /></p>
+}
+
+<br />
+
+@*Display the table ONLY if it has values*@
+@if (Model != null && Model.Count() > 0)
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model[0].tblEmplStatu.EmplStatusDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].tblEthnicity.EthnicDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].tblGender.GenderDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].tblPayLocation.PayLocDesc)
+            </th>
+            @*When we click an ActionLink for sorting, we are passing ONLY the soortOrder and the currentFilter values, so we can return to page 1*@
+            <th>
+                @*@Html.DisplayNameFor(model => model[0].LastName)*@
+                @Html.ActionLink("Last Name", "Index", new { sortOrder = ViewBag.SortLastNameParam, currentFilter = ViewBag.CurrentFilter })
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model[0].FirstName)*@
+                @Html.ActionLink("First Name", "Index", new { sortOrder = ViewBag.SortFirstNameParam, currentFilter = ViewBag.CurrentFilter })
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].MiddleName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].NameSuffix)
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model[0].SeniorityDate)*@
+                @Html.ActionLink("Seniority Date", "Index", new { sortOrder = ViewBag.SortDateSeniorParam, currentFilter = ViewBag.CurrentFilter })
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].BirthDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].Comments)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].ehrPositionID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].ehrUnitNumber)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(mod => item.tblEmplStatu.EmplStatusDesc)
+                </td>
+                <td>
+                    @Html.DisplayFor(mod => item.tblEthnicity.EthnicDesc)
+                </td>
+                <td>
+                    @Html.DisplayFor(mod => item.tblGender.GenderDesc)
+                </td>
+                <td>
+                    @Html.DisplayFor(mod => item.tblPayLocation.PayLocDesc)
+                </td>
+                <td>
+                    @Html.DisplayFor(mod => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(mod => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(mod => item.MiddleName)
+                </td>
+                <td>
+                    @Html.DisplayFor(mod => item.NameSuffix)
+                </td>
+                <td>
+                    @Html.DisplayFor(mod => item.SeniorityDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(mod => item.BirthDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(mod => item.Comments)
+                </td>
+                <td>
+                    @Html.DisplayFor(mod => item.ehrPositionID)
+                </td>
+                <td>
+                    @Html.DisplayFor(mod => item.ehrUnitNumber)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.EmplID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.EmplID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.EmplID })
+                </td>
+            </tr>
+        }
+
+    </table>
 
     <br />
+    <div>Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount </div>
 
-    @Html.ActionLink("Create a New Employee", "Create")
-
-    @if (Model is List<ItemCDBMigrations.Models.tblEMPLOYEELIST> && Model != null && Model.Count() > 0)
-    {
-        <table class="table">
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model[0].tblEmplStatu.EmplStatusDesc)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model[0].tblEthnicity.EthnicDesc)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model[0].tblGender.GenderDesc)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model[0].tblPayLocation.PayLocDesc)
-                </th>
-                <th>
-                    @*@Html.DisplayNameFor(model => model[0].LastName)*@
-                    @Html.ActionLink("Last Name", "Index", new { sortOrder = ViewBag.SortLastNameParam, searchString = ViewBag.SearchString })
-                </th>
-                <th>
-                    @*@Html.DisplayNameFor(model => model[0].FirstName)*@
-                    @Html.ActionLink("First Name", "Index", new { sortOrder = ViewBag.SortFirstNameParam, searchString = ViewBag.SearchString })
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model[0].MiddleName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model[0].NameSuffix)
-                </th>
-                <th>
-                    @*@Html.DisplayNameFor(model => model[0].SeniorityDate)*@
-                    @Html.ActionLink("Seniority Date", "Index", new { sortOrder = ViewBag.SortDateSeniorParam, searchString = ViewBag.SearchString })
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model[0].BirthDate)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model[0].Comments)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model[0].ehrPositionID)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model[0].ehrUnitNumber)
-                </th>
-                <th></th>
-            </tr>
-
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(mod => item.tblEmplStatu.EmplStatusDesc)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(mod => item.tblEthnicity.EthnicDesc)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(mod => item.tblGender.GenderDesc)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(mod => item.tblPayLocation.PayLocDesc)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(mod => item.LastName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(mod => item.FirstName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(mod => item.MiddleName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(mod => item.NameSuffix)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(mod => item.SeniorityDate)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(mod => item.BirthDate)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(mod => item.Comments)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(mod => item.ehrPositionID)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(mod => item.ehrUnitNumber)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.EmplID }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.EmplID }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.EmplID })
-                    </td>
-                </tr>
-            }
-
-        </table>
-    }
+    //When we move to a different page, we are passing everything but the searchString, so that it will be null, and we can stay on our current page
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))    
+}

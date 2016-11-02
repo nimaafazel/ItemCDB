@@ -49,20 +49,85 @@ namespace ItemCDBMigrations.Controllers
         //    return View();
         //}
 
-        public ActionResult Index(string searchString, string sortOrder)
+
+        ///// Search and sort
+        //public ActionResult Index(string searchString, string sortOrder)
+        //{
+        //    // fill the list of properties to search by
+        //    //List<string> listProperties = new List<string>();
+        //    //listProperties = (from t in typeof(tblEMPLOYEELIST).GetProperties()
+        //    //            select t.Name).ToList();
+        //    //ViewBag.searchProperties = new SelectList(listProperties);
+
+        //    ViewBag.SearchString = searchString;  // save the searchString
+
+        //    // set the sort parameter
+        //    ViewBag.SortLastNameParam = string.IsNullOrEmpty(sortOrder) ? "lname_desc" : "";
+        //    ViewBag.SortFirstNameParam = sortOrder == "fname" ? "fname_desc" : "fname";
+        //    ViewBag.SortDateSeniorParam = sortOrder == "Date" ? "date_desc" : "Date";
+
+        //    // get all employees
+        //    var tblEMPLOYEELISTs = db.tblEMPLOYEELISTs.Include(t => t.tblEmplStatu).Include(t => t.tblEthnicity).Include(t => t.tblGender).Include(t => t.tblPayLocation);
+
+        //    if (!string.IsNullOrEmpty(searchString))
+        //    {
+        //        // filter down by the search value
+        //        tblEMPLOYEELISTs = tblEMPLOYEELISTs.Where(e => e.LastName.Contains(searchString) || e.FirstName.Contains(searchString));
+        //    }
+        //    else
+        //        return View();
+
+        //    // sort the results
+        //    switch(sortOrder)
+        //    {
+        //        case "lname_desc":
+        //            tblEMPLOYEELISTs = tblEMPLOYEELISTs.OrderByDescending(emp => emp.LastName);
+        //            break;
+
+        //        case "fname_desc":
+        //            tblEMPLOYEELISTs = tblEMPLOYEELISTs.OrderByDescending(emp => emp.FirstName);
+        //            break;
+
+        //        case "fname":
+        //            tblEMPLOYEELISTs = tblEMPLOYEELISTs.OrderBy(emp => emp.FirstName);
+        //            break;
+
+        //        case "Date":
+        //            tblEMPLOYEELISTs = tblEMPLOYEELISTs.OrderByDescending(emp => emp.SeniorityDate);
+        //            break;
+
+        //        case "date_desc":
+        //            tblEMPLOYEELISTs = tblEMPLOYEELISTs.OrderBy(emp => emp.SeniorityDate);
+        //            break;
+
+        //        default:
+        //            tblEMPLOYEELISTs = tblEMPLOYEELISTs.OrderBy(emp => emp.LastName);
+        //            break;
+        //    }
+
+        //    // return them as a List
+        //    List<tblEMPLOYEELIST> listOfEmployees = tblEMPLOYEELISTs.ToList();
+        //    return View(listOfEmployees);
+        //}
+
+        /// Search, sort and pagination
+        public ActionResult Index(string searchString, string sortOrder, string currentFilter, int? page)
         {
-            // fill the list of properties to search by
-            //List<string> listProperties = new List<string>();
-            //listProperties = (from t in typeof(tblEMPLOYEELIST).GetProperties()
-            //            select t.Name).ToList();
-            //ViewBag.searchProperties = new SelectList(listProperties);
-
-            ViewBag.SearchString = searchString;  // save the searchString
-
-            // set the sort parameter
+            ViewBag.CurrentSort = sortOrder; // save the current sort order for the pagination
+            
+            // set the sort parameter on the links by switching the current one
             ViewBag.SortLastNameParam = string.IsNullOrEmpty(sortOrder) ? "lname_desc" : "";
             ViewBag.SortFirstNameParam = sortOrder == "fname" ? "fname_desc" : "fname";
             ViewBag.SortDateSeniorParam = sortOrder == "Date" ? "date_desc" : "Date";
+
+            if (searchString != null) // if we just searched, we go to the first page
+            {
+                page = 1;
+            }
+            else
+                searchString = currentFilter;  // if not, we save the currentFilter in the searchString to paginate
+
+            ViewBag.CurrentFilter = searchString;  // save the current filter            
 
             // get all employees
             var tblEMPLOYEELISTs = db.tblEMPLOYEELISTs.Include(t => t.tblEmplStatu).Include(t => t.tblEthnicity).Include(t => t.tblGender).Include(t => t.tblPayLocation);
@@ -73,10 +138,10 @@ namespace ItemCDBMigrations.Controllers
                 tblEMPLOYEELISTs = tblEMPLOYEELISTs.Where(e => e.LastName.Contains(searchString) || e.FirstName.Contains(searchString));
             }
             else
-                return View();
+                return View(); // on first load, dont show anything
 
             // sort the results
-            switch(sortOrder)
+            switch (sortOrder)
             {
                 case "lname_desc":
                     tblEMPLOYEELISTs = tblEMPLOYEELISTs.OrderByDescending(emp => emp.LastName);
@@ -103,11 +168,14 @@ namespace ItemCDBMigrations.Controllers
                     break;
             }
 
-            // return them as a List
-            List<tblEMPLOYEELIST> listOfEmployees = tblEMPLOYEELISTs.ToList();
-            return View(listOfEmployees);
+            // paginate according to the page number
+            int pageSize = 3;  // set number of results by page
+            int pageNumber = (page ?? 1);  // page == null ? 1 : page
+
+            // return the page with the subset of elements from the query
+            return View(tblEMPLOYEELISTs.ToPagedList(pageNumber, pageSize));
         }
-            
+
 
         // GET: Employees/Details/5
         public ActionResult Details(int? id)
