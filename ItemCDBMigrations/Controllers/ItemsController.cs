@@ -15,9 +15,14 @@ namespace ItemCDBMigrations.Controllers
         private ICContext db = new ICContext();
 
         // GET: Items
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
             var tblBudItemNums = db.tblBudItemNums.Include(t => t.tblBargainUnit);
+            // applly search string
+            if(!string.IsNullOrEmpty(searchString))
+            {
+                tblBudItemNums = tblBudItemNums.Where(t => t.BudItemDesc.Contains(searchString));
+            }
             return View(tblBudItemNums.ToList());
         }
 
