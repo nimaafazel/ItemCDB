@@ -15,9 +15,19 @@ namespace ItemCDBMigrations.Controllers
         private ICContext db = new ICContext();
 
         // GET: BudgetedP
-        public ActionResult Index()
-        {
-            var tblPOSITIONBUDGETEDs = db.tblPOSITIONBUDGETEDs.Include(t => t.tblBud).Include(t => t.tblBudItemNum).Include(t => t.tblDivision).Include(t => t.tblFilled).Include(t => t.tblFunction).Include(t => t.tblOrd).Include(t => t.tblOrgCode).Include(t => t.tblSection).Include(t => t.tblSubItem).Include(t => t.tblUnit);
+        public ActionResult Index(string searchString)
+        {            
+            // get the positions
+            var tblPOSITIONBUDGETEDs = db.tblPOSITIONBUDGETEDs.Include(t => t.tblBud).
+                Include(t => t.tblBudItemNum).Include(t => t.tblDivision).Include(t => t.tblFilled).
+                Include(t => t.tblFunction).Include(t => t.tblOrd).Include(t => t.tblOrgCode).
+                Include(t => t.tblSection).Include(t => t.tblSubItem).Include(t => t.tblUnit);
+
+            if(!string.IsNullOrEmpty(searchString))
+            {
+                tblPOSITIONBUDGETEDs = tblPOSITIONBUDGETEDs.Where(t => t.tblBudItemNum.BudItemDesc.Contains(searchString));
+            }
+
             return View(tblPOSITIONBUDGETEDs.ToList());
         }
 
