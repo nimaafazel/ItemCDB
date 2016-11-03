@@ -171,7 +171,7 @@ namespace ItemCDBMigrations.Controllers
             // get the number of results
             ViewBag.NumberOfResults = tblEMPLOYEELISTs.Count();
 
-            // paginate according to the page number
+            // page according to the page number
             int pageSize = 10;  // set number of results by page
             int pageNumber = (page ?? 1);  // page == null ? 1 : page
 

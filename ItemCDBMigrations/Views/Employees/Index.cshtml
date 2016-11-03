@@ -125,9 +125,12 @@
     </table>
 
     // Show the number of results
-    <h4>@(ViewBag.NumberOfResults != null ? ViewBag.NumberOfResults + " Results" : "")</h4>
-    <div>Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount </div>
+    <h4>@(ViewBag.NumberOfResults != null ? ViewBag.NumberOfResults + " Records found" : "")</h4>
+    if(ViewBag.NumberOfResults > Model.PageSize)
+    {
+        <div>Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount </div>
 
-    //When we move to a different page, we are passing everything but the searchString, so that it will be null, and we can stay on our current page
-    @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))    
+        //When we move to a different page, we are passing everything but the searchString, so that it will be null, and we can stay on our current page
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+    }
 }

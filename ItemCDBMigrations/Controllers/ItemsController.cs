@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ItemCDBMigrations.Models;
+using PagedList;
 
 namespace ItemCDBMigrations.Controllers
 {
@@ -15,11 +16,19 @@ namespace ItemCDBMigrations.Controllers
         private ICContext db = new ICContext();
 
         // GET: Items
-        public ActionResult Index(string searchString, string sortOrder)
+        public ActionResult Index(string searchString, string sortOrder, string currentFilter, int? page)
         {
+            // save the sortorder value
+            ViewBag.CurrentSortOrder = sortOrder;
+
             // filter aux vars
             ViewBag.ItemDesc = string.IsNullOrEmpty(sortOrder) ? "item_desc" : "";
             ViewBag.BUnit = sortOrder == "bunit" ? "bunit_desc" : "bunit";
+
+            if (searchString != null)  // we only set searchString from a form submission, so we always go to the first page with a new search
+                page = 1;
+            else
+                searchString = currentFilter;
 
             // save the search filter
             ViewBag.CurrentFilter = searchString;
@@ -51,7 +60,11 @@ namespace ItemCDBMigrations.Controllers
                     break;
             }
 
-            return View(tblBudItemNums.ToList());
+            // paging
+            int pageNumber = page ?? 1;
+            int pageSize = 10;
+
+            return View(tblBudItemNums.ToPagedList(pageNumber, pageSize));
         }
 
         // GET: Items/Details/5
