@@ -21,13 +21,16 @@ namespace ItemCDBMigrations.Models
 
         [Required]
         [StringLength(100)]
+        [Display(Name ="Item Description")]
         public string BudItemDesc { get; set; }
 
         [Required]
         [StringLength(10)]
+        [Display(Name ="Budgeted Schedule")]
         public string BudSchedule { get; set; }
 
         [StringLength(255)]
+        [Display(Name ="Budegeted Note")]
         public string BudNote { get; set; }
 
         public int? BudBargainUnit { get; set; }
