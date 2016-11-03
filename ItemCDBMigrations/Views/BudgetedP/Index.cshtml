@@ -20,7 +20,8 @@
             @Html.DisplayNameFor(model => model.tblBud.BudDesc)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.tblBudItemNum.BudItemDesc)
+            @*@Html.DisplayNameFor(model => model.tblBudItemNum.BudItemDesc)*@
+            @Html.ActionLink("Item Description", "Index", new { searchString = ViewBag.CurrentFilter, sortOrder = ViewBag.ItemD })
         </th>
         <th>
             @Html.DisplayNameFor(model => model.tblDivision.DivDesc)
@@ -44,7 +45,8 @@
             @Html.DisplayNameFor(model => model.tblSubItem.SubItemDesc)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.tblUnit.UnitDesc)
+            @*@Html.DisplayNameFor(model => model.tblUnit.UnitDesc)*@
+            @Html.ActionLink("Unit", "Index", new { searchString = ViewBag.CurrentFilter, sortOrder = ViewBag.Unit })
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Comments)

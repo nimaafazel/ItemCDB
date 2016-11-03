@@ -15,8 +15,12 @@ namespace ItemCDBMigrations.Controllers
         private ICContext db = new ICContext();
 
         // GET: BudgetedP
-        public ActionResult Index(string searchString)
-        {            
+        public ActionResult Index(string searchString, string sortOrder)
+        {
+            ViewBag.ItemD = (string.IsNullOrEmpty(sortOrder)) ? "item_desc" : "";
+            ViewBag.Unit = sortOrder == "unit" ? "unit_desc" : "unit";
+
+            ViewBag.CurrentFilter = searchString;
             // get the positions
             var tblPOSITIONBUDGETEDs = db.tblPOSITIONBUDGETEDs.Include(t => t.tblBud).
                 Include(t => t.tblBudItemNum).Include(t => t.tblDivision).Include(t => t.tblFilled).
@@ -26,6 +30,25 @@ namespace ItemCDBMigrations.Controllers
             if(!string.IsNullOrEmpty(searchString))
             {
                 tblPOSITIONBUDGETEDs = tblPOSITIONBUDGETEDs.Where(t => t.tblBudItemNum.BudItemDesc.Contains(searchString));
+            }
+
+            switch (sortOrder)
+            {
+                case "item_desc":
+                    tblPOSITIONBUDGETEDs = tblPOSITIONBUDGETEDs.OrderByDescending(t => t.tblBudItemNum.BudItemDesc);
+                    break;
+
+                case "unit":
+                    tblPOSITIONBUDGETEDs = tblPOSITIONBUDGETEDs.OrderBy(t => t.tblUnit.UnitDesc);
+                    break;
+
+                case "unit_desc":
+                    tblPOSITIONBUDGETEDs = tblPOSITIONBUDGETEDs.OrderByDescending(t => t.tblUnit.UnitDesc);
+                    break;
+
+                default:
+                    tblPOSITIONBUDGETEDs = tblPOSITIONBUDGETEDs.OrderBy(t => t.tblBudItemNum.BudItemDesc);
+                    break;
             }
 
             return View(tblPOSITIONBUDGETEDs.ToList());
