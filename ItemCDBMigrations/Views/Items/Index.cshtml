@@ -3,13 +3,13 @@
 <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Index Item";
 }
 
-<h2>Index</h2>
+<h2>Item Search</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New Item", "Create")
 </p>
 
 @using (Html.BeginForm("Index", "Items", FormMethod.Get))
