@@ -18,10 +18,10 @@ namespace ItemCDBMigrations.Controllers
         public ActionResult Index(string searchString)
         {
             var tblBudItemNums = db.tblBudItemNums.Include(t => t.tblBargainUnit);
-            // applly search string
+            // apply search string
             if(!string.IsNullOrEmpty(searchString))
             {
-                tblBudItemNums = tblBudItemNums.Where(t => t.BudItemDesc.Contains(searchString));
+                tblBudItemNums = tblBudItemNums.Where(t => t.BudItemDesc.Contains(searchString) || t.tblBargainUnit.BargainUnitDesc.Contains(searchString));
             }
             return View(tblBudItemNums.ToList());
         }
