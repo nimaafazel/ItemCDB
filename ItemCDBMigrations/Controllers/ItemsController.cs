@@ -15,14 +15,42 @@ namespace ItemCDBMigrations.Controllers
         private ICContext db = new ICContext();
 
         // GET: Items
-        public ActionResult Index(string searchString)
+        public ActionResult Index(string searchString, string sortOrder)
         {
+            // filter aux vars
+            ViewBag.ItemDesc = string.IsNullOrEmpty(sortOrder) ? "item_desc" : "";
+            ViewBag.BUnit = sortOrder == "bunit" ? "bunit_desc" : "bunit";
+
+            // save the search filter
+            ViewBag.CurrentFilter = searchString;
+            
             var tblBudItemNums = db.tblBudItemNums.Include(t => t.tblBargainUnit);
             // apply search string
             if(!string.IsNullOrEmpty(searchString))
             {
                 tblBudItemNums = tblBudItemNums.Where(t => t.BudItemDesc.Contains(searchString) || t.tblBargainUnit.BargainUnitDesc.Contains(searchString));
             }
+
+            // apply ordering
+            switch(sortOrder)
+            {
+                case "item_desc":
+                    tblBudItemNums = tblBudItemNums.OrderByDescending(t => t.BudItemDesc);
+                    break;
+
+                case "bunit":
+                    tblBudItemNums = tblBudItemNums.OrderBy(t => t.tblBargainUnit.BargainUnitDesc);
+                    break;
+
+                case "bunit_desc":
+                    tblBudItemNums = tblBudItemNums.OrderByDescending(t => t.tblBargainUnit.BargainUnitDesc);
+                    break;
+
+                default:
+                    tblBudItemNums = tblBudItemNums.OrderBy(t => t.BudItemDesc);
+                    break;
+            }
+
             return View(tblBudItemNums.ToList());
         }
 

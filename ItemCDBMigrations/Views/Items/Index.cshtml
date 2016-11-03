@@ -21,10 +21,12 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.tblBargainUnit.BargainUnitDesc)
+            @*@Html.DisplayNameFor(model => model.tblBargainUnit.BargainUnitDesc)*@
+            @Html.ActionLink("Bargain Unit", "Index", new { sortOrder = ViewBag.BUnit, searchString = ViewBag.CurrentFilter })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.BudItemDesc)
+            @*@Html.DisplayNameFor(model => model.BudItemDesc)*@
+            @Html.ActionLink("Description", "Index", new { sortOrder = ViewBag.ItemDesc, searchString = ViewBag.CurrentFilter })
         </th>
         <th>
             @Html.DisplayNameFor(model => model.BudSchedule)
