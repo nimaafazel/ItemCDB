@@ -1,0 +1,99 @@
+﻿@model IEnumerable<ItemCDBMigrations.Models.tblPOSITIONBUDGETED>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tblBud.BudDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblBudItemNum.BudItemDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblDivision.DivDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblFilled.FilledDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblFunction.FuncDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblOrd.OrdDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblOrgCode.BudOrgCodeDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblSection.SecDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblSubItem.SubItemDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblUnit.UnitDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SSMA_TimeStamp)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblBud.BudDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblBudItemNum.BudItemDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblDivision.DivDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblFilled.FilledDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblFunction.FuncDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblOrd.OrdDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblOrgCode.BudOrgCodeDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblSection.SecDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblSubItem.SubItemDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblUnit.UnitDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SSMA_TimeStamp)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BudPosNum }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BudPosNum }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BudPosNum })
+        </td>
+    </tr>
+}
+
+</table>

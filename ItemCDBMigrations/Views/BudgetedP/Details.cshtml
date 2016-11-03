@@ -1,0 +1,114 @@
+﻿@model ItemCDBMigrations.Models.tblPOSITIONBUDGETED
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblPOSITIONBUDGETED</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tblBud.BudDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblBud.BudDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblBudItemNum.BudItemDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblBudItemNum.BudItemDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblDivision.DivDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblDivision.DivDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblFilled.FilledDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblFilled.FilledDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblFunction.FuncDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblFunction.FuncDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblOrd.OrdDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblOrd.OrdDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblOrgCode.BudOrgCodeDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblOrgCode.BudOrgCodeDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblSection.SecDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblSection.SecDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblSubItem.SubItemDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblSubItem.SubItemDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblUnit.UnitDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblUnit.UnitDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SSMA_TimeStamp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SSMA_TimeStamp)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BudPosNum }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
