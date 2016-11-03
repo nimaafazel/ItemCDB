@@ -45,7 +45,7 @@ namespace ItemCDBMigrations.Models
         [Column(TypeName = "datetime2")]
         [Display(Name ="Seniority Date")]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString ="{0:MM/dd/yyyy}", ApplyFormatInEditMode =true)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode =true)]
         public DateTime? SeniorityDate { get; set; }
 
         [StringLength(10)]
@@ -55,7 +55,7 @@ namespace ItemCDBMigrations.Models
         [Column(TypeName = "datetime2")]
         [Display(Name ="Birth Date")]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString ="{0:MM/dd/yyyy}", ApplyFormatInEditMode =true)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode =true)]
         public DateTime? BirthDate { get; set; }
 
         [StringLength(1)]
