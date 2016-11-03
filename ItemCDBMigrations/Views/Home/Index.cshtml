@@ -10,21 +10,31 @@
 </div>
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-3">
         <h2>Employees</h2>
         <p>
             Get all the information and data from all the employees in the Department.
         </p>
         <p>
-            @Html.ActionLink("Go ", "Index", "Employees", null, new { @class = "btn btn-success" })
+            @Html.ActionLink("Let's see the Employees", "Index", "Employees", null, new { @class = "btn btn-success" })
         </p>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
+        <h2>Items</h2>
+        <p>
+            Check out all the Items we have at the Department. Need to update some info on one?<br />
+            How about adding a brand new one? Get here and do it all!
+        </p>
+        <p>
+            @Html.ActionLink("Show me the Items", "Index", "Items", null, new { @class = "btn btn-success" })
+        </p>
+    </div>
+    <div class="col-md-3">
         <h2>Positions</h2>
         <p>Surf through Budgeted and Regular Positions to see everything the Department has to offer!</p>
         <p>@Html.ActionLink("Positions not developed yet", "Index", "Home", null, new { @class = "btn btn-danger" })</p>        
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <h2>Reports</h2>
         <p>Looking for some compact, meaningful data? Get your KPI's right here!</p>
         <p>@Html.ActionLink("Reports coming soon!", "Index", "Home", null,   new { @class = "btn btn-warning" })</p>        
