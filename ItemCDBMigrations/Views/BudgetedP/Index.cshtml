@@ -1,4 +1,6 @@
-﻿@model IEnumerable<ItemCDBMigrations.Models.tblPOSITIONBUDGETED>
+﻿@model PagedList.IPagedList<ItemCDBMigrations.Models.tblPOSITIONBUDGETED>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
     ViewBag.Title = "Index";
@@ -9,47 +11,47 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-@using (Html.BeginForm())
+@using (Html.BeginForm("Index", "BudgetedP", FormMethod.Get))
 {
-    <p>Item Description: @Html.TextBox("searchString") 
+    <p>Item Description: @Html.TextBox("searchString", ViewBag.CurrentFilter as string) 
     <input type="submit" value="Search" /></p>
 }
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.tblBud.BudDesc)
+            @Html.DisplayNameFor(model => model[0].tblBud.BudDesc)
         </th>
         <th>
             @*@Html.DisplayNameFor(model => model.tblBudItemNum.BudItemDesc)*@
-            @Html.ActionLink("Item Description", "Index", new { searchString = ViewBag.CurrentFilter, sortOrder = ViewBag.ItemD })
+            @Html.ActionLink("Item Description", "Index", new { currentFilter = ViewBag.CurrentFilter, sortOrder = ViewBag.ItemD })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.tblDivision.DivDesc)
+            @Html.DisplayNameFor(model => model[0].tblDivision.DivDesc)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.tblFilled.FilledDesc)
+            @Html.DisplayNameFor(model => model[0].tblFilled.FilledDesc)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.tblFunction.FuncDesc)
+            @Html.DisplayNameFor(model => model[0].tblFunction.FuncDesc)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.tblOrd.OrdDesc)
+            @Html.DisplayNameFor(model => model[0].tblOrd.OrdDesc)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.tblOrgCode.BudOrgCodeDesc)
+            @Html.DisplayNameFor(model => model[0].tblOrgCode.BudOrgCodeDesc)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.tblSection.SecDesc)
+            @Html.DisplayNameFor(model => model[0].tblSection.SecDesc)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.tblSubItem.SubItemDesc)
+            @Html.DisplayNameFor(model => model[0].tblSubItem.SubItemDesc)
         </th>
         <th>
             @*@Html.DisplayNameFor(model => model.tblUnit.UnitDesc)*@
-            @Html.ActionLink("Unit", "Index", new { searchString = ViewBag.CurrentFilter, sortOrder = ViewBag.Unit })
+            @Html.ActionLink("Unit", "Index", new { currentFilter = ViewBag.CurrentFilter, sortOrder = ViewBag.Unit })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Comments)
+            @Html.DisplayNameFor(model => model[0].Comments)
         </th>
         <th></th>
     </tr>
@@ -98,3 +100,9 @@
 }
 
 </table>
+<h4>@(Model.TotalItemCount > 0 ? Model.TotalItemCount + " Records found" : "")</h4>
+@if(Model.TotalItemCount > Model.PageSize)
+{
+    <div>Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount</div>
+    @Html.PagedListPager(Model, pg => Url.Action("Index", new { page = pg, sortOrder = ViewBag.CurrentSortOrder, currentFilter = ViewBag.CurrentFilter }))
+}

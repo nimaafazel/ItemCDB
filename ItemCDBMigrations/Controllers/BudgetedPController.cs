@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ItemCDBMigrations.Models;
+using PagedList;
 
 namespace ItemCDBMigrations.Controllers
 {
@@ -15,12 +16,19 @@ namespace ItemCDBMigrations.Controllers
         private ICContext db = new ICContext();
 
         // GET: BudgetedP
-        public ActionResult Index(string searchString, string sortOrder)
+        public ActionResult Index(string searchString, string sortOrder, string currentFilter, int? page)
         {
             ViewBag.ItemD = (string.IsNullOrEmpty(sortOrder)) ? "item_desc" : "";
             ViewBag.Unit = sortOrder == "unit" ? "unit_desc" : "unit";
 
-            ViewBag.CurrentFilter = searchString;
+            if (searchString != null)
+                page = 1;
+            else
+                searchString = currentFilter;
+
+            ViewBag.CurrentFilter = currentFilter;
+            ViewBag.CurrentSortOrder = sortOrder;
+
             // get the positions
             var tblPOSITIONBUDGETEDs = db.tblPOSITIONBUDGETEDs.Include(t => t.tblBud).
                 Include(t => t.tblBudItemNum).Include(t => t.tblDivision).Include(t => t.tblFilled).
@@ -51,7 +59,10 @@ namespace ItemCDBMigrations.Controllers
                     break;
             }
 
-            return View(tblPOSITIONBUDGETEDs.ToList());
+            int pageNumber = page ?? 1;
+            int pageSize = 10;
+
+            return View(tblPOSITIONBUDGETEDs.ToPagedList(pageNumber, pageSize));
         }
 
         // GET: BudgetedP/Details/5
