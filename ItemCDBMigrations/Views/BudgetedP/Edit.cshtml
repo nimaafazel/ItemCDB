@@ -1,10 +1,10 @@
 ﻿@model ItemCDBMigrations.Models.tblPOSITIONBUDGETED
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Edit Budgeted Position";
 }
 
-<h2>Edit</h2>
+<h2>Edit Budgeted Position</h2>
 
 
 @using (Html.BeginForm())
@@ -12,7 +12,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>tblPOSITIONBUDGETED</h4>
+        <h4>@Model.tblBudItemNum.BudItemDesc</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.BudPosNum)
@@ -20,7 +20,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.BudItemNum, "BudItemNum", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("BudItemNum", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("BudItemNum", null, "Select an Item", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.BudItemNum, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -28,7 +28,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.BudSubItem, "BudSubItem", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("BudSubItem", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("BudSubItem", null, "Select SubItem", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.BudSubItem, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -36,7 +36,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.BudOrd, "BudOrd", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("BudOrd", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("BudOrd", null, "Select Ordinance", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.BudOrd, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -44,7 +44,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.BudBud, "BudBud", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("BudBud", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("BudBud", null, "Select Budgeted", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.BudBud, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -52,7 +52,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.BudFilled, "BudFilled", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("BudFilled", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("BudFilled", null, "Select Filled", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.BudFilled, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -60,7 +60,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.BudFunction, "BudFunction", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("BudFunction", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("BudFunction", null, "Select Function", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.BudFunction, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -68,7 +68,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.BudOrgCode, "BudOrgCode", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("BudOrgCode", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("BudOrgCode", null, "Select Org Code", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.BudOrgCode, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -76,7 +76,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.BudDivCode, "BudDivCode", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("BudDivCode", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("BudDivCode", null, "Select Division Code", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.BudDivCode, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -84,7 +84,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.BudSecCode, "BudSecCode", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("BudSecCode", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("BudSecCode", null, "Select Section", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.BudSecCode, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -92,7 +92,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.BudUnitCode, "BudUnitCode", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("BudUnitCode", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("BudUnitCode", null, "Select Unit", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.BudUnitCode, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -102,14 +102,6 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Comments, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Comments, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.SSMA_TimeStamp, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.SSMA_TimeStamp, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.SSMA_TimeStamp, "", new { @class = "text-danger" })
             </div>
         </div>
 
