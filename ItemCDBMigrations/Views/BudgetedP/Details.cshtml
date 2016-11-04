@@ -1,13 +1,13 @@
 ﻿@model ItemCDBMigrations.Models.tblPOSITIONBUDGETED
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Details Budgeted Position";
 }
 
-<h2>Details</h2>
+<h2>Budgeted Position Details</h2>
 
 <div>
-    <h4>tblPOSITIONBUDGETED</h4>
+    <h4>@Model.tblBudItemNum.BudItemDesc</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -96,16 +96,7 @@
 
         <dd>
             @Html.DisplayFor(model => model.Comments)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SSMA_TimeStamp)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SSMA_TimeStamp)
-        </dd>
-
+        </dd>        
     </dl>
 </div>
 <p>
