@@ -20,9 +20,13 @@ namespace ItemCDBMigrations.Models
 
         [Display(Name ="Effective Date")]
         [Column(TypeName = "datetime2")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime EffectiveDate { get; set; }
 
         [Display(Name ="Hire Date")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString ="{0:yyyy-MM-dd}", ApplyFormatInEditMode =true)]
         [Column(TypeName = "datetime2")]
         public DateTime? DeptHireDate { get; set; }
 
