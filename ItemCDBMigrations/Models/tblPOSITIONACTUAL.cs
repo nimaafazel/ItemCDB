@@ -46,6 +46,7 @@ namespace ItemCDBMigrations.Models
 
         [Column(TypeName = "money")]
         [Display(Name ="Pay Rate")]
+        [DisplayFormat(DataFormatString ="{0:C2}")]
         public decimal? PayRate { get; set; }
 
         [Display(Name ="Pay Period")]
