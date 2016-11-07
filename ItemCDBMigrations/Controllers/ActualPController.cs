@@ -84,10 +84,10 @@ namespace ItemCDBMigrations.Controllers
         // GET: ActualP/Create
         public ActionResult Create()
         {
-            ViewBag.EmplID = new SelectList(db.tblEMPLOYEELISTs, "EmplID", "LastName");
+            ViewBag.EmplID = new SelectList(db.tblEMPLOYEELISTs, "EmplID", "EmplID");
             ViewBag.EmplType = new SelectList(db.tblEmploymentTypes, "EmplType", "EmplTypeDesc");
             ViewBag.PayPeriod = new SelectList(db.tblPayPeriods, "PayTypeID", "PayTypeDesc");
-            ViewBag.ActPosNum = new SelectList(db.tblPOSITIONBUDGETEDs, "BudPosNum", "BudItemNum");
+            ViewBag.ActPosNum = new SelectList(db.tblPOSITIONBUDGETEDs, "BudPosNum", "BudPosNum");
             ViewBag.Step = new SelectList(db.tblSteps, "Step", "Step");
             return View();
         }
@@ -106,10 +106,10 @@ namespace ItemCDBMigrations.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.EmplID = new SelectList(db.tblEMPLOYEELISTs, "EmplID", "LastName", tblPOSITIONACTUAL.EmplID);
+            ViewBag.EmplID = new SelectList(db.tblEMPLOYEELISTs, "EmplID", "EmplID", tblPOSITIONACTUAL.EmplID);
             ViewBag.EmplType = new SelectList(db.tblEmploymentTypes, "EmplType", "EmplTypeDesc", tblPOSITIONACTUAL.EmplType);
             ViewBag.PayPeriod = new SelectList(db.tblPayPeriods, "PayTypeID", "PayTypeDesc", tblPOSITIONACTUAL.PayPeriod);
-            ViewBag.ActPosNum = new SelectList(db.tblPOSITIONBUDGETEDs, "BudPosNum", "BudItemNum", tblPOSITIONACTUAL.ActPosNum);
+            ViewBag.ActPosNum = new SelectList(db.tblPOSITIONBUDGETEDs, "BudPosNum", "BudPosNum", tblPOSITIONACTUAL.ActPosNum);
             ViewBag.Step = new SelectList(db.tblSteps, "Step", "Step", tblPOSITIONACTUAL.Step);
             return View(tblPOSITIONACTUAL);
         }
