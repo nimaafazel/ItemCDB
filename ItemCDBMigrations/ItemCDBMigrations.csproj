@@ -138,6 +138,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ActualPController.cs" />
     <Compile Include="Controllers\BudgetedPController.cs" />
     <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -234,6 +235,11 @@
     <Content Include="Views\BudgetedP\Details.cshtml" />
     <Content Include="Views\BudgetedP\Edit.cshtml" />
     <Content Include="Views\BudgetedP\Index.cshtml" />
+    <Content Include="Views\ActualP\Create.cshtml" />
+    <Content Include="Views\ActualP\Delete.cshtml" />
+    <Content Include="Views\ActualP\Details.cshtml" />
+    <Content Include="Views\ActualP\Edit.cshtml" />
+    <Content Include="Views\ActualP\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,123 @@
+﻿@model IEnumerable<ItemCDBMigrations.Models.tblPOSITIONACTUAL>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tblEMPLOYEELIST.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblEmploymentType.EmplTypeDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblPayPeriod.PayTypeDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblPOSITIONBUDGETED.BudItemNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblStep.Step)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EffectiveDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeptHireDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActEmplStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActItemNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActSubItem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PayRate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PreItemNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PreSubItem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReasonOfChange)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SSMA_TimeStamp)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblEMPLOYEELIST.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblEmploymentType.EmplTypeDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblPayPeriod.PayTypeDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblPOSITIONBUDGETED.BudItemNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblStep.Step)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EffectiveDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeptHireDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActEmplStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActItemNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActSubItem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PayRate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PreItemNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PreSubItem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReasonOfChange)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SSMA_TimeStamp)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ActPosAutoID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ActPosAutoID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ActPosAutoID })
+        </td>
+    </tr>
+}
+
+</table>
