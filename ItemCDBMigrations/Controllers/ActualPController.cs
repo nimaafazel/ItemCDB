@@ -15,9 +15,17 @@ namespace ItemCDBMigrations.Controllers
         private ICContext db = new ICContext();
 
         // GET: ActualP
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
-            var tblPOSITIONACTUALs = db.tblPOSITIONACTUALs.Include(t => t.tblEMPLOYEELIST).Include(t => t.tblEmploymentType).Include(t => t.tblPayPeriod).Include(t => t.tblPOSITIONBUDGETED).Include(t => t.tblStep);
+            var tblPOSITIONACTUALs = db.tblPOSITIONACTUALs.Include(t => t.tblEMPLOYEELIST).Include(t => t.tblEmploymentType).
+                Include(t => t.tblPayPeriod).Include(t => t.tblPOSITIONBUDGETED).Include(t => t.tblStep);
+
+            if(!string.IsNullOrEmpty(searchString))
+            {
+                // search by employee
+                tblPOSITIONACTUALs = tblPOSITIONACTUALs.Where(t => t.tblEMPLOYEELIST.LastName.Contains(searchString) || t.tblEMPLOYEELIST.FirstName.Contains(searchString));
+            }
+
             return View(tblPOSITIONACTUALs.ToList());
         }
 
