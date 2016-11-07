@@ -1,73 +1,72 @@
-﻿@model IEnumerable<ItemCDBMigrations.Models.tblPOSITIONACTUAL>
+﻿@model PagedList.IPagedList<ItemCDBMigrations.Models.tblPOSITIONACTUAL>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" type="text/css" rel="stylesheet" />
 
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
-
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-@using (Html.BeginForm())
+
+@using (Html.BeginForm("Index", "ActualP", FormMethod.Get))
 {
-    <p>
-        @Html.Editor("searchString")
+    <p> Item: 
+        @Html.TextBox("searchString", ViewBag.CurrentFilter as string)
         <input type="submit" value="Search" />
     </p> 
 }
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.tblEMPLOYEELIST.LastName)
+            @Html.DisplayNameFor(model => model[0].tblEMPLOYEELIST.LastName)
         </th>
         <th>
             @*@Html.DisplayNameFor(model => model.tblEmploymentType.EmplTypeDesc)*@
-            @Html.ActionLink("Employment Type", "Index", new { searchString = ViewBag.CurrentSearch, sortOrder = ViewBag.EmplType })
+            @Html.ActionLink("Employment Type", "Index", new { currentFilter = ViewBag.CurrentFilter, sortOrder = ViewBag.EmplType })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.tblPayPeriod.PayTypeDesc)
+            @Html.DisplayNameFor(model => model[0].tblPayPeriod.PayTypeDesc)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.tblPOSITIONBUDGETED.BudItemNum)
+            @Html.DisplayNameFor(model => model[0].tblPOSITIONBUDGETED.BudItemNum)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.tblStep.Step)
+            @Html.DisplayNameFor(model => model[0].tblStep.Step)
         </th>
         <th>
             @*@Html.DisplayNameFor(model => model.EffectiveDate)*@
-            @Html.ActionLink("Effective Date", "Index", new { searchString = ViewBag.CurrentSearch, sortOrder = ViewBag.EffectiveDate })
+            @Html.ActionLink("Effective Date", "Index", new { currentFilter = ViewBag.CurrentFilter, sortOrder = ViewBag.EffectiveDate })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DeptHireDate)
+            @Html.DisplayNameFor(model => model[0].DeptHireDate)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ActEmplStatus)
+            @Html.DisplayNameFor(model => model[0].ActEmplStatus)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ActItemNum)
+            @Html.DisplayNameFor(model => model[0].ActItemNum)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ActSubItem)
+            @Html.DisplayNameFor(model => model[0].ActSubItem)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PayRate)
+            @Html.DisplayNameFor(model => model[0].PayRate)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PreItemNum)
+            @Html.DisplayNameFor(model => model[0].PreItemNum)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PreSubItem)
+            @Html.DisplayNameFor(model => model[0].PreSubItem)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ReasonOfChange)
+            @Html.DisplayNameFor(model => model[0].ReasonOfChange)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Comments)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SSMA_TimeStamp)
-        </th>
+            @Html.DisplayNameFor(model => model[0].Comments)
+        </th>        
         <th></th>
     </tr>
 
@@ -119,9 +118,6 @@
             @Html.DisplayFor(modelItem => item.Comments)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.SSMA_TimeStamp)
-        </td>
-        <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ActPosAutoID }) |
             @Html.ActionLink("Details", "Details", new { id=item.ActPosAutoID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.ActPosAutoID })
@@ -130,3 +126,13 @@
 }
 
 </table>
+
+@if(Model != null && Model.TotalItemCount > 0)
+{
+    <h4>@Model.TotalItemCount Records found</h4>
+    if (Model.TotalItemCount > Model.PageSize)
+    {
+        <div>Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount</div>
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+    }
+}

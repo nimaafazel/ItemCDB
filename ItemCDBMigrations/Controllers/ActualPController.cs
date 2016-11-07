@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ItemCDBMigrations.Models;
+using PagedList;
 
 namespace ItemCDBMigrations.Controllers
 {
@@ -15,11 +16,18 @@ namespace ItemCDBMigrations.Controllers
         private ICContext db = new ICContext();
 
         // GET: ActualP
-        public ActionResult Index(string searchString, string sortOrder)
+        public ActionResult Index(string searchString, string sortOrder, string currentFilter, int? page)
         {
-            ViewBag.CurrentSearch = searchString;
+            ViewBag.CurrentSort = sortOrder;
             ViewBag.EmplType = string.IsNullOrEmpty(sortOrder) ? "empltype_desc" : "";
             ViewBag.EffectiveDate = sortOrder == "efdate" ? "efdate_desc" : "efdate";
+
+            if (searchString != null)
+                page = 1;
+            else
+                searchString = currentFilter;
+
+            ViewBag.CurrentFilter = searchString;
 
             var tblPOSITIONACTUALs = db.tblPOSITIONACTUALs.Include(t => t.tblEMPLOYEELIST).Include(t => t.tblEmploymentType).
                 Include(t => t.tblPayPeriod).Include(t => t.tblPOSITIONBUDGETED).Include(t => t.tblStep);
@@ -31,7 +39,6 @@ namespace ItemCDBMigrations.Controllers
 
                 // search by item name
                 tblPOSITIONACTUALs = tblPOSITIONACTUALs.Where(t => t.tblPOSITIONBUDGETED.tblBudItemNum.BudItemDesc.Contains(searchString));
-
             }
 
             switch(sortOrder)
@@ -53,7 +60,10 @@ namespace ItemCDBMigrations.Controllers
                     break;
             }
 
-            return View(tblPOSITIONACTUALs.ToList());
+            int pageNumber = page ?? 1;
+            int pageSize = 10;
+
+            return View(tblPOSITIONACTUALs.ToPagedList(pageNumber, pageSize));
         }
 
         // GET: ActualP/Details/5
