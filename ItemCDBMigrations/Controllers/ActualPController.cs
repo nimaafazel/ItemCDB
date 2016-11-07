@@ -126,10 +126,12 @@ namespace ItemCDBMigrations.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.EmplID = new SelectList(db.tblEMPLOYEELISTs, "EmplID", "LastName", tblPOSITIONACTUAL.EmplID);
+            //ViewBag.EmplID = new SelectList(db.tblEMPLOYEELISTs, "EmplID", "LastName", tblPOSITIONACTUAL.EmplID);
+            ViewBag.EmplID = new SelectList(db.tblEMPLOYEELISTs, "EmplID", "EmplID", tblPOSITIONACTUAL.EmplID);
             ViewBag.EmplType = new SelectList(db.tblEmploymentTypes, "EmplType", "EmplTypeDesc", tblPOSITIONACTUAL.EmplType);
             ViewBag.PayPeriod = new SelectList(db.tblPayPeriods, "PayTypeID", "PayTypeDesc", tblPOSITIONACTUAL.PayPeriod);
-            ViewBag.ActPosNum = new SelectList(db.tblPOSITIONBUDGETEDs, "BudPosNum", "BudItemNum", tblPOSITIONACTUAL.ActPosNum);
+            //ViewBag.ActPosNum = new SelectList(db.tblPOSITIONBUDGETEDs, "BudPosNum", "BudItemNum", tblPOSITIONACTUAL.ActPosNum);
+            ViewBag.ActPosNum = new SelectList(db.tblPOSITIONBUDGETEDs, "BudPosNum", "BudPosNum", tblPOSITIONACTUAL.ActPosNum);
             ViewBag.Step = new SelectList(db.tblSteps, "Step", "Step", tblPOSITIONACTUAL.Step);
             return View(tblPOSITIONACTUAL);
         }
@@ -147,10 +149,10 @@ namespace ItemCDBMigrations.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.EmplID = new SelectList(db.tblEMPLOYEELISTs, "EmplID", "LastName", tblPOSITIONACTUAL.EmplID);
+            ViewBag.EmplID = new SelectList(db.tblEMPLOYEELISTs, "EmplID", "EmplID", tblPOSITIONACTUAL.EmplID);
             ViewBag.EmplType = new SelectList(db.tblEmploymentTypes, "EmplType", "EmplTypeDesc", tblPOSITIONACTUAL.EmplType);
             ViewBag.PayPeriod = new SelectList(db.tblPayPeriods, "PayTypeID", "PayTypeDesc", tblPOSITIONACTUAL.PayPeriod);
-            ViewBag.ActPosNum = new SelectList(db.tblPOSITIONBUDGETEDs, "BudPosNum", "BudItemNum", tblPOSITIONACTUAL.ActPosNum);
+            ViewBag.ActPosNum = new SelectList(db.tblPOSITIONBUDGETEDs, "BudPosNum", "BudPosNum", tblPOSITIONACTUAL.ActPosNum);
             ViewBag.Step = new SelectList(db.tblSteps, "Step", "Step", tblPOSITIONACTUAL.Step);
             return View(tblPOSITIONACTUAL);
         }

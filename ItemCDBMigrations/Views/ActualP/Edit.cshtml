@@ -20,7 +20,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ActPosNum, "ActPosNum", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("ActPosNum", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("ActPosNum", null, "Select Position Number", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.ActPosNum, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -28,7 +28,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.EmplID, "EmplID", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("EmplID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("EmplID", null, "Select Employee ID", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.EmplID, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -76,7 +76,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Step, "Step", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("Step", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("Step", null, "Select Step", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Step, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -92,7 +92,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.PayPeriod, "PayPeriod", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("PayPeriod", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("PayPeriod", null, "Select Pay Period",  htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.PayPeriod, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -100,7 +100,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.EmplType, "EmplType", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("EmplType", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("EmplType", null, "Select Employment Type", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.EmplType, "", new { @class = "text-danger" })
             </div>
         </div>
