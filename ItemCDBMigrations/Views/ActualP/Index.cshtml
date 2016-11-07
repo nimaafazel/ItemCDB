@@ -22,7 +22,8 @@
             @Html.DisplayNameFor(model => model.tblEMPLOYEELIST.LastName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.tblEmploymentType.EmplTypeDesc)
+            @*@Html.DisplayNameFor(model => model.tblEmploymentType.EmplTypeDesc)*@
+            @Html.ActionLink("Employment Type", "Index", new { searchString = ViewBag.CurrentSearch, sortOrder = ViewBag.EmplType })
         </th>
         <th>
             @Html.DisplayNameFor(model => model.tblPayPeriod.PayTypeDesc)
@@ -34,7 +35,8 @@
             @Html.DisplayNameFor(model => model.tblStep.Step)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.EffectiveDate)
+            @*@Html.DisplayNameFor(model => model.EffectiveDate)*@
+            @Html.ActionLink("Effective Date", "Index", new { searchString = ViewBag.CurrentSearch, sortOrder = ViewBag.EffectiveDate })
         </th>
         <th>
             @Html.DisplayNameFor(model => model.DeptHireDate)

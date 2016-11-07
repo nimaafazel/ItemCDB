@@ -15,8 +15,12 @@ namespace ItemCDBMigrations.Controllers
         private ICContext db = new ICContext();
 
         // GET: ActualP
-        public ActionResult Index(string searchString)
+        public ActionResult Index(string searchString, string sortOrder)
         {
+            ViewBag.CurrentSearch = searchString;
+            ViewBag.EmplType = string.IsNullOrEmpty(sortOrder) ? "empltype_desc" : "";
+            ViewBag.EffectiveDate = sortOrder == "efdate" ? "efdate_desc" : "efdate";
+
             var tblPOSITIONACTUALs = db.tblPOSITIONACTUALs.Include(t => t.tblEMPLOYEELIST).Include(t => t.tblEmploymentType).
                 Include(t => t.tblPayPeriod).Include(t => t.tblPOSITIONBUDGETED).Include(t => t.tblStep);
 
@@ -28,6 +32,25 @@ namespace ItemCDBMigrations.Controllers
                 // search by item name
                 tblPOSITIONACTUALs = tblPOSITIONACTUALs.Where(t => t.tblPOSITIONBUDGETED.tblBudItemNum.BudItemDesc.Contains(searchString));
 
+            }
+
+            switch(sortOrder)
+            {
+                case "empltype_desc":
+                    tblPOSITIONACTUALs = tblPOSITIONACTUALs.OrderByDescending(t => t.EmplType);
+                    break;
+
+                case "efdate":
+                    tblPOSITIONACTUALs = tblPOSITIONACTUALs.OrderBy(t => t.EffectiveDate);
+                    break;
+
+                case "efdate_desc":
+                    tblPOSITIONACTUALs = tblPOSITIONACTUALs.OrderByDescending(t => t.EffectiveDate);
+                    break;
+
+                default:
+                    tblPOSITIONACTUALs = tblPOSITIONACTUALs.OrderBy(t => t.EmplType);
+                    break;
             }
 
             return View(tblPOSITIONACTUALs.ToList());
