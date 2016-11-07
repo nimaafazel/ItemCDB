@@ -23,7 +23,11 @@ namespace ItemCDBMigrations.Controllers
             if(!string.IsNullOrEmpty(searchString))
             {
                 // search by employee
-                tblPOSITIONACTUALs = tblPOSITIONACTUALs.Where(t => t.tblEMPLOYEELIST.LastName.Contains(searchString) || t.tblEMPLOYEELIST.FirstName.Contains(searchString));
+                //tblPOSITIONACTUALs = tblPOSITIONACTUALs.Where(t => t.tblEMPLOYEELIST.LastName.Contains(searchString) || t.tblEMPLOYEELIST.FirstName.Contains(searchString));
+
+                // search by item name
+                tblPOSITIONACTUALs = tblPOSITIONACTUALs.Where(t => t.tblPOSITIONBUDGETED.tblBudItemNum.BudItemDesc.Contains(searchString));
+
             }
 
             return View(tblPOSITIONACTUALs.ToList());
