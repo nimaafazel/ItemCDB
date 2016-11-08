@@ -17,9 +17,11 @@ namespace ItemCDBMigrations.Models
 
         [Key]
         [StringLength(1)]
+        [Display(Name ="Gender Code")]
         public string GenderCode { get; set; }
 
         [StringLength(25)]
+        [Display(Name ="Gender")]
         public string GenderDesc { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
