@@ -17,7 +17,8 @@ namespace ItemCDBMigrations.Controllers
         // GET: Units
         public ActionResult Index()
         {
-            return View(db.tblUnits.ToList());
+            var sortedUnits = db.tblUnits.OrderBy(t => t.UnitDesc);
+            return View(sortedUnits.ToList());
         }
 
         // GET: Units/Details/5
