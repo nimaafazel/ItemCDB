@@ -20,6 +20,7 @@ namespace ItemCDBMigrations.Models
         public int FilledCode { get; set; }
 
         [StringLength(25)]
+        [Display(Name ="Filled")]
         public string FilledDesc { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
