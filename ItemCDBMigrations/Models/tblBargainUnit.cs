@@ -20,6 +20,7 @@ namespace ItemCDBMigrations.Models
         public int BargainUnitCode { get; set; }
 
         [StringLength(50)]
+        [Display(Name ="Bargain Unit")]
         public string BargainUnitDesc { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
