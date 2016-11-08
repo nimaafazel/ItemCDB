@@ -20,6 +20,7 @@ namespace ItemCDBMigrations.Models
         public string FuncCode { get; set; }
 
         [StringLength(25)]
+        [Display(Name ="Function")]
         public string FuncDesc { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
