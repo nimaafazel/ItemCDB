@@ -20,6 +20,7 @@ namespace ItemCDBMigrations.Models
         public string SubItemCode { get; set; }
 
         [StringLength(50)]
+        [Display(Name ="SubItem")]
         public string SubItemDesc { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
