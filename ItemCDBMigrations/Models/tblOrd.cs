@@ -20,6 +20,7 @@ namespace ItemCDBMigrations.Models
         public int OrdCode { get; set; }
 
         [StringLength(25)]
+        [Display(Name ="Ordinance")]
         public string OrdDesc { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
