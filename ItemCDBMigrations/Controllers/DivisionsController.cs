@@ -21,19 +21,19 @@ namespace ItemCDBMigrations.Controllers
         }
 
         // GET: Divisions/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            tblDivision tblDivision = db.tblDivisions.Find(id);
-            if (tblDivision == null)
-            {
-                return HttpNotFound();
-            }
-            return View(tblDivision);
-        }
+        //public ActionResult Details(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    tblDivision tblDivision = db.tblDivisions.Find(id);
+        //    if (tblDivision == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(tblDivision);
+        //}
 
         // GET: Divisions/Create
         public ActionResult Create()
