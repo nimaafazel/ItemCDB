@@ -16,9 +16,11 @@ namespace ItemCDBMigrations.Models
 
         [Key]
         [StringLength(1)]
+        [Display(Name ="Status Code")]
         public string EmplStatusCode { get; set; }
 
         [StringLength(10)]
+        [Display(Name ="Status")]
         public string EmplStatusDesc { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
