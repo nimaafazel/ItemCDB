@@ -17,7 +17,8 @@ namespace ItemCDBMigrations.Controllers
         // GET: Divisions
         public ActionResult Index()
         {
-            return View(db.tblDivisions.ToList());
+            var ordered = db.tblDivisions.OrderBy(t => t.DivDesc);
+            return View(ordered.ToList());
         }
 
         // GET: Divisions/Details/5
