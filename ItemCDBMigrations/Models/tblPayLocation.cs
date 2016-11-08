@@ -17,9 +17,11 @@ namespace ItemCDBMigrations.Models
 
         [Key]
         [StringLength(10)]
+        [Display(Name ="Pay Location Code")]
         public string PayLocCode { get; set; }
 
         [StringLength(50)]
+        [Display(Name ="Pay Location")]
         public string PayLocDesc { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
