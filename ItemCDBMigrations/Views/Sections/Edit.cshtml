@@ -1,10 +1,10 @@
 ﻿@model ItemCDBMigrations.Models.tblSection
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Edit Section";
 }
 
-<h2>Edit</h2>
+<h2>Edit Section</h2>
 
 
 @using (Html.BeginForm())
@@ -12,7 +12,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>tblSection</h4>
+        <h4>@Model.SecDesc1</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.SecCode)
@@ -43,15 +43,12 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
+                @Html.ActionLink("Cancel Edit", "Index", null, new { @class = "btn btn-danger" })
                 <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
