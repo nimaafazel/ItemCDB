@@ -20,12 +20,15 @@ namespace ItemCDBMigrations.Models
         public int SecCode { get; set; }
 
         [StringLength(50)]
+        [Display(Name ="Section")]
         public string SecDesc { get; set; }
 
         [StringLength(50)]
+        [Display(Name ="Section Name")]
         public string SecDesc1 { get; set; }
 
         [StringLength(50)]
+        [Display(Name ="Section Head")]
         public string SecHead { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
