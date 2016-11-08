@@ -14,6 +14,7 @@ namespace ItemCDBMigrations.Models
         public int VacantCode { get; set; }
 
         [StringLength(25)]
+        [Display(Name ="Vacant")]
         public string VacantDesc { get; set; }
     }
 }
