@@ -20,6 +20,7 @@ namespace ItemCDBMigrations.Models
         public int PayTypeID { get; set; }
 
         [StringLength(50)]
+        [Display(Name ="Pay Period")]
         public string PayTypeDesc { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
