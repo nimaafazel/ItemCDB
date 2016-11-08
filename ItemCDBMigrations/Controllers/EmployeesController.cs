@@ -137,9 +137,7 @@ namespace ItemCDBMigrations.Controllers
                 // filter down by the search value
                 tblEMPLOYEELISTs = tblEMPLOYEELISTs.Where(e => e.LastName.Contains(searchString) || e.FirstName.Contains(searchString));
             }
-            else
-                return View(); // on first load, dont show anything
-
+            
             // sort the results
             switch (sortOrder)
             {
