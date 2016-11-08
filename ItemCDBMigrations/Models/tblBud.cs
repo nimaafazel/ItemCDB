@@ -20,9 +20,11 @@ namespace ItemCDBMigrations.Models
         public int BudCode { get; set; }
 
         [StringLength(50)]
+        [Display(Name ="Budget")]
         public string BudDesc { get; set; }
 
         [StringLength(50)]
+        [Display(Name ="Budget")]
         public string BudDesc1 { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
