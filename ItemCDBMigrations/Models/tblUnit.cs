@@ -20,9 +20,11 @@ namespace ItemCDBMigrations.Models
         public int UnitCode { get; set; }
 
         [StringLength(50)]
+        [Display(Name ="Unit")]
         public string UnitDesc { get; set; }
 
         [StringLength(25)]
+        [Display(Name ="Unit Supervisor")]
         public string UnitSupervisor { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
