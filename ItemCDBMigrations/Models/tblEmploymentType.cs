@@ -20,6 +20,7 @@ namespace ItemCDBMigrations.Models
         public string EmplType { get; set; }
 
         [StringLength(50)]
+        [Display(Name ="Employment Type")]
         public string EmplTypeDesc { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
