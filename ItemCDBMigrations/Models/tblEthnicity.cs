@@ -17,9 +17,11 @@ namespace ItemCDBMigrations.Models
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Display(Name ="Ethnicity Code")]
         public int EthnicCode { get; set; }
 
         [StringLength(25)]
+        [Display(Name ="Ethnicity")]
         public string EthnicDesc { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
