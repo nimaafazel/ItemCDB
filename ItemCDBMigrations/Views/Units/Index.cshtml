@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ItemCDBMigrations.Models.tblUnit>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitSupervisor)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnitDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnitSupervisor)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.UnitCode }) |
+            @Html.ActionLink("Details", "Details", new { id=item.UnitCode }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.UnitCode })
+        </td>
+    </tr>
+}
+
+</table>
