@@ -21,6 +21,7 @@ namespace ItemCDBMigrations.Models
 
         [StringLength(50)]
         [Display(Name ="Unit")]
+        [Required]
         public string UnitDesc { get; set; }
 
         [StringLength(25)]
