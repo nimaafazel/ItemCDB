@@ -47,7 +47,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.BudBargainUnit, "BudBargainUnit", htmlAttributes: new { @class = "control-label col-md-2" })
+            @*@Html.LabelFor(model => model.BudBargainUnit, "BudBargainUnit", htmlAttributes: new { @class = "control-label col-md-2" })*@
+            @Html.LabelFor(model => model.tblBargainUnit.BargainUnitDesc, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("BudBargainUnit", null, "Select Bargain Unit", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.BudBargainUnit, "", new { @class = "text-danger" })

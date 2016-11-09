@@ -17,6 +17,7 @@ namespace ItemCDBMigrations.Models
 
         [Key]
         [StringLength(10)]
+        [Required]
         public string BudItemNum { get; set; }
 
         [Required]
@@ -30,7 +31,7 @@ namespace ItemCDBMigrations.Models
         public string BudSchedule { get; set; }
 
         [StringLength(255)]
-        [Display(Name ="Budegeted Note")]
+        [Display(Name ="Budgeted Note")]
         public string BudNote { get; set; }
 
         public int? BudBargainUnit { get; set; }
