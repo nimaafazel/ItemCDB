@@ -21,10 +21,12 @@ namespace ItemCDBMigrations.Models
 
         [StringLength(50)]
         [Display(Name ="Section")]
+        [Required]
         public string SecDesc { get; set; }
 
         [StringLength(50)]
         [Display(Name ="Section Name")]
+        [Required]
         public string SecDesc1 { get; set; }
 
         [StringLength(50)]
