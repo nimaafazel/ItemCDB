@@ -27,10 +27,13 @@ namespace ItemCDBMigrations.Models
         [StringLength(1)]
         public string BudSubItem { get; set; }
 
+        [Required]
         public int BudOrd { get; set; }
 
+        [Required]
         public int BudBud { get; set; }
 
+        [Required]
         public int BudFilled { get; set; }
 
         [Required]
@@ -40,18 +43,21 @@ namespace ItemCDBMigrations.Models
         [StringLength(10)]
         public string BudOrgCode { get; set; }
 
+        [Required]
         public int BudDivCode { get; set; }
 
+        [Required]
         public int BudSecCode { get; set; }
 
+        [Required]
         public int BudUnitCode { get; set; }
 
         public string Comments { get; set; }
 
-        [Column(TypeName = "timestamp")]
+        /*[Column(TypeName = "timestamp")]
         [MaxLength(8)]
         [Timestamp]
-        public byte[] SSMA_TimeStamp { get; set; }
+        public byte[] SSMA_TimeStamp { get; set; }*/
 
         public virtual tblBud tblBud { get; set; }
 

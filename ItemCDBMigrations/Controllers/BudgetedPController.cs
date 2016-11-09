@@ -101,7 +101,7 @@ namespace ItemCDBMigrations.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "BudPosNum,BudItemNum,BudSubItem,BudOrd,BudBud,BudFilled,BudFunction,BudOrgCode,BudDivCode,BudSecCode,BudUnitCode,Comments,SSMA_TimeStamp")] tblPOSITIONBUDGETED tblPOSITIONBUDGETED)
+        public ActionResult Create([Bind(Include = "BudPosNum,BudItemNum,BudSubItem,BudOrd,BudBud,BudFilled,BudFunction,BudOrgCode,BudDivCode,BudSecCode,BudUnitCode,Comments")] tblPOSITIONBUDGETED tblPOSITIONBUDGETED)
         {
             if (ModelState.IsValid)
             {
@@ -153,7 +153,7 @@ namespace ItemCDBMigrations.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "BudPosNum,BudItemNum,BudSubItem,BudOrd,BudBud,BudFilled,BudFunction,BudOrgCode,BudDivCode,BudSecCode,BudUnitCode,Comments,SSMA_TimeStamp")] tblPOSITIONBUDGETED tblPOSITIONBUDGETED)
+        public ActionResult Edit([Bind(Include = "BudPosNum,BudItemNum,BudSubItem,BudOrd,BudBud,BudFilled,BudFunction,BudOrgCode,BudDivCode,BudSecCode,BudUnitCode,Comments")] tblPOSITIONBUDGETED tblPOSITIONBUDGETED)
         {
             if (ModelState.IsValid)
             {

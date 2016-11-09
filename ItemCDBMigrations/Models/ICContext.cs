@@ -180,9 +180,9 @@ namespace ItemCDBMigrations.Models
                 .Property(e => e.SSMA_TimeStamp)
                 .IsFixedLength();
 
-            modelBuilder.Entity<tblPOSITIONBUDGETED>()
-                .Property(e => e.SSMA_TimeStamp)
-                .IsFixedLength();
+            //modelBuilder.Entity<tblPOSITIONBUDGETED>()
+            //    .Property(e => e.SSMA_TimeStamp)
+            //    .IsFixedLength();
 
             modelBuilder.Entity<tblPOSITIONBUDGETED>()
                 .HasMany(e => e.tblPOSITIONACTUALs)
