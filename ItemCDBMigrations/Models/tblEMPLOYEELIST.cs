@@ -71,10 +71,10 @@ namespace ItemCDBMigrations.Models
         [StringLength(5)]
         public string ehrUnitNumber { get; set; }
 
-        [Column(TypeName = "timestamp")]
+        /*[Column(TypeName = "timestamp")]
         [MaxLength(8)]
         [Timestamp]
-        public byte[] SSMA_TimeStamp { get; set; }
+        public byte[] SSMA_TimeStamp { get; set; }*/
 
         public virtual tblPayLocation tblPayLocation { get; set; }
 

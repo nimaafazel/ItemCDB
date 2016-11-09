@@ -248,10 +248,10 @@ namespace ItemCDBMigrations.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EmplID,LastName,FirstName,MiddleName,NameSuffix,EmplStatus,SeniorityDate,PayLoc,BirthDate,Gender,Ethnicity,Comments,ehrPositionID,ehrUnitNumber,SSMA_TimeStamp")] tblEMPLOYEELIST tblEMPLOYEELIST)
+        public ActionResult Edit([Bind(Include = "EmplID,LastName,FirstName,MiddleName,NameSuffix,EmplStatus,SeniorityDate,PayLoc,BirthDate,Gender,Ethnicity,Comments,ehrPositionID,ehrUnitNumber")] tblEMPLOYEELIST tblEMPLOYEELIST)        
         {
-            if (ModelState.IsValid)
-            {
+            if (ModelState.IsValid)                 
+            {        
                 db.Entry(tblEMPLOYEELIST).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

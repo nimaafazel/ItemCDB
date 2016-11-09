@@ -71,9 +71,9 @@ namespace ItemCDBMigrations.Models
                 .Property(e => e.BirthDate)
                 .HasPrecision(0);
 
-            modelBuilder.Entity<tblEMPLOYEELIST>()
-                .Property(e => e.SSMA_TimeStamp)
-                .IsFixedLength();
+            //modelBuilder.Entity<tblEMPLOYEELIST>()
+            //    .Property(e => e.SSMA_TimeStamp)
+            //    .IsFixedLength();
 
             modelBuilder.Entity<tblEmploymentType>()
                 .HasMany(e => e.tblPOSITIONACTUALs)
