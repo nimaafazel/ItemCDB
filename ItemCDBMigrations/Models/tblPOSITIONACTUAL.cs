@@ -12,12 +12,14 @@ namespace ItemCDBMigrations.Models
         [Key]
         public int ActPosAutoID { get; set; }
 
-        [Display(Name ="Position Number")]
+        [Required]
         public int ActPosNum { get; set; }
 
+        [Required]
         [Display(Name ="Employee ID")]
         public int EmplID { get; set; }
 
+        [Required]
         [Display(Name ="Effective Date")]
         [Column(TypeName = "datetime2")]
         [DataType(DataType.Date)]
@@ -32,7 +34,6 @@ namespace ItemCDBMigrations.Models
 
         [Required]
         [StringLength(1)]
-        [Display(Name ="Status")]
         public string ActEmplStatus { get; set; }
 
         [Required]
@@ -53,7 +54,6 @@ namespace ItemCDBMigrations.Models
         [DisplayFormat(DataFormatString ="{0:C2}")]
         public decimal? PayRate { get; set; }
 
-        [Display(Name ="Pay Period")]
         public int? PayPeriod { get; set; }
 
         [Required]

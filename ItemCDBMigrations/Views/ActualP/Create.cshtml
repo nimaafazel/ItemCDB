@@ -15,7 +15,7 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.ActPosNum, "ActPosNum", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.tblPOSITIONBUDGETED.BudPosNum, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("ActPosNum", null, "Select Position Number", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.ActPosNum, "", new { @class = "text-danger" })
@@ -23,7 +23,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.EmplID, "EmplID", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.EmplID, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("EmplID", null, "Select Employee ID", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.EmplID, "", new { @class = "text-danger" })
@@ -47,7 +47,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ActEmplStatus, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.tblEMPLOYEELIST.EmplStatus, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.ActEmplStatus, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ActEmplStatus, "", new { @class = "text-danger" })
@@ -87,7 +87,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.PayPeriod, "PayPeriod", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.tblPayPeriod.PayTypeDesc, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("PayPeriod", null, "Select Pay Period", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.PayPeriod, "", new { @class = "text-danger" })
@@ -95,7 +95,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.EmplType, "EmplType", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.tblEmploymentType.EmplTypeDesc, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("EmplType", null, "Select Employment Type", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.EmplType, "", new { @class = "text-danger" })
