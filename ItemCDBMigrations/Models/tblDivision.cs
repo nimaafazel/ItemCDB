@@ -21,10 +21,12 @@ namespace ItemCDBMigrations.Models
 
         [StringLength(50)]
         [Display(Name ="Division Code")]
+        [Required]
         public string DivDesc { get; set; }
 
         [StringLength(50)]
         [Display(Name ="Division Name")]
+        [Required]
         public string DivDesc1 { get; set; }
 
         [StringLength(50)]

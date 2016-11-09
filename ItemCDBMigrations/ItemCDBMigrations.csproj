@@ -157,6 +157,10 @@
     <Compile Include="Migrations\201611022051060_EmployeeNameSizeChange.Designer.cs">
       <DependentUpon>201611022051060_EmployeeNameSizeChange.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611090033120_RequiredDivision.cs" />
+    <Compile Include="Migrations\201611090033120_RequiredDivision.Designer.cs">
+      <DependentUpon>201611090033120_RequiredDivision.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ICContext.cs" />
     <Compile Include="Models\tblBargainUnit.cs" />
@@ -276,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611022051060_EmployeeNameSizeChange.resx">
       <DependentUpon>201611022051060_EmployeeNameSizeChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611090033120_RequiredDivision.resx">
+      <DependentUpon>201611090033120_RequiredDivision.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
