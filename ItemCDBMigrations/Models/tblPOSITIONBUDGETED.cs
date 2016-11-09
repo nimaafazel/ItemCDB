@@ -21,10 +21,12 @@ namespace ItemCDBMigrations.Models
 
         [Required]
         [StringLength(10)]
+        [Display(Name ="Budgeted Item")]
         public string BudItemNum { get; set; }
 
         [Required]
         [StringLength(1)]
+        [Display(Name ="Budgeted SubItem")]
         public string BudSubItem { get; set; }
 
         [Required]
@@ -46,7 +48,7 @@ namespace ItemCDBMigrations.Models
         [Required]
         public int BudDivCode { get; set; }
 
-        [Required]
+        [Required]        
         public int BudSecCode { get; set; }
 
         [Required]
