@@ -26,7 +26,7 @@ namespace ItemCDBMigrations.Controllers
             else
                 searchString = currentFilter;
 
-            ViewBag.CurrentFilter = currentFilter;
+            ViewBag.CurrentFilter = searchString;
             ViewBag.CurrentSortOrder = sortOrder;
 
             // get the positions
