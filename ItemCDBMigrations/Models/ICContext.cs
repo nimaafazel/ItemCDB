@@ -176,9 +176,9 @@ namespace ItemCDBMigrations.Models
                 .Property(e => e.PayRate)
                 .HasPrecision(19, 4);
 
-            modelBuilder.Entity<tblPOSITIONACTUAL>()
-                .Property(e => e.SSMA_TimeStamp)
-                .IsFixedLength();
+            //modelBuilder.Entity<tblPOSITIONACTUAL>()
+            //    .Property(e => e.SSMA_TimeStamp)
+            //    .IsFixedLength();
 
             //modelBuilder.Entity<tblPOSITIONBUDGETED>()
             //    .Property(e => e.SSMA_TimeStamp)

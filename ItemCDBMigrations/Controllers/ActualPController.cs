@@ -97,7 +97,7 @@ namespace ItemCDBMigrations.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ActPosAutoID,ActPosNum,EmplID,EffectiveDate,DeptHireDate,ActEmplStatus,ActItemNum,ActSubItem,Step,PayRate,PayPeriod,EmplType,PreItemNum,PreSubItem,ReasonOfChange,Comments,SSMA_TimeStamp")] tblPOSITIONACTUAL tblPOSITIONACTUAL)
+        public ActionResult Create([Bind(Include = "ActPosAutoID,ActPosNum,EmplID,EffectiveDate,DeptHireDate,ActEmplStatus,ActItemNum,ActSubItem,Step,PayRate,PayPeriod,EmplType,PreItemNum,PreSubItem,ReasonOfChange,Comments")] tblPOSITIONACTUAL tblPOSITIONACTUAL)
         {
             if (ModelState.IsValid)
             {
@@ -141,7 +141,7 @@ namespace ItemCDBMigrations.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ActPosAutoID,ActPosNum,EmplID,EffectiveDate,DeptHireDate,ActEmplStatus,ActItemNum,ActSubItem,Step,PayRate,PayPeriod,EmplType,PreItemNum,PreSubItem,ReasonOfChange,Comments,SSMA_TimeStamp")] tblPOSITIONACTUAL tblPOSITIONACTUAL)
+        public ActionResult Edit([Bind(Include = "ActPosAutoID,ActPosNum,EmplID,EffectiveDate,DeptHireDate,ActEmplStatus,ActItemNum,ActSubItem,Step,PayRate,PayPeriod,EmplType,PreItemNum,PreSubItem,ReasonOfChange,Comments")] tblPOSITIONACTUAL tblPOSITIONACTUAL)
         {
             if (ModelState.IsValid)
             {

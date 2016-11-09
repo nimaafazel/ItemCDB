@@ -177,6 +177,10 @@
     <Compile Include="Migrations\201611091730316_RemoveTimeStmpBudP.Designer.cs">
       <DependentUpon>201611091730316_RemoveTimeStmpBudP.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611091844469_RemoveTimeStmpActualP.cs" />
+    <Compile Include="Migrations\201611091844469_RemoveTimeStmpActualP.Designer.cs">
+      <DependentUpon>201611091844469_RemoveTimeStmpActualP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ICContext.cs" />
     <Compile Include="Models\tblBargainUnit.cs" />
@@ -311,6 +315,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611091730316_RemoveTimeStmpBudP.resx">
       <DependentUpon>201611091730316_RemoveTimeStmpBudP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611091844469_RemoveTimeStmpActualP.resx">
+      <DependentUpon>201611091844469_RemoveTimeStmpActualP.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -74,10 +74,10 @@ namespace ItemCDBMigrations.Models
 
         public string Comments { get; set; }
 
-        [Column(TypeName = "timestamp")]
+        /*[Column(TypeName = "timestamp")]
         [MaxLength(8)]
         [Timestamp]
-        public byte[] SSMA_TimeStamp { get; set; }
+        public byte[] SSMA_TimeStamp { get; set; }*/
 
         public virtual tblEMPLOYEELIST tblEMPLOYEELIST { get; set; }
 
