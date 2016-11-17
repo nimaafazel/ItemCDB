@@ -306,6 +306,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="LocalReports\VacancyByDiv.rdlc" />
     <EmbeddedResource Include="Migrations\201610312334292_InitialM.resx">
       <DependentUpon>201610312334292_InitialM.cs</DependentUpon>
     </EmbeddedResource>
