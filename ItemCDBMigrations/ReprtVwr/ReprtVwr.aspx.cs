@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WebForms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -19,9 +20,10 @@ namespace ItemCDBMigrations.ReprtVwr
                 // load the report after the page loads
                 if (!string.IsNullOrEmpty(param))
                 {
-                    /*
+                    
                     if (param == "local")
                         showLocalReport();
+                    /*
                     if (param == "remote")
                         showRemoteReport();
                         */
@@ -36,19 +38,18 @@ namespace ItemCDBMigrations.ReprtVwr
                 // report url         
                 string localReportPath = "LocalReports/VacancyByDiv.rdlc";
 
-                /*
+                
                 // processing mode
                 rptViewer.ProcessingMode = ProcessingMode.Local;
 
                 // set the report path
                 rptViewer.LocalReport.ReportPath = localReportPath;
 
-                var dataSource = new VacancyDataSetTableAdapters.View_VacancyByDivisionOrderedTableAdapter().GetData();
-                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("VacancyDataSet", (object)dataSource));
+                var dataSource = new ICViewsDataSetTableAdapters.View_VacByDivisionTableAdapter().GetData();
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ICViewsDataSet", (object)dataSource));                
 
                 // refresh the report
-                rptViewer.LocalReport.Refresh();
-                */
+                rptViewer.LocalReport.Refresh();                
             }
             catch (Exception ex)
             {
