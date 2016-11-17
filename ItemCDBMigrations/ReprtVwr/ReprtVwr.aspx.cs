@@ -36,7 +36,7 @@ namespace ItemCDBMigrations.ReprtVwr
             try
             {
                 // report url         
-                string localReportPath = "LocalReports/VacancyByDiv.rdlc";
+                string localReportPath = "LocalReports/VacByDivision.rdlc";
 
                 
                 // processing mode
