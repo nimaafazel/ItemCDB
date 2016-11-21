@@ -1125,7 +1125,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>ICDataSet</DataSetName>
+        <DataSetName>ICDataSet1</DataSetName>
         <Left>0.07812in</Left>
         <Height>1.21615in</Height>
         <Width>10.35417in</Width>
@@ -1276,7 +1276,7 @@
           <rd:DefaultName>Textbox74</rd:DefaultName>
           <Left>3.04687in</Left>
           <Height>0.25in</Height>
-          <Width>4.5in</Width>
+          <Width>4.19792in</Width>
           <ZIndex>3</ZIndex>
           <Style>
             <Border>
@@ -1803,18 +1803,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ICDataSet">
+    <DataSource Name="ICDataSet1">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>fa7b49bb-d269-4469-a269-b020cb72e445</rd:DataSourceID>
+      <rd:DataSourceID>581b36b4-410d-4ed8-8b59-08a811b91e3a</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="ICDataSet">
+    <DataSet Name="ICDataSet1">
       <Query>
-        <DataSourceName>ICDataSet</DataSourceName>
+        <DataSourceName>ICDataSet1</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -1858,14 +1858,18 @@
           <DataField>Comments</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="BudSubItem">
+          <DataField>BudSubItem</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>ICDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ICDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>View_VacByDivision5</rd:TableName>
+        <rd:DataSetName>ICDataSet1</rd:DataSetName>
+        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ICDataSet1.xsd</rd:SchemaPath>
+        <rd:TableName>View_VacByDivision6</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>View_VacByDivision5TableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>View_VacByDivision6TableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
