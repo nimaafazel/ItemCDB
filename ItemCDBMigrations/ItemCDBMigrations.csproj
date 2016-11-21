@@ -151,16 +151,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="ICViews2DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ICViews2DataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ICViewsDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ICViewsDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201610312334292_InitialM.cs" />
     <Compile Include="Migrations\201610312334292_InitialM.Designer.cs">
       <DependentUpon>201610312334292_InitialM.cs</DependentUpon>
@@ -241,28 +231,6 @@
     <Content Include="ReprtVwr\ReprtVwr.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="ICViewsDataSet.xsc">
-      <DependentUpon>ICViewsDataSet.xsd</DependentUpon>
-    </Content>
-    <Content Include="ICViews2DataSet.xsc">
-      <DependentUpon>ICViews2DataSet.xsd</DependentUpon>
-    </Content>
-    <None Include="ICViews2DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ICViews2DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="ICViews2DataSet.xss">
-      <DependentUpon>ICViews2DataSet.xsd</DependentUpon>
-    </Content>
-    <None Include="ICViewsDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ICViewsDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="ICViewsDataSet.xss">
-      <DependentUpon>ICViewsDataSet.xsd</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -339,7 +307,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="LocalReports\VacancyByDiv.rdlc" />
-    <EmbeddedResource Include="LocalReports\VacByDiv.rdlc" />
     <EmbeddedResource Include="Migrations\201610312334292_InitialM.resx">
       <DependentUpon>201610312334292_InitialM.cs</DependentUpon>
     </EmbeddedResource>

@@ -38,7 +38,7 @@ namespace ItemCDBMigrations.ReprtVwr
                 // report url         
                 string localReportPath = "LocalReports/VacByDiv.rdlc";
 
-                
+                /*
                 // processing mode
                 rptViewer.ProcessingMode = ProcessingMode.Local;
 
@@ -49,7 +49,7 @@ namespace ItemCDBMigrations.ReprtVwr
                 rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ICViewsDataSet", (object)dataSource));                
 
                 // refresh the report
-                rptViewer.LocalReport.Refresh();                
+                rptViewer.LocalReport.Refresh();             */   
             }
             catch (Exception ex)
             {
