@@ -36,20 +36,20 @@ namespace ItemCDBMigrations.ReprtVwr
             try
             {
                 // report url         
-                string localReportPath = "LocalReports/VacByDiv.rdlc";
+                string localReportPath = "LocalReports/VacByDivision.rdlc";
 
-                /*
+                
                 // processing mode
                 rptViewer.ProcessingMode = ProcessingMode.Local;
 
                 // set the report path
                 rptViewer.LocalReport.ReportPath = localReportPath;
 
-                var dataSource = new ICViewsDataSetTableAdapters.View_VacByDivisionTableAdapter().GetData();
-                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ICViewsDataSet", (object)dataSource));                
+                var dataSource = new ICDataSetTableAdapters.View_VacByDivision5TableAdapter().GetData();                
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ICDataSet", (object)dataSource));                
 
                 // refresh the report
-                rptViewer.LocalReport.Refresh();             */   
+                rptViewer.LocalReport.Refresh();             
             }
             catch (Exception ex)
             {

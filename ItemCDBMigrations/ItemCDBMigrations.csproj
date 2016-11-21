@@ -151,6 +151,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="ICDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ICDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201610312334292_InitialM.cs" />
     <Compile Include="Migrations\201610312334292_InitialM.Designer.cs">
       <DependentUpon>201610312334292_InitialM.cs</DependentUpon>
@@ -231,6 +236,17 @@
     <Content Include="ReprtVwr\ReprtVwr.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ICDataSet.xsc">
+      <DependentUpon>ICDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="ICDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ICDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ICDataSet.xss">
+      <DependentUpon>ICDataSet.xsd</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
