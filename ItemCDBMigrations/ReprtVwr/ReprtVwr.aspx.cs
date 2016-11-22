@@ -36,7 +36,7 @@ namespace ItemCDBMigrations.ReprtVwr
             try
             {
                 // report url         
-                string localReportPath = "LocalReports/VacByDivision.rdlc";
+                string localReportPath = "LocalReports/VacByBudItemDesc.rdlc";
 
                 
                 // processing mode
@@ -45,8 +45,8 @@ namespace ItemCDBMigrations.ReprtVwr
                 // set the report path
                 rptViewer.LocalReport.ReportPath = localReportPath;
 
-                var dataSource = new ICDataSet1TableAdapters.View_VacByDivision6TableAdapter().GetData();                
-                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ICDataSet1", (object)dataSource));                
+                var dataSource = new ICDataSet1TableAdapters.View_VacByBudItemDescriptionTableAdapter().GetData();                         
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("VacByBudItemDescDataSet2", (object)dataSource));                
 
                 // refresh the report
                 rptViewer.LocalReport.Refresh();             

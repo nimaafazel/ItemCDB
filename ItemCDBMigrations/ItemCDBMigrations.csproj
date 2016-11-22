@@ -161,6 +161,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ICDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ICDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ICDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201610312334292_InitialM.cs" />
     <Compile Include="Migrations\201610312334292_InitialM.Designer.cs">
       <DependentUpon>201610312334292_InitialM.cs</DependentUpon>
@@ -263,6 +268,17 @@
     <Content Include="ICDataSet1.xss">
       <DependentUpon>ICDataSet1.xsd</DependentUpon>
     </Content>
+    <Content Include="ICDataSet2.xsc">
+      <DependentUpon>ICDataSet2.xsd</DependentUpon>
+    </Content>
+    <None Include="ICDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ICDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ICDataSet2.xss">
+      <DependentUpon>ICDataSet2.xsd</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -341,6 +357,7 @@
     <EmbeddedResource Include="LocalReports\VacancyByDiv.rdlc">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="LocalReports\VacByBudItemDesc.rdlc" />
     <EmbeddedResource Include="LocalReports\VacByDivision.rdlc">
       <SubType>Designer</SubType>
     </EmbeddedResource>
