@@ -390,14 +390,16 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>Sub-Item Total:</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox45</rd:DefaultName>
@@ -633,7 +635,28 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
+                              <Value>Beaches: </Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                            <TextRun>
                               <Value>=Count(IIf(Fields!BudFunction.Value = "B", Fields!BudPosNum.Value, Nothing))</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                            <TextRun>
+                              <Value>  Marina: </Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                            <TextRun>
+                              <Value>=Count(IIf(Fields!BudFunction.Value = "M", Fields!BudPosNum.Value, Nothing))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -641,7 +664,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Center</TextAlign>
+                            <TextAlign>Left</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -657,76 +680,11 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <ColSpan>3</ColSpan>
                   </CellContents>
                 </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox98">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Count(IIf(Fields!BudFunction.Value = "M", Fields!BudPosNum.Value, Nothing))</Value>
-                              <Style>
-                                <FontSize>8pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox98</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox104">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style>
-                                <FontSize>8pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox104</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
+                <TablixCell />
+                <TablixCell />
               </TablixCells>
             </TablixRow>
             <TablixRow>
@@ -1020,7 +978,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox105">
+                    <Textbox Name="Textbox390">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -1028,13 +986,16 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox105</rd:DefaultName>
+                      <rd:DefaultName>Textbox390</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -1963,7 +1924,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -2282,7 +2242,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -2601,7 +2560,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -2920,7 +2878,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -3239,7 +3196,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -3558,7 +3514,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -3875,7 +3830,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -4194,7 +4148,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -4513,7 +4466,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -4832,7 +4784,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -5496,7 +5447,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox68</rd:DefaultName>
-          <Top>0.23004in</Top>
+          <Top>0.06944in</Top>
           <Left>0.10415in</Left>
           <Height>0.18576in</Height>
           <Width>0.45833in</Width>
@@ -5517,7 +5468,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>(a) Budget Type</Value>
+                  <Value>(a) Ord: Position in Ordinance</Value>
                   <Style>
                     <FontSize>7pt</FontSize>
                   </Style>
@@ -5528,7 +5479,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>B: Budgeted</Value>
+                  <Value>(b) Bud Position  budgeted</Value>
                   <Style>
                     <FontSize>7pt</FontSize>
                   </Style>
@@ -5539,7 +5490,18 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>U: Unfunded</Value>
+                  <Value>(c) Filled: Position filled</Value>
+                  <Style>
+                    <FontSize>7pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>(d) Vac: Vacant position</Value>
                   <Style>
                     <FontSize>7pt</FontSize>
                   </Style>
@@ -5549,10 +5511,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox68</rd:DefaultName>
-          <Top>0.23004in</Top>
+          <Top>0.06944in</Top>
           <Left>0.97915in</Left>
-          <Height>0.42882in</Height>
-          <Width>0.91666in</Width>
+          <Height>0.52604in</Height>
+          <Width>1.43752in</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -5571,7 +5533,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>(b) Beaches or Marina</Value>
+                  <Value>(e) Func: Function (Beaches or Marina)</Value>
                   <Style>
                     <FontSize>7pt</FontSize>
                   </Style>
@@ -5603,65 +5565,11 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox68</rd:DefaultName>
-          <Top>0.23004in</Top>
-          <Left>2.57291in</Left>
-          <Height>0.42882in</Height>
-          <Width>1.04166in</Width>
+          <Top>0.06944in</Top>
+          <Left>2.99999in</Left>
+          <Height>0.41493in</Height>
+          <Width>1.79861in</Width>
           <ZIndex>2</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-        <Textbox Name="Textbox108">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>(c) Gender</Value>
-                  <Style>
-                    <FontSize>7pt</FontSize>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>M: Male</Value>
-                  <Style>
-                    <FontSize>7pt</FontSize>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>F: Female</Value>
-                  <Style>
-                    <FontSize>7pt</FontSize>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox68</rd:DefaultName>
-          <Top>0.23004in</Top>
-          <Left>4.27082in</Left>
-          <Height>0.42882in</Height>
-          <Width>0.53472in</Width>
-          <ZIndex>3</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -5679,7 +5587,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>(d) Ethnic Ctg</Value>
+                  <Value>(f) Division</Value>
                   <Style>
                     <FontSize>7pt</FontSize>
                   </Style>
@@ -5690,7 +5598,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>1: White</Value>
+                  <Value>ASD: Administrative Services Division</Value>
                   <Style>
                     <FontSize>7pt</FontSize>
                   </Style>
@@ -5701,7 +5609,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>3: African American</Value>
+                  <Value>AMD: Asset Management Division</Value>
                   <Style>
                     <FontSize>7pt</FontSize>
                   </Style>
@@ -5712,7 +5620,29 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>5: Hispanic</Value>
+                  <Value>CMSD: Community &amp; Marketing Services</Value>
+                  <Style>
+                    <FontSize>7pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>FPMD: Facilities &amp; Property Maint. Division</Value>
+                  <Style>
+                    <FontSize>7pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>PLN: Planning Division</Value>
                   <Style>
                     <FontSize>7pt</FontSize>
                   </Style>
@@ -5722,65 +5652,11 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox68</rd:DefaultName>
-          <Top>0.23004in</Top>
+          <Top>0.06944in</Top>
           <Left>5.47915in</Left>
-          <Height>0.53993in</Height>
-          <Width>0.9861in</Width>
-          <ZIndex>4</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-        <Textbox Name="Textbox110">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>6: American Indian</Value>
-                  <Style>
-                    <FontSize>7pt</FontSize>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>7: Asian/Pacific Islander</Value>
-                  <Style>
-                    <FontSize>7pt</FontSize>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>8: Filipino</Value>
-                  <Style>
-                    <FontSize>7pt</FontSize>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox68</rd:DefaultName>
-          <Top>0.34114in</Top>
-          <Left>7.31943in</Left>
-          <Height>0.42882in</Height>
-          <Width>1.21527in</Width>
-          <ZIndex>5</ZIndex>
+          <Height>0.82205in</Height>
+          <Width>2.58334in</Width>
+          <ZIndex>3</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
