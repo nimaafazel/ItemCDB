@@ -32,6 +32,7 @@ namespace ItemCDBMigrations.ReprtVwr
                             break;
 
                         default:
+                            showLocal();
                             break;
                     }
                     /*
@@ -41,6 +42,32 @@ namespace ItemCDBMigrations.ReprtVwr
                         showRemoteReport();
                         */
                 }
+            }
+        }
+
+        private void showLocal()
+        {
+            try
+            {
+                // report url         
+                string localReportPath = "LocalReports/ItemsEncumbered.rdlc";
+
+                // processing mode
+                rptViewer.ProcessingMode = ProcessingMode.Local;
+
+                // set the report path
+                rptViewer.LocalReport.ReportPath = localReportPath;
+
+                var dataSource = new ICDataSet3TableAdapters.View_ItemsEncumbered2TableAdapter().GetData();
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ItemsEncumberedDataSet", (object)dataSource));
+
+                // refresh the report
+                rptViewer.LocalReport.Refresh();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
             }
         }
 

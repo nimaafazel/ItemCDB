@@ -166,6 +166,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ICDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ICDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ICDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201610312334292_InitialM.cs" />
     <Compile Include="Migrations\201610312334292_InitialM.Designer.cs">
       <DependentUpon>201610312334292_InitialM.cs</DependentUpon>
@@ -279,6 +284,17 @@
     <Content Include="ICDataSet2.xss">
       <DependentUpon>ICDataSet2.xsd</DependentUpon>
     </Content>
+    <Content Include="ICDataSet3.xsc">
+      <DependentUpon>ICDataSet3.xsd</DependentUpon>
+    </Content>
+    <None Include="ICDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ICDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ICDataSet3.xss">
+      <DependentUpon>ICDataSet3.xsd</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -354,6 +370,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="LocalReports\ItemsEncumbered.rdlc" />
     <EmbeddedResource Include="LocalReports\VacancyByDiv.rdlc">
       <SubType>Designer</SubType>
     </EmbeddedResource>
