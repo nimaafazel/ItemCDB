@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using ItemCDBMigrations.Controllers;
 
 namespace ItemCDBMigrations.ReprtVwr
 {
@@ -20,10 +21,22 @@ namespace ItemCDBMigrations.ReprtVwr
                 // load the report after the page loads
                 if (!string.IsNullOrEmpty(param))
                 {
-                    
-                    if (param == "local")
-                        showLocalReport();
+                    switch (param)
+                    {
+                        case ReportsController.REPORT_VACBYDIV:
+                            showLocalReportVacByDivision();
+                            break;
+
+                        case ReportsController.REPORT_VACBYBUDITEMDESC:
+                            showLocalReportVacByBudItemDesc();
+                            break;
+
+                        default:
+                            break;
+                    }
                     /*
+                    if (param == "local")
+                        showLocalReport();                    
                     if (param == "remote")
                         showRemoteReport();
                         */
@@ -31,13 +44,12 @@ namespace ItemCDBMigrations.ReprtVwr
             }
         }
 
-        private void showLocalReport()
+        private void showLocalReportVacByDivision()
         {
             try
             {
                 // report url         
-                string localReportPath = "LocalReports/VacByBudItemDesc.rdlc";
-
+                string localReportPath = "LocalReports/VacByDivision.rdlc";
                 
                 // processing mode
                 rptViewer.ProcessingMode = ProcessingMode.Local;
@@ -45,11 +57,38 @@ namespace ItemCDBMigrations.ReprtVwr
                 // set the report path
                 rptViewer.LocalReport.ReportPath = localReportPath;
 
-                var dataSource = new ICDataSet2TableAdapters.View_VacByBudItemDescription2TableAdapter().GetData();                  
-                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("VacByBudItemDescDataSet", (object)dataSource));                
+                var dataSource = new ICDataSet1TableAdapters.View_VacByDivision6TableAdapter().GetData();              
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ICDataSet1", (object)dataSource));                
 
                 // refresh the report
                 rptViewer.LocalReport.Refresh();             
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        private void showLocalReportVacByBudItemDesc()
+        {
+            try
+            {
+                // report url         
+                string localReportPath = "LocalReports/VacByBudItemDesc.rdlc";
+
+
+                // processing mode
+                rptViewer.ProcessingMode = ProcessingMode.Local;
+
+                // set the report path
+                rptViewer.LocalReport.ReportPath = localReportPath;
+
+                var dataSource = new ICDataSet2TableAdapters.View_VacByBudItemDescription2TableAdapter().GetData();
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("VacByBudItemDescDataSet", (object)dataSource));
+
+                // refresh the report
+                rptViewer.LocalReport.Refresh();
             }
             catch (Exception ex)
             {

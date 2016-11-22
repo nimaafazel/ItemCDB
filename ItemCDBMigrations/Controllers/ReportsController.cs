@@ -8,6 +8,9 @@ namespace ItemCDBMigrations.Controllers
 {
     public class ReportsController : Controller
     {
+        public const string REPORT_VACBYDIV = "VacancyByDivision";
+        public const string REPORT_VACBYBUDITEMDESC = "VacancyByBudItemDescription";
+
         // GET: Reports
         public ActionResult Index()
         {
@@ -18,9 +21,9 @@ namespace ItemCDBMigrations.Controllers
         /// Call to our aspx page to show the report.
         /// </summary>
         /// <returns></returns>
-        public ActionResult LocalReport()
+        public ActionResult LocalReport(string reportName)
         {
-            return Redirect("../ReprtVwr/ReprtVwr.aspx?repLoc=local");
+            return Redirect("../ReprtVwr/ReprtVwr.aspx?repLoc=" + reportName);
         }
     }
 }
