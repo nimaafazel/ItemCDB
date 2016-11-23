@@ -10,6 +10,7 @@ namespace ItemCDBMigrations.Controllers
     {
         public const string REPORT_VACBYDIV = "VacancyByDivision";
         public const string REPORT_VACBYBUDITEMDESC = "VacancyByBudItemDescription";
+        public const string REPORT_ITEMSENCUMBERED = "ItemsEncumbered";
 
         // GET: Reports
         public ActionResult Index()

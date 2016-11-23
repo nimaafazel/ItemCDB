@@ -31,6 +31,10 @@ namespace ItemCDBMigrations.ReprtVwr
                             showLocalReportVacByBudItemDesc();
                             break;
 
+                        case ReportsController.REPORT_ITEMSENCUMBERED:
+                            showLocalItemsEncumbered();
+                            break;
+
                         default:
                             showLocal();
                             break;
@@ -113,6 +117,32 @@ namespace ItemCDBMigrations.ReprtVwr
 
                 var dataSource = new ICDataSet2TableAdapters.View_VacByBudItemDescription2TableAdapter().GetData();
                 rptViewer.LocalReport.DataSources.Add(new ReportDataSource("VacByBudItemDescDataSet", (object)dataSource));
+
+                // refresh the report
+                rptViewer.LocalReport.Refresh();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        private void showLocalItemsEncumbered()
+        {
+            try
+            {
+                // report url         
+                string localReportPath = "LocalReports/ItemsEncumbered.rdlc";
+
+                // processing mode
+                rptViewer.ProcessingMode = ProcessingMode.Local;
+
+                // set the report path
+                rptViewer.LocalReport.ReportPath = localReportPath;
+
+                var dataSource = new ICDataSet3TableAdapters.View_ItemsEncumbered2TableAdapter().GetData();
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ItemsEncumberedDataSet", (object)dataSource));
 
                 // refresh the report
                 rptViewer.LocalReport.Refresh();
