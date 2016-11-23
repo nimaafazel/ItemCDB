@@ -35,6 +35,10 @@ namespace ItemCDBMigrations.ReprtVwr
                             showLocalItemsEncumbered();
                             break;
 
+                        case ReportsController.REPORT_ORGCODES:
+                            showLocalOrgCodesByEmplID();
+                            break;
+
                         default:
                             showLocal();
                             break;
@@ -143,6 +147,32 @@ namespace ItemCDBMigrations.ReprtVwr
 
                 var dataSource = new ICDataSet3TableAdapters.View_ItemsEncumbered2TableAdapter().GetData();
                 rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ItemsEncumberedDataSet", (object)dataSource));
+
+                // refresh the report
+                rptViewer.LocalReport.Refresh();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        private void showLocalOrgCodesByEmplID()
+        {
+            try
+            {
+                // report url         
+                string localReportPath = "LocalReports/OrgCodesByEmplID.rdlc";
+
+                // processing mode
+                rptViewer.ProcessingMode = ProcessingMode.Local;
+
+                // set the report path
+                rptViewer.LocalReport.ReportPath = localReportPath;
+
+                var dataSource = new ICDataSet4TableAdapters.View_OrgCodesByEmplID2TableAdapter().GetData();
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("OrgCodesByEmplIDDataSet", (object)dataSource));
 
                 // refresh the report
                 rptViewer.LocalReport.Refresh();
