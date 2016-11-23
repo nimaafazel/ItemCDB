@@ -58,7 +58,7 @@ namespace ItemCDBMigrations.ReprtVwr
             try
             {
                 // report url         
-                string localReportPath = "LocalReports/OrgCodesByEmplID.rdlc";
+                string localReportPath = "LocalReports/BudPosByEmployeeLN.rdlc";
 
                 // processing mode
                 rptViewer.ProcessingMode = ProcessingMode.Local;
@@ -66,8 +66,8 @@ namespace ItemCDBMigrations.ReprtVwr
                 // set the report path
                 rptViewer.LocalReport.ReportPath = localReportPath;
 
-                var dataSource = new ICDataSet4TableAdapters.View_OrgCodesByEmplID2TableAdapter().GetData();
-                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("OrgCodesByEmplIDDataSet", (object)dataSource));
+                var dataSource = new ICDataSet5TableAdapters.View_BudgetPosByEmployeeLN2TableAdapter().GetData();
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("BudPosByEmployeeLNDataSet", (object)dataSource));
 
                 // refresh the report
                 rptViewer.LocalReport.Refresh();
