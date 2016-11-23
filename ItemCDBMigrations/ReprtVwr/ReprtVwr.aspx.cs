@@ -39,6 +39,10 @@ namespace ItemCDBMigrations.ReprtVwr
                             showLocalOrgCodesByEmplID();
                             break;
 
+                        case ReportsController.REPORT_BUDPOSBYEMPLLN:
+                            showLocalBudPosByEmployeeLN();
+                            break;
+
                         default:
                             showLocal();
                             break;
@@ -173,6 +177,32 @@ namespace ItemCDBMigrations.ReprtVwr
 
                 var dataSource = new ICDataSet4TableAdapters.View_OrgCodesByEmplID2TableAdapter().GetData();
                 rptViewer.LocalReport.DataSources.Add(new ReportDataSource("OrgCodesByEmplIDDataSet", (object)dataSource));
+
+                // refresh the report
+                rptViewer.LocalReport.Refresh();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        private void showLocalBudPosByEmployeeLN()
+        {
+            try
+            {
+                // report url         
+                string localReportPath = "LocalReports/BudPosByEmployeeLN.rdlc";
+
+                // processing mode
+                rptViewer.ProcessingMode = ProcessingMode.Local;
+
+                // set the report path
+                rptViewer.LocalReport.ReportPath = localReportPath;
+
+                var dataSource = new ICDataSet5TableAdapters.View_BudgetPosByEmployeeLN2TableAdapter().GetData();
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("BudPosByEmployeeLNDataSet", (object)dataSource));
 
                 // refresh the report
                 rptViewer.LocalReport.Refresh();

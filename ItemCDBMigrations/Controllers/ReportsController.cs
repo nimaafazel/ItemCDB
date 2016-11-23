@@ -12,6 +12,7 @@ namespace ItemCDBMigrations.Controllers
         public const string REPORT_VACBYBUDITEMDESC = "VacancyByBudItemDescription";
         public const string REPORT_ITEMSENCUMBERED = "ItemsEncumbered";
         public const string REPORT_ORGCODES = "OrgCodes";
+        public const string REPORT_BUDPOSBYEMPLLN = "BudPosByEmployeeLN";
 
         // GET: Reports
         public ActionResult Index()
