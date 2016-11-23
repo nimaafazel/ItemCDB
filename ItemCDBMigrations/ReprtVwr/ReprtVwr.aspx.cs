@@ -54,7 +54,7 @@ namespace ItemCDBMigrations.ReprtVwr
             try
             {
                 // report url         
-                string localReportPath = "LocalReports/ItemsEncumbered.rdlc";
+                string localReportPath = "LocalReports/OrgCodesByEmplID.rdlc";
 
                 // processing mode
                 rptViewer.ProcessingMode = ProcessingMode.Local;
@@ -62,8 +62,8 @@ namespace ItemCDBMigrations.ReprtVwr
                 // set the report path
                 rptViewer.LocalReport.ReportPath = localReportPath;
 
-                var dataSource = new ICDataSet3TableAdapters.View_ItemsEncumbered2TableAdapter().GetData();
-                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ItemsEncumberedDataSet", (object)dataSource));
+                var dataSource = new ICDataSet4TableAdapters.View_OrgCodesByEmplID2TableAdapter().GetData();
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("OrgCodesByEmplIDDataSet", (object)dataSource));
 
                 // refresh the report
                 rptViewer.LocalReport.Refresh();
