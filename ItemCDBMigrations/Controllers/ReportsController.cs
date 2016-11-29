@@ -27,10 +27,7 @@ namespace ItemCDBMigrations.Controllers
         /// <returns></returns>
         public ActionResult LocalReport(string reportName)
         {
-            return Redirect("../ReprtVwr/ReprtVwr.aspx?repLoc=" + reportName);
-
-            // CHECK THE LAST ELEMENTS OF THE BUDPOSBYDIVISIONDEPT REPORT!!!
-
+            return Redirect("../ReprtVwr/ReprtVwr.aspx?repLoc=" + reportName);            
         }
     }
 }
