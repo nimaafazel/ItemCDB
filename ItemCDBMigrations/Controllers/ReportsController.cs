@@ -14,6 +14,7 @@ namespace ItemCDBMigrations.Controllers
         public const string REPORT_ORGCODES = "OrgCodes";
         public const string REPORT_BUDPOSBYEMPLLN = "BudPosByEmployeeLN";
         public const string REPORT_BUDPOSBYDIVDEPT = "BudPosByDivisionDept";
+        public const string REPORT_EMPLOYEELISTPERMTEMP = "EmployeeListPermTemp";
 
         // GET: Reports
         public ActionResult Index()

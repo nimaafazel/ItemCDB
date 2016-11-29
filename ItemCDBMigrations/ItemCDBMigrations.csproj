@@ -151,6 +151,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="IC8DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IC8DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ICDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -273,6 +278,17 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ICDataSet.xsc">
       <DependentUpon>ICDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="IC8DataSet.xsc">
+      <DependentUpon>IC8DataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="IC8DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IC8DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="IC8DataSet.xss">
+      <DependentUpon>IC8DataSet.xsd</DependentUpon>
     </Content>
     <None Include="ICDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
@@ -436,6 +452,7 @@
   <ItemGroup>
     <EmbeddedResource Include="LocalReports\BudPosByDivisionDept.rdlc" />
     <EmbeddedResource Include="LocalReports\BudPosByEmployeeLN.rdlc" />
+    <EmbeddedResource Include="LocalReports\EmployeeListPermAndTemp.rdlc" />
     <EmbeddedResource Include="LocalReports\ItemsEncumbered.rdlc" />
     <EmbeddedResource Include="LocalReports\OrgCodesByEmplID.rdlc" />
     <EmbeddedResource Include="LocalReports\VacancyByDiv.rdlc">
