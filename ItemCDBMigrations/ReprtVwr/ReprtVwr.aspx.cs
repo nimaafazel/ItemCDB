@@ -43,6 +43,10 @@ namespace ItemCDBMigrations.ReprtVwr
                             showLocalBudPosByEmployeeLN();
                             break;
 
+                        case ReportsController.REPORT_BUDPOSBYDIVDEPT:
+                            showLocalBudPosByDivisionDept();
+                            break;
+
                         default:
                             showLocal();
                             break;
@@ -70,8 +74,9 @@ namespace ItemCDBMigrations.ReprtVwr
                 // set the report path
                 rptViewer.LocalReport.ReportPath = localReportPath;
 
-                var dataSource = new ICDataSet6TableAdapters.View_BudgetPosByDivisionDep2TableAdapter().GetData();
-                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("BudPosByDivisionDepDataSet", (object)dataSource));
+                //var dataSource = new ICDataSet6TableAdapters.View_BudgetPosByDivisionDep2TableAdapter().GetData();
+                var dataSource = new ICDataSet7TableAdapters.View_BudgetPosByDivisionDep3TableAdapter().GetData();
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("BudPosByDivDept2DataSet", (object)dataSource));
 
                 // refresh the report
                 rptViewer.LocalReport.Refresh();
@@ -203,6 +208,32 @@ namespace ItemCDBMigrations.ReprtVwr
 
                 var dataSource = new ICDataSet5TableAdapters.View_BudgetPosByEmployeeLN2TableAdapter().GetData();
                 rptViewer.LocalReport.DataSources.Add(new ReportDataSource("BudPosByEmployeeLNDataSet", (object)dataSource));
+
+                // refresh the report
+                rptViewer.LocalReport.Refresh();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        private void showLocalBudPosByDivisionDept()
+        {
+            try
+            {
+                // report url         
+                string localReportPath = "LocalReports/BudPosByDivisionDept.rdlc";
+
+                // processing mode
+                rptViewer.ProcessingMode = ProcessingMode.Local;
+
+                // set the report path
+                rptViewer.LocalReport.ReportPath = localReportPath;
+
+                var dataSource = new ICDataSet7TableAdapters.View_BudgetPosByDivisionDep3TableAdapter().GetData();
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("BudPosByDivDept2DataSet", (object)dataSource));
 
                 // refresh the report
                 rptViewer.LocalReport.Refresh();

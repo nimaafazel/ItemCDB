@@ -186,6 +186,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ICDataSet6.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ICDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ICDataSet7.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201610312334292_InitialM.cs" />
     <Compile Include="Migrations\201610312334292_InitialM.Designer.cs">
       <DependentUpon>201610312334292_InitialM.cs</DependentUpon>
@@ -342,6 +347,17 @@
     </None>
     <Content Include="ICDataSet6.xss">
       <DependentUpon>ICDataSet6.xsd</DependentUpon>
+    </Content>
+    <Content Include="ICDataSet7.xsc">
+      <DependentUpon>ICDataSet7.xsd</DependentUpon>
+    </Content>
+    <None Include="ICDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ICDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ICDataSet7.xss">
+      <DependentUpon>ICDataSet7.xsd</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
