@@ -196,6 +196,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ICDataSet7.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ICDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ICDataSet8.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201610312334292_InitialM.cs" />
     <Compile Include="Migrations\201610312334292_InitialM.Designer.cs">
       <DependentUpon>201610312334292_InitialM.cs</DependentUpon>
@@ -375,6 +380,17 @@
     <Content Include="ICDataSet7.xss">
       <DependentUpon>ICDataSet7.xsd</DependentUpon>
     </Content>
+    <Content Include="ICDataSet8.xsc">
+      <DependentUpon>ICDataSet8.xsd</DependentUpon>
+    </Content>
+    <None Include="ICDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ICDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ICDataSet8.xss">
+      <DependentUpon>ICDataSet8.xsd</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -453,6 +469,7 @@
     <EmbeddedResource Include="LocalReports\BudPosByDivisionDept.rdlc" />
     <EmbeddedResource Include="LocalReports\BudPosByEmployeeLN.rdlc" />
     <EmbeddedResource Include="LocalReports\EmployeeListPermAndTemp.rdlc" />
+    <EmbeddedResource Include="LocalReports\ItemControlByDivision.rdlc" />
     <EmbeddedResource Include="LocalReports\ItemsEncumbered.rdlc" />
     <EmbeddedResource Include="LocalReports\OrgCodesByEmplID.rdlc" />
     <EmbeddedResource Include="LocalReports\VacancyByDiv.rdlc">

@@ -70,7 +70,7 @@ namespace ItemCDBMigrations.ReprtVwr
             try
             {
                 // report url         
-                string localReportPath = "LocalReports/EmployeeListPermAndTemp.rdlc";
+                string localReportPath = "LocalReports/ItemControlByDivision.rdlc";
 
                 // processing mode
                 rptViewer.ProcessingMode = ProcessingMode.Local;
@@ -78,8 +78,8 @@ namespace ItemCDBMigrations.ReprtVwr
                 // set the report path
                 rptViewer.LocalReport.ReportPath = localReportPath;
 
-                var dataSource = new IC8DataSetTableAdapters.View_EmployeeListTempAndPerm2TableAdapter().GetData();
-                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("EmployeeListPermTempDataSet", (object)dataSource));
+                var dataSource = new ICDataSet8TableAdapters.View_ItemControlByDiv2TableAdapter().GetData();
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ItemControlByDivDataSet", (object)dataSource));
 
                 // refresh the report
                 rptViewer.LocalReport.Refresh();
