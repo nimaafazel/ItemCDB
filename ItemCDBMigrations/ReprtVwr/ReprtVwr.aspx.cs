@@ -47,6 +47,10 @@ namespace ItemCDBMigrations.ReprtVwr
                             showLocalBudPosByDivisionDept();
                             break;
 
+                        case ReportsController.REPORT_EMPLOYEELISTPERMTEMP:
+                            showLocalEmployeeListPermTemp();
+                            break;
+
                         default:
                             showLocal();
                             break;
@@ -233,6 +237,32 @@ namespace ItemCDBMigrations.ReprtVwr
 
                 var dataSource = new ICDataSet7TableAdapters.View_BudgetPosByDivisionDep3TableAdapter().GetData();
                 rptViewer.LocalReport.DataSources.Add(new ReportDataSource("BudPosByDivDept2DataSet", (object)dataSource));
+
+                // refresh the report
+                rptViewer.LocalReport.Refresh();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        private void showLocalEmployeeListPermTemp()
+        {
+            try
+            {
+                // report url         
+                string localReportPath = "LocalReports/EmployeeListPermAndTemp.rdlc";
+
+                // processing mode
+                rptViewer.ProcessingMode = ProcessingMode.Local;
+
+                // set the report path
+                rptViewer.LocalReport.ReportPath = localReportPath;
+
+                var dataSource = new IC8DataSetTableAdapters.View_EmployeeListTempAndPerm2TableAdapter().GetData();
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("EmployeeListPermTempDataSet", (object)dataSource));
 
                 // refresh the report
                 rptViewer.LocalReport.Refresh();
