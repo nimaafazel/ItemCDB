@@ -1929,7 +1929,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Divsion Total:</Value>
+                              <Value>Division Total:</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -2774,6 +2774,11 @@
                           <Style>Solid</Style>
                           <Width>1pt</Width>
                         </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
@@ -2820,6 +2825,11 @@
                           <Style>Solid</Style>
                           <Width>1pt</Width>
                         </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2859,6 +2869,11 @@
                           <Style>Solid</Style>
                           <Width>1pt</Width>
                         </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
@@ -3021,7 +3036,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox867</rd:DefaultName>
@@ -3182,7 +3199,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -5804,7 +5820,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Total (Excluding no-counts):</Value>
+                              <Value>Total (Excluding No Counts):</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -6633,7 +6649,6 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>ItemControlByDivDataSet2</DataSetName>
-        <Top>0.25917in</Top>
         <Height>5.14583in</Height>
         <Width>9.9618in</Width>
         <Style>
@@ -6643,10 +6658,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>6.39458in</Height>
+    <Height>5.14583in</Height>
     <Style />
   </Body>
-  <Width>10.38542in</Width>
+  <Width>10.5in</Width>
   <Page>
     <PageHeader>
       <Height>1.22223in</Height>
@@ -6851,8 +6866,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox7</rd:DefaultName>
-          <Top>0.67708in</Top>
-          <Height>0.53125in</Height>
+          <Top>0.69098in</Top>
+          <Height>0.51735in</Height>
           <Width>0.75173in</Width>
           <ZIndex>5</ZIndex>
           <Style>
@@ -6922,9 +6937,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox5</rd:DefaultName>
-          <Top>0.67708in</Top>
+          <Top>0.69098in</Top>
           <Left>3.33333in</Left>
-          <Height>0.51737in</Height>
+          <Height>0.53125in</Height>
           <Width>0.28125in</Width>
           <ZIndex>7</ZIndex>
           <Style>
@@ -6958,9 +6973,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox5</rd:DefaultName>
-          <Top>0.67709in</Top>
+          <Top>0.69099in</Top>
           <Left>3.61459in</Left>
-          <Height>0.54514in</Height>
+          <Height>0.53124in</Height>
           <Width>0.28472in</Width>
           <ZIndex>8</ZIndex>
           <Style>
@@ -6994,9 +7009,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox5</rd:DefaultName>
-          <Top>0.67708in</Top>
+          <Top>0.69099in</Top>
           <Left>3.9132in</Left>
-          <Height>0.53125in</Height>
+          <Height>0.51735in</Height>
           <Width>0.38195in</Width>
           <ZIndex>9</ZIndex>
           <Style>
@@ -7030,9 +7045,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox5</rd:DefaultName>
-          <Top>0.67709in</Top>
+          <Top>0.69098in</Top>
           <Left>4.29515in</Left>
-          <Height>0.53125in</Height>
+          <Height>0.51736in</Height>
           <Width>0.28819in</Width>
           <ZIndex>10</ZIndex>
           <Style>
@@ -7138,9 +7153,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox7</rd:DefaultName>
-          <Top>0.67709in</Top>
+          <Top>0.69098in</Top>
           <Left>0.75173in</Left>
-          <Height>0.53125in</Height>
+          <Height>0.51736in</Height>
           <Width>0.72049in</Width>
           <ZIndex>13</ZIndex>
           <Style>
@@ -7174,9 +7189,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox7</rd:DefaultName>
-          <Top>0.67708in</Top>
+          <Top>0.69099in</Top>
           <Left>1.47222in</Left>
-          <Height>0.53125in</Height>
+          <Height>0.51734in</Height>
           <Width>1.86111in</Width>
           <ZIndex>14</ZIndex>
           <Style>
@@ -7210,9 +7225,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox9</rd:DefaultName>
-          <Top>0.67709in</Top>
+          <Top>0.69099in</Top>
           <Left>8.12847in</Left>
-          <Height>0.53125in</Height>
+          <Height>0.51735in</Height>
           <Width>1.83333in</Width>
           <ZIndex>15</ZIndex>
           <Style>
@@ -7233,10 +7248,119 @@
         </Border>
       </Style>
     </PageHeader>
-    <LeftMargin>1in</LeftMargin>
-    <RightMargin>1in</RightMargin>
-    <TopMargin>1in</TopMargin>
-    <BottomMargin>1in</BottomMargin>
+    <PageFooter>
+      <Height>0.70746in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox85">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Legend:</Value>
+                  <Style>
+                    <FontSize>7pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox68</rd:DefaultName>
+          <Top>0.15017in</Top>
+          <Left>0.75173in</Left>
+          <Height>0.18576in</Height>
+          <Width>0.45833in</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox91">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>(a) Ord: Position in Ordinance</Value>
+                  <Style>
+                    <FontSize>7pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>(b) Bud Position  budgeted</Value>
+                  <Style>
+                    <FontSize>7pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>(c) Filled: Position filled</Value>
+                  <Style>
+                    <FontSize>7pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>(d) Vac: Vacant position</Value>
+                  <Style>
+                    <FontSize>7pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox68</rd:DefaultName>
+          <Top>0.15017in</Top>
+          <Left>4.29515in</Left>
+          <Height>0.55729in</Height>
+          <Width>1.43752in</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageFooter>
+    <PageWidth>11in</PageWidth>
+    <LeftMargin>0.25in</LeftMargin>
+    <RightMargin>0.25in</RightMargin>
+    <TopMargin>0.25in</TopMargin>
+    <BottomMargin>0.25in</BottomMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
