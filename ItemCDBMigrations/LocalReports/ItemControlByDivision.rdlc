@@ -3347,7 +3347,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!ActSubItem.Value = "A", Fields!ActSubItem.Value, Nothing))</Value>
+                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "A", Fields!BudSubItem.Value, Nothing))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -3382,7 +3382,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!ActSubItem.Value = "A" And Fields!Filled.Value &lt;&gt; 0, Fields!ActSubItem.Value, Nothing))</Value>
+                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "A" And Fields!Filled.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -3415,7 +3415,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!ActSubItem.Value = "A" And Fields!Vacant.Value &lt;&gt; 0, Fields!ActSubItem.Value, Nothing))</Value>
+                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "A" And Fields!Vacant.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -3623,7 +3623,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!ActSubItem.Value = "C", Fields!ActSubItem.Value, Nothing))</Value>
+                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "C", Fields!BudSubItem.Value, Nothing))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -3658,7 +3658,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!ActSubItem.Value = "C" And Fields!Filled.Value &lt;&gt; 0, Fields!ActSubItem.Value, Nothing))</Value>
+                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "C" And Fields!Filled.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -3691,7 +3691,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!ActSubItem.Value = "C" And Fields!Vacant.Value &lt;&gt; 0, Fields!ActSubItem.Value, Nothing))</Value>
+                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "C" And Fields!Vacant.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -3899,7 +3899,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!ActSubItem.Value = "F", Fields!ActSubItem.Value, Nothing))</Value>
+                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "F", Fields!BudSubItem.Value, Nothing))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -3934,7 +3934,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!ActSubItem.Value = "F" And Fields!Filled.Value &lt;&gt; 0, Fields!ActSubItem.Value, Nothing))</Value>
+                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "F" And Fields!Filled.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -3967,7 +3967,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!ActSubItem.Value = "F" And Fields!Vacant.Value &lt;&gt; 0, Fields!ActSubItem.Value, Nothing))</Value>
+                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "F" And Fields!Vacant.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -4175,7 +4175,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!ActSubItem.Value = "J", Fields!ActSubItem.Value, Nothing))</Value>
+                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "J", Fields!BudSubItem.Value, Nothing))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -4210,7 +4210,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!ActSubItem.Value = "J" And Fields!Filled.Value &lt;&gt; 0, Fields!ActSubItem.Value, Nothing))</Value>
+                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "J" And Fields!Filled.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -4243,7 +4243,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!ActSubItem.Value = "J" And Fields!Vacant.Value &lt;&gt; 0, Fields!ActSubItem.Value, Nothing))</Value>
+                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "J" And Fields!Vacant.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -4451,7 +4451,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!ActSubItem.Value = "L", Fields!ActSubItem.Value, Nothing))</Value>
+                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "L", Fields!BudSubItem.Value, Nothing))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -4486,7 +4486,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!ActSubItem.Value = "L" And Fields!Filled.Value &lt;&gt; 0, Fields!ActSubItem.Value, Nothing))</Value>
+                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "L" And Fields!Filled.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -4519,7 +4519,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!ActSubItem.Value = "L" And Fields!Vacant.Value &lt;&gt; 0, Fields!ActSubItem.Value, Nothing))</Value>
+                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "L" And Fields!Vacant.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -4727,7 +4727,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!ActSubItem.Value = "H", Fields!ActSubItem.Value, Nothing))</Value>
+                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "H", Fields!BudSubItem.Value, Nothing))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -4762,7 +4762,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!ActSubItem.Value = "H" And Fields!Filled.Value &lt;&gt; 0, Fields!ActSubItem.Value, Nothing))</Value>
+                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "H" And Fields!Filled.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -4795,7 +4795,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!ActSubItem.Value = "H" And Fields!Vacant.Value &lt;&gt; 0, Fields!ActSubItem.Value, Nothing))</Value>
+                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "H" And Fields!Vacant.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -5156,6 +5156,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -5307,7 +5308,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!ActSubItem.Value = "F", Fields!ActSubItem.Value, Nothing))</Value>
+                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "F", Fields!BudSubItem.Value, Nothing))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -5583,7 +5584,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!ActSubItem.Value = "J", Fields!ActSubItem.Value, Nothing))</Value>
+                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "J", Fields!BudSubItem.Value, Nothing))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
