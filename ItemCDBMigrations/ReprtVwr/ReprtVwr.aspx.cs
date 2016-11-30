@@ -74,7 +74,7 @@ namespace ItemCDBMigrations.ReprtVwr
             try
             {
                 // report url         
-                string localReportPath = "LocalReports/ItemControlByDivision.rdlc";
+                string localReportPath = "LocalReports/ItemControlByDivDept.rdlc";
 
                 // processing mode
                 rptViewer.ProcessingMode = ProcessingMode.Local;
@@ -82,8 +82,8 @@ namespace ItemCDBMigrations.ReprtVwr
                 // set the report path
                 rptViewer.LocalReport.ReportPath = localReportPath;
 
-                var dataSource = new ICDataSet10TableAdapters.View_ItemControlByDiv4TableAdapter().GetData();
-                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ItemControlByDivDataSet3", (object)dataSource));
+                var dataSource = new ICDataSet12TableAdapters.View_ItemControlByDivForDept3TableAdapter().GetData();
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ItemControlByDivDept2DataSet", (object)dataSource));
 
                 // refresh the report
                 rptViewer.LocalReport.Refresh();

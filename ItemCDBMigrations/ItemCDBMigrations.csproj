@@ -171,6 +171,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ICDataSet10.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ICDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ICDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ICDataSet12.cs">
+      <DependentUpon>ICDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ICDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ICDataSet12.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ICDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -338,6 +351,28 @@
     <Content Include="ICDataSet10.xss">
       <DependentUpon>ICDataSet10.xsd</DependentUpon>
     </Content>
+    <Content Include="ICDataSet11.xsc">
+      <DependentUpon>ICDataSet11.xsd</DependentUpon>
+    </Content>
+    <None Include="ICDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ICDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ICDataSet11.xss">
+      <DependentUpon>ICDataSet11.xsd</DependentUpon>
+    </Content>
+    <Content Include="ICDataSet12.xsc">
+      <DependentUpon>ICDataSet12.xsd</DependentUpon>
+    </Content>
+    <None Include="ICDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ICDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ICDataSet12.xss">
+      <DependentUpon>ICDataSet12.xsd</DependentUpon>
+    </Content>
     <None Include="ICDataSet2.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ICDataSet2.Designer.cs</LastGenOutput>
@@ -501,6 +536,7 @@
     <EmbeddedResource Include="LocalReports\BudPosByDivisionDept.rdlc" />
     <EmbeddedResource Include="LocalReports\BudPosByEmployeeLN.rdlc" />
     <EmbeddedResource Include="LocalReports\EmployeeListPermAndTemp.rdlc" />
+    <EmbeddedResource Include="LocalReports\ItemControlByDivDept.rdlc" />
     <EmbeddedResource Include="LocalReports\ItemControlByDivision.rdlc" />
     <EmbeddedResource Include="LocalReports\ItemsEncumbered.rdlc" />
     <EmbeddedResource Include="LocalReports\OrgCodesByEmplID.rdlc" />
