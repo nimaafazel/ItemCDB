@@ -6648,7 +6648,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>ItemControlByDivDataSet2</DataSetName>
+        <DataSetName>ItemControlByDivDataSet3</DataSetName>
         <Height>5.14583in</Height>
         <Width>9.9618in</Width>
         <Style>
@@ -7365,18 +7365,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ICDataSet9">
+    <DataSource Name="ICDataSet10">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>1356d093-8583-408a-8895-59f359372e7e</rd:DataSourceID>
+      <rd:DataSourceID>b2d42c1d-6104-44f9-826e-a6edbc1cd181</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="ItemControlByDivDataSet2">
+    <DataSet Name="ItemControlByDivDataSet3">
       <Query>
-        <DataSourceName>ICDataSet9</DataSourceName>
+        <DataSourceName>ICDataSet10</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -7456,14 +7456,18 @@
           <DataField>ActSubItem</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="BudSubItem">
+          <DataField>BudSubItem</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>ICDataSet9</rd:DataSetName>
-        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ICDataSet9.xsd</rd:SchemaPath>
-        <rd:TableName>View_ItemControlByDiv3</rd:TableName>
+        <rd:DataSetName>ICDataSet10</rd:DataSetName>
+        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ICDataSet10.xsd</rd:SchemaPath>
+        <rd:TableName>View_ItemControlByDiv4</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>View_ItemControlByDiv3TableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>View_ItemControlByDiv4TableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
