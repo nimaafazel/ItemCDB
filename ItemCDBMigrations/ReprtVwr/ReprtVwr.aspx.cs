@@ -55,6 +55,10 @@ namespace ItemCDBMigrations.ReprtVwr
                             showLocalItemControlByDiv();
                             break;
 
+                        case ReportsController.REPORT_ITEMCTRLBYDIVDEPT:
+                            showLocalItemControlByDivDept();
+                            break;
+
                         default:
                             showLocal();
                             break;
@@ -293,6 +297,32 @@ namespace ItemCDBMigrations.ReprtVwr
 
                 var dataSource = new ICDataSet10TableAdapters.View_ItemControlByDiv4TableAdapter().GetData();
                 rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ItemControlByDivDataSet3", (object)dataSource));
+
+                // refresh the report
+                rptViewer.LocalReport.Refresh();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        private void showLocalItemControlByDivDept()
+        {
+            try
+            {
+                // report url         
+                string localReportPath = "LocalReports/ItemControlByDivDept.rdlc";
+
+                // processing mode
+                rptViewer.ProcessingMode = ProcessingMode.Local;
+
+                // set the report path
+                rptViewer.LocalReport.ReportPath = localReportPath;
+
+                var dataSource = new ICDataSet13TableAdapters.View_ItemControlByDivForDept4TableAdapter().GetData();
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ItemControlByDivForDept3DataSet", (object)dataSource));
 
                 // refresh the report
                 rptViewer.LocalReport.Refresh();

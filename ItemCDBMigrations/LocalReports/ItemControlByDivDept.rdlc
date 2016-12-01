@@ -3329,7 +3329,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -10885,7 +10884,7 @@
         <DataSetName>ItemControlByDivForDept3DataSet</DataSetName>
         <Top>0.01389in</Top>
         <Height>5.79167in</Height>
-        <Width>10.39063in</Width>
+        <Width>10.39062in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -10910,7 +10909,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Item Control by Division (For Budget Services)</Value>
+                  <Value>Item Control by Division (For Department)</Value>
                   <Style>
                     <FontSize>14pt</FontSize>
                     <Color>White</Color>
@@ -11248,7 +11247,6 @@
           </Paragraphs>
           <rd:DefaultName>Textbox7</rd:DefaultName>
           <Top>0.73271in</Top>
-          <Left>0in</Left>
           <Height>0.51736in</Height>
           <Width>0.72049in</Width>
           <ZIndex>9</ZIndex>
