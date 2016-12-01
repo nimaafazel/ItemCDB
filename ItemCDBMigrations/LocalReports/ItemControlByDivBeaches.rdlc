@@ -10895,7 +10895,7 @@
     <Height>5.79167in</Height>
     <Style />
   </Body>
-  <Width>10.39063in</Width>
+  <Width>10.5in</Width>
   <Page>
     <PageHeader>
       <Height>1.25007in</Height>
@@ -10909,7 +10909,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Item Control by Division (For Department)</Value>
+                  <Value>Item Control by Division (For Beaches)</Value>
                   <Style>
                     <FontSize>14pt</FontSize>
                     <Color>White</Color>
@@ -11485,7 +11485,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>1in</Height>
+      <Height>0.76996in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -11808,10 +11808,11 @@
         </Border>
       </Style>
     </PageFooter>
-    <LeftMargin>1in</LeftMargin>
-    <RightMargin>1in</RightMargin>
-    <TopMargin>1in</TopMargin>
-    <BottomMargin>1in</BottomMargin>
+    <PageWidth>11in</PageWidth>
+    <LeftMargin>0.25in</LeftMargin>
+    <RightMargin>0.25in</RightMargin>
+    <TopMargin>0.25in</TopMargin>
+    <BottomMargin>0.25in</BottomMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
