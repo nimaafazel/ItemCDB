@@ -189,6 +189,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ICDataSet14.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ICDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ICDataSet15.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ICDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -389,6 +394,17 @@
     <Content Include="ICDataSet14.xss">
       <DependentUpon>ICDataSet14.xsd</DependentUpon>
     </Content>
+    <Content Include="ICDataSet15.xsc">
+      <DependentUpon>ICDataSet15.xsd</DependentUpon>
+    </Content>
+    <None Include="ICDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ICDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ICDataSet15.xss">
+      <DependentUpon>ICDataSet15.xsd</DependentUpon>
+    </Content>
     <None Include="ICDataSet2.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ICDataSet2.Designer.cs</LastGenOutput>
@@ -555,6 +571,7 @@
     <EmbeddedResource Include="LocalReports\ItemControlByDivBeaches.rdlc" />
     <EmbeddedResource Include="LocalReports\ItemControlByDivDept.rdlc" />
     <EmbeddedResource Include="LocalReports\ItemControlByDivision.rdlc" />
+    <EmbeddedResource Include="LocalReports\ItemControlByDivMarina.rdlc" />
     <EmbeddedResource Include="LocalReports\ItemsEncumbered.rdlc" />
     <EmbeddedResource Include="LocalReports\OrgCodesByEmplID.rdlc" />
     <EmbeddedResource Include="LocalReports\VacancyByDiv.rdlc">
