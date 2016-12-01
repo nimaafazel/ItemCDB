@@ -59,6 +59,10 @@ namespace ItemCDBMigrations.ReprtVwr
                             showLocalItemControlByDivDept();
                             break;
 
+                        case ReportsController.REPORT_ITEMCTRLBYDIVBEACHES:
+                            showLocalItemControlByDivBeaches();
+                            break;
+
                         default:
                             showLocal();
                             break;
@@ -323,6 +327,32 @@ namespace ItemCDBMigrations.ReprtVwr
 
                 var dataSource = new ICDataSet13TableAdapters.View_ItemControlByDivForDept4TableAdapter().GetData();
                 rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ItemControlByDivForDept3DataSet", (object)dataSource));
+
+                // refresh the report
+                rptViewer.LocalReport.Refresh();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        private void showLocalItemControlByDivBeaches()
+        {
+            try
+            {
+                // report url         
+                string localReportPath = "LocalReports/ItemControlByDivBeaches.rdlc";
+
+                // processing mode
+                rptViewer.ProcessingMode = ProcessingMode.Local;
+
+                // set the report path
+                rptViewer.LocalReport.ReportPath = localReportPath;
+
+                var dataSource = new ICDataSet14TableAdapters.View_ItemControlByDivForBeaches2TableAdapter().GetData();
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ItemControlByDivBeachesDataSet", (object)dataSource));
 
                 // refresh the report
                 rptViewer.LocalReport.Refresh();

@@ -17,6 +17,7 @@ namespace ItemCDBMigrations.Controllers
         public const string REPORT_EMPLOYEELISTPERMTEMP = "EmployeeListPermTemp";
         public const string REPORT_ITEMCTRLBYDIV = "ItemControlByDiv";
         public const string REPORT_ITEMCTRLBYDIVDEPT = "ItemControlByDivDept";
+        public const string REPORT_ITEMCTRLBYDIVBEACHES = "ItemControlByDivBeaches";
 
         // GET: Reports
         public ActionResult Index()
