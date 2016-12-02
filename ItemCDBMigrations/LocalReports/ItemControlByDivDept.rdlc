@@ -3128,7 +3128,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Vacant.Value)</Value>
+                              <Value>=ReportItems!Textbox173.Value - ReportItems!Textbox161.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -5616,7 +5616,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Vacant.Value)</Value>
+                              <Value>=ReportItems!Textbox372.Value - ReportItems!Textbox373.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -7184,7 +7184,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(IIf(Fields!BudSubItem.Value = "A" AND Fields!Vacant.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
+                              <Value>=ReportItems!Textbox262.Value - ReportItems!Textbox263.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -7591,7 +7591,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "C" And Fields!Vacant.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
+                              <Value>=ReportItems!Textbox450.Value - ReportItems!Textbox451.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -7998,7 +7998,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "F" And Fields!Vacant.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
+                              <Value>=ReportItems!Textbox444.Value - ReportItems!Textbox447.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -8405,7 +8405,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "J" And Fields!Vacant.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
+                              <Value>=ReportItems!Textbox454.Value - ReportItems!Textbox455.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -8812,7 +8812,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "L" And Fields!Vacant.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
+                              <Value>=ReportItems!Textbox458.Value - ReportItems!Textbox459.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -9219,7 +9219,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "H" And Fields!Vacant.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
+                              <Value>=ReportItems!Textbox462.Value - ReportItems!Textbox463.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -9528,7 +9528,8 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudOrd.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
+                              <Value>=ReportItems!Textbox375.Value + ReportItems!Textbox449.Value + ReportItems!Textbox443.Value
++ ReportItems!Textbox453.Value + ReportItems!Textbox457.Value + ReportItems!Textbox461.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -9562,7 +9563,8 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudBud.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
+                              <Value>=ReportItems!Textbox262.Value + ReportItems!Textbox450.Value + ReportItems!Textbox444.Value
++ ReportItems!Textbox454.Value + ReportItems!Textbox458.Value + ReportItems!Textbox462.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -9596,7 +9598,8 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudFilled.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
+                              <Value>=ReportItems!Textbox263.Value + ReportItems!Textbox451.Value + ReportItems!Textbox447.Value
++ ReportItems!Textbox455.Value + ReportItems!Textbox459.Value + ReportItems!Textbox463.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -9630,7 +9633,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!Vacant.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
+                              <Value>=ReportItems!Textbox466.Value - ReportItems!Textbox467.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -9658,6 +9661,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
