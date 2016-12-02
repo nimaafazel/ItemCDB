@@ -3121,14 +3121,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox162">
+                    <Textbox Name="Textbox171">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Vacant.Value)</Value>
+                              <Value>=ReportItems!Textbox173.Value - ReportItems!Textbox161.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -5609,14 +5609,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox374">
+                    <Textbox Name="Textbox376">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Vacant.Value)</Value>
+                              <Value>=ReportItems!Textbox372.Value - ReportItems!Textbox373.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -7177,14 +7177,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox264">
+                    <Textbox Name="Textbox274">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(IIf(Fields!BudSubItem.Value = "A" AND Fields!Vacant.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
+                              <Value>=ReportItems!Textbox262.Value - ReportItems!Textbox263.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -7584,14 +7584,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox452">
+                    <Textbox Name="Textbox469">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "C" And Fields!Vacant.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
+                              <Value>=ReportItems!Textbox450.Value - ReportItems!Textbox451.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -8398,14 +8398,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox456">
+                    <Textbox Name="Textbox470">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "J" And Fields!Vacant.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
+                              <Value>=ReportItems!Textbox454.Value - ReportItems!Textbox455.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -8805,14 +8805,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox460">
+                    <Textbox Name="Textbox471">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "L" And Fields!Vacant.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
+                              <Value>=ReportItems!Textbox458.Value - ReportItems!Textbox459.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -9212,14 +9212,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox464">
+                    <Textbox Name="Textbox472">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudSubItem.Value = "H" And Fields!Vacant.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
+                              <Value>=ReportItems!Textbox462.Value - ReportItems!Textbox463.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -9521,14 +9521,14 @@
                 <TablixCell />
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox465">
+                    <Textbox Name="Textbox468">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudOrd.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
+                              <Value>=ReportItems!Textbox375.Value + ReportItems!Textbox449.Value + ReportItems!Textbox443.Value + ReportItems!Textbox453.Value + ReportItems!Textbox457.Value + ReportItems!Textbox461.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -9555,14 +9555,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox466">
+                    <Textbox Name="Textbox475">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudBud.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
+                              <Value>=ReportItems!Textbox262.Value + ReportItems!Textbox450.Value + ReportItems!Textbox444.Value + ReportItems!Textbox454.Value + ReportItems!Textbox458.Value + ReportItems!Textbox462.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -9589,14 +9589,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox467">
+                    <Textbox Name="Textbox476">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!BudFilled.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
+                              <Value>=ReportItems!Textbox263.Value + ReportItems!Textbox451.Value + ReportItems!Textbox447.Value + ReportItems!Textbox455.Value + ReportItems!Textbox459.Value + ReportItems!Textbox463.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -9623,14 +9623,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox468">
+                    <Textbox Name="Textbox473">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Microsoft.VisualBasic.Interaction.IIf(Fields!Vacant.Value &lt;&gt; 0, Fields!BudSubItem.Value, Nothing))</Value>
+                              <Value>=ReportItems!Textbox475.Value - ReportItems!Textbox476.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -10038,7 +10038,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox1028">
+                    <Textbox Name="Textbox1029">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -10359,7 +10359,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=ReportItems!Textbox465.Value - ReportItems!Textbox1026.Value</Value>
+                              <Value>=ReportItems!Textbox468.Value - ReportItems!Textbox1026.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -10398,7 +10398,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=ReportItems!Textbox466.Value - ReportItems!Textbox1037.Value</Value>
+                              <Value>=ReportItems!Textbox475.Value - ReportItems!Textbox1037.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -10437,7 +10437,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=ReportItems!Textbox467.Value - ReportItems!Textbox1027.Value</Value>
+                              <Value>=ReportItems!Textbox476.Value - ReportItems!Textbox1027.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -10469,14 +10469,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox235">
+                    <Textbox Name="Textbox236">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=ReportItems!Textbox468.Value - ReportItems!Textbox1028.Value</Value>
+                              <Value>=ReportItems!Textbox233.Value - ReportItems!Textbox234.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
