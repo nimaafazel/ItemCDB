@@ -71,6 +71,10 @@ namespace ItemCDBMigrations.ReprtVwr
                             showLocalItemControlByBudItemDescDept();
                             break;
 
+                        case ReportsController.REPORT_ITEMCTRLBYBUDITEMBEACHES:
+                            showLocalItemControlByBudItemDescBeaches();
+                            break;
+
                         default:
                             showLocal();
                             break;
@@ -110,6 +114,8 @@ namespace ItemCDBMigrations.ReprtVwr
                 throw ex;
             }
         }
+
+        #region LocalReports
 
         private void showLocalReportVacByDivision()
         {
@@ -423,5 +429,33 @@ namespace ItemCDBMigrations.ReprtVwr
                 throw ex;
             }
         }
+
+        private void showLocalItemControlByBudItemDescBeaches()
+        {
+            try
+            {
+                // report url         
+                string localReportPath = "LocalReports/ItemControlByBudItemDescBeaches.rdlc";
+
+                // processing mode
+                rptViewer.ProcessingMode = ProcessingMode.Local;
+
+                // set the report path
+                rptViewer.LocalReport.ReportPath = localReportPath;
+
+                var dataSource = new ICDataSet18TableAdapters.View_ItemControlByBudItemDescForBeaches2TableAdapter().GetData();
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ItemControlByBudItemDescBeachesDataSet", (object)dataSource));
+
+                // refresh the report
+                rptViewer.LocalReport.Refresh();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        #endregion
     }
 }
