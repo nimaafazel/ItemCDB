@@ -67,6 +67,10 @@ namespace ItemCDBMigrations.ReprtVwr
                             showLocalItemControlByDivMarina();
                             break;
 
+                        case ReportsController.REPORT_ITEMCTRLBYBUDITEMDEPT:
+                            showLocalItemControlByBudItemDescDept();
+                            break;
+
                         default:
                             showLocal();
                             break;
@@ -383,6 +387,32 @@ namespace ItemCDBMigrations.ReprtVwr
 
                 var dataSource = new ICDataSet15TableAdapters.View_ItemControlByDivForMarina2TableAdapter().GetData();
                 rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ItemControlByDivMarinaDataSet", (object)dataSource));
+
+                // refresh the report
+                rptViewer.LocalReport.Refresh();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        private void showLocalItemControlByBudItemDescDept()
+        {
+            try
+            {
+                // report url         
+                string localReportPath = "LocalReports/ItemControlByBudItemDescDept.rdlc";
+
+                // processing mode
+                rptViewer.ProcessingMode = ProcessingMode.Local;
+
+                // set the report path
+                rptViewer.LocalReport.ReportPath = localReportPath;
+
+                var dataSource = new ICDataSet17TableAdapters.View_ItemControlByBudItemDescForDept3TableAdapter().GetData();
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ItemControlByBudItemDescDeptDataSet2", (object)dataSource));
 
                 // refresh the report
                 rptViewer.LocalReport.Refresh();

@@ -3521,7 +3521,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -7220,7 +7219,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Items Encumbered By Persons Holding Other Titles</Value>
+                  <Value>Item Control By Budgeted Item Description (For Department)</Value>
                   <Style>
                     <FontSize>14pt</FontSize>
                     <Color>White</Color>
