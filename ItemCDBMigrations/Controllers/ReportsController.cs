@@ -21,6 +21,7 @@ namespace ItemCDBMigrations.Controllers
         public const string REPORT_ITEMCTRLBYDIVMARINA = "ItemControlByDivMarina";
         public const string REPORT_ITEMCTRLBYBUDITEMDEPT = "ItemControlByBudItemDept";
         public const string REPORT_ITEMCTRLBYBUDITEMBEACHES = "ItemControlByBudItemBeaches";
+        public const string REPORT_ITEMCTRLBYBUDITEMMARINA = "ItemControlByBudItemMarina";
 
         // GET: Reports
         public ActionResult Index()
