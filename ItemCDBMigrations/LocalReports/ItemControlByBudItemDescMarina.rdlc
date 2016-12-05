@@ -7240,7 +7240,7 @@
     <Height>4.10417in</Height>
     <Style />
   </Body>
-  <Width>10.38542in</Width>
+  <Width>10.5in</Width>
   <Page>
     <PageHeader>
       <Height>1.35765in</Height>
@@ -7254,7 +7254,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Item Control By Budgeted Item Description (For Beaches)</Value>
+                  <Value>Item Control By Budgeted Item Description (For Marina)</Value>
                   <Style>
                     <FontSize>14pt</FontSize>
                     <Color>White</Color>
@@ -8206,10 +8206,14 @@
         </Border>
       </Style>
     </PageFooter>
-    <LeftMargin>1in</LeftMargin>
-    <RightMargin>1in</RightMargin>
-    <TopMargin>1in</TopMargin>
-    <BottomMargin>1in</BottomMargin>
+    <PageHeight>8.5in</PageHeight>
+    <PageWidth>11in</PageWidth>
+    <InteractiveHeight>8.5in</InteractiveHeight>
+    <InteractiveWidth>11in</InteractiveWidth>
+    <LeftMargin>0.25in</LeftMargin>
+    <RightMargin>0.25in</RightMargin>
+    <TopMargin>0.25in</TopMargin>
+    <BottomMargin>0.25in</BottomMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
