@@ -209,6 +209,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ICDataSet18.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ICDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ICDataSet19.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ICDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -453,6 +458,17 @@
     <Content Include="ICDataSet18.xss">
       <DependentUpon>ICDataSet18.xsd</DependentUpon>
     </Content>
+    <Content Include="ICDataSet19.xsc">
+      <DependentUpon>ICDataSet19.xsd</DependentUpon>
+    </Content>
+    <None Include="ICDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ICDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ICDataSet19.xss">
+      <DependentUpon>ICDataSet19.xsd</DependentUpon>
+    </Content>
     <None Include="ICDataSet2.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ICDataSet2.Designer.cs</LastGenOutput>
@@ -618,6 +634,7 @@
     <EmbeddedResource Include="LocalReports\EmployeeListPermAndTemp.rdlc" />
     <EmbeddedResource Include="LocalReports\ItemControlByBudItemDescBeaches.rdlc" />
     <EmbeddedResource Include="LocalReports\ItemControlByBudItemDescDept.rdlc" />
+    <EmbeddedResource Include="LocalReports\ItemControlByBudItemDescMarina.rdlc" />
     <EmbeddedResource Include="LocalReports\ItemControlByDivBeaches.rdlc" />
     <EmbeddedResource Include="LocalReports\ItemControlByDivDept.rdlc" />
     <EmbeddedResource Include="LocalReports\ItemControlByDivision.rdlc" />
