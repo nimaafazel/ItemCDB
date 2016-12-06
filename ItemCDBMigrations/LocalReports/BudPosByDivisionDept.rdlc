@@ -368,7 +368,6 @@
                       </Style>
                     </Textbox>
                     <ColSpan>7</ColSpan>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell />
@@ -2257,7 +2256,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>BudPosByDivDept2DataSet</DataSetName>
+        <DataSetName>BudPosByDivForDeptDataSet</DataSetName>
         <Top>0.01389in</Top>
         <Height>1.6875in</Height>
         <Width>10.38541in</Width>
@@ -3228,18 +3227,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ICDataSet7">
+    <DataSource Name="ItemCtrlDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>5d78923a-358c-4a6c-ac6c-2be08122953f</rd:DataSourceID>
+      <rd:DataSourceID>9dea940d-2310-465d-a46a-027f16c00db3</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="BudPosByDivDept2DataSet">
+    <DataSet Name="BudPosByDivForDeptDataSet">
       <Query>
-        <DataSourceName>ICDataSet7</DataSourceName>
+        <DataSourceName>ItemCtrlDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -3317,12 +3316,12 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>ICDataSet7</rd:DataSetName>
-        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ICDataSet7.xsd</rd:SchemaPath>
-        <rd:TableName>View_BudgetPosByDivisionDep3</rd:TableName>
+        <rd:DataSetName>ItemCtrlDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ItemCtrlDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>View_FBudgetPosByDivisionDep</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>View_BudgetPosByDivisionDep3TableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>View_FBudgetPosByDivisionDepTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
