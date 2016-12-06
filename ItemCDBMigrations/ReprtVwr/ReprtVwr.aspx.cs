@@ -213,8 +213,8 @@ namespace ItemCDBMigrations.ReprtVwr
                 // set the report path
                 rptViewer.LocalReport.ReportPath = localReportPath;
 
-                var dataSource = new ICDataSet4TableAdapters.View_OrgCodesByEmplID2TableAdapter().GetData();
-                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("OrgCodesByEmplIDDataSet", (object)dataSource));
+                var dataSource = new ItemCtrlDataSetTableAdapters.View_FOrgCoodesByEmplIDTableAdapter().GetData();
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("OrgCodesByEmpIDDataSet", (object)dataSource));
 
                 // refresh the report
                 rptViewer.LocalReport.Refresh();

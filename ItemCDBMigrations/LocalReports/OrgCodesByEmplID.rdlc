@@ -208,7 +208,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>OrgCodesByEmplIDDataSet</DataSetName>
+        <DataSetName>OrgCodesByEmpIDDataSet</DataSetName>
         <Top>0.02778in</Top>
         <Left>0.01389in</Left>
         <Height>0.20833in</Height>
@@ -787,18 +787,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ICDataSet4">
+    <DataSource Name="ItemCtrlDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>125ff429-6855-499a-82e6-8d3ce82d8009</rd:DataSourceID>
+      <rd:DataSourceID>dececa64-4c1e-4e20-9ec6-bde378a74607</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="OrgCodesByEmplIDDataSet">
+    <DataSet Name="OrgCodesByEmpIDDataSet">
       <Query>
-        <DataSourceName>ICDataSet4</DataSourceName>
+        <DataSourceName>ItemCtrlDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -824,12 +824,12 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>ICDataSet4</rd:DataSetName>
-        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ICDataSet4.xsd</rd:SchemaPath>
-        <rd:TableName>View_OrgCodesByEmplID2</rd:TableName>
+        <rd:DataSetName>ItemCtrlDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ItemCtrlDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>View_FOrgCoodesByEmplID</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>View_OrgCodesByEmplID2TableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>View_FOrgCoodesByEmplIDTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
