@@ -473,8 +473,8 @@ namespace ItemCDBMigrations.ReprtVwr
                 // set the report path
                 rptViewer.LocalReport.ReportPath = localReportPath;
 
-                var dataSource = new ICDataSet19TableAdapters.View_ItemControlByBudItemDescForMarina2TableAdapter().GetData();
-                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ItemControlByBudItemDescMarinaDataSet", (object)dataSource));
+                var dataSource = new ItemCtrlDataSetTableAdapters.View_FItemControlByBudItemDescMarinaTableAdapter().GetData();
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ItemCtrlByBudItemDescMarinaDataSet", (object)dataSource));
 
                 // refresh the report
                 rptViewer.LocalReport.Refresh();

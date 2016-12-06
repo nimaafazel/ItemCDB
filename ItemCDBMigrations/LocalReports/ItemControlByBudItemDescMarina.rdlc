@@ -7226,7 +7226,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>ItemControlByBudItemDescMarinaDataSet</DataSetName>
+        <DataSetName>ItemCtrlByBudItemDescMarinaDataSet</DataSetName>
         <Left>0.00521in</Left>
         <Height>4.10417in</Height>
         <Width>10.37501in</Width>
@@ -8218,18 +8218,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ICDataSet19">
+    <DataSource Name="ItemCtrlDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>b3cd7d70-f861-4006-bf29-c4c3a9ed9fa3</rd:DataSourceID>
+      <rd:DataSourceID>9681bfb9-c86e-40da-9ba6-2dc52d926826</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="ItemControlByBudItemDescMarinaDataSet">
+    <DataSet Name="ItemCtrlByBudItemDescMarinaDataSet">
       <Query>
-        <DataSourceName>ICDataSet19</DataSourceName>
+        <DataSourceName>ItemCtrlDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -8295,12 +8295,12 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>ICDataSet19</rd:DataSetName>
-        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ICDataSet19.xsd</rd:SchemaPath>
-        <rd:TableName>View_ItemControlByBudItemDescForMarina2</rd:TableName>
+        <rd:DataSetName>ItemCtrlDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ItemCtrlDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>View_FItemControlByBudItemDescMarina</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>View_ItemControlByBudItemDescForMarina2TableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>View_FItemControlByBudItemDescMarinaTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
