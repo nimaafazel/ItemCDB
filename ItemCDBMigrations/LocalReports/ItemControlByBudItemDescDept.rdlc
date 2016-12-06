@@ -7226,7 +7226,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>ItemControlByBudItemDescDeptDataSet2</DataSetName>
+        <DataSetName>ItemControlByBudItemDescDeptDataSet</DataSetName>
         <Top>0.00916in</Top>
         <Height>4.10417in</Height>
         <Width>10.37501in</Width>
@@ -8218,18 +8218,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ICDataSet17">
+    <DataSource Name="ItemCtrlDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>8c7baeec-3beb-44b8-9cc1-ea8b724329cb</rd:DataSourceID>
+      <rd:DataSourceID>11e82a8f-72ec-4323-989f-f44d95fef24f</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="ItemControlByBudItemDescDeptDataSet2">
+    <DataSet Name="ItemControlByBudItemDescDeptDataSet">
       <Query>
-        <DataSourceName>ICDataSet17</DataSourceName>
+        <DataSourceName>ItemCtrlDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -8295,12 +8295,12 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>ICDataSet17</rd:DataSetName>
-        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ICDataSet17.xsd</rd:SchemaPath>
-        <rd:TableName>View_ItemControlByBudItemDescForDept3</rd:TableName>
+        <rd:DataSetName>ItemCtrlDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ItemCtrlDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>View_FItemControlByBudItemDescForDept</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>View_ItemControlByBudItemDescForDept3TableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>View_FItemControlByBudItemDescForDeptTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
