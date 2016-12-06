@@ -239,8 +239,8 @@ namespace ItemCDBMigrations.ReprtVwr
                 // set the report path
                 rptViewer.LocalReport.ReportPath = localReportPath;
 
-                var dataSource = new ICDataSet5TableAdapters.View_BudgetPosByEmployeeLN2TableAdapter().GetData();
-                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("BudPosByEmployeeLNDataSet", (object)dataSource));
+                var dataSource = new ItemCtrlDataSetTableAdapters.View_FBudgetPosByEmployeeLNTableAdapter().GetData();
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("BudPosByEmplLNDataSet", (object)dataSource));
 
                 // refresh the report
                 rptViewer.LocalReport.Refresh();

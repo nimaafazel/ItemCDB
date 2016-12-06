@@ -870,7 +870,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>BudPosByEmployeeLNDataSet</DataSetName>
+        <DataSetName>BudPosByEmplLNDataSet</DataSetName>
         <Top>0.04167in</Top>
         <Left>0.03125in</Left>
         <Height>0.46875in</Height>
@@ -1836,18 +1836,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ICDataSet5">
+    <DataSource Name="ItemCtrlDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>992cd988-c77b-4f50-bb29-f4a93f806125</rd:DataSourceID>
+      <rd:DataSourceID>5ac1e635-8d17-4b4d-a136-a88bf2bd573d</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="BudPosByEmployeeLNDataSet">
+    <DataSet Name="BudPosByEmplLNDataSet">
       <Query>
-        <DataSourceName>ICDataSet5</DataSourceName>
+        <DataSourceName>ItemCtrlDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -1905,12 +1905,12 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>ICDataSet5</rd:DataSetName>
-        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ICDataSet5.xsd</rd:SchemaPath>
-        <rd:TableName>View_BudgetPosByEmployeeLN2</rd:TableName>
+        <rd:DataSetName>ItemCtrlDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ItemCtrlDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>View_FBudgetPosByEmployeeLN</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>View_BudgetPosByEmployeeLN2TableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>View_FBudgetPosByEmployeeLNTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
