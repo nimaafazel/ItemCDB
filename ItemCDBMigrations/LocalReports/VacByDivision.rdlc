@@ -3134,7 +3134,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>ICDataSet1</DataSetName>
+        <DataSetName>VacByDivisionDataSet</DataSetName>
         <Top>0in</Top>
         <Left>0.07292in</Left>
         <Height>2.83854in</Height>
@@ -3934,18 +3934,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ICDataSet1">
+    <DataSource Name="ItemCtrlDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>581b36b4-410d-4ed8-8b59-08a811b91e3a</rd:DataSourceID>
+      <rd:DataSourceID>80895362-3572-448b-b26d-6ac24286e54a</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="ICDataSet1">
+    <DataSet Name="VacByDivisionDataSet">
       <Query>
-        <DataSourceName>ICDataSet1</DataSourceName>
+        <DataSourceName>ItemCtrlDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -3995,12 +3995,12 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>ICDataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ICDataSet1.xsd</rd:SchemaPath>
-        <rd:TableName>View_VacByDivision6</rd:TableName>
+        <rd:DataSetName>ItemCtrlDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ItemCtrlDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>View_FVacByDivision</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>View_VacByDivision6TableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>View_FVacByDivisionTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

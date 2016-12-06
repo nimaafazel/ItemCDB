@@ -134,8 +134,8 @@ namespace ItemCDBMigrations.ReprtVwr
                 // set the report path
                 rptViewer.LocalReport.ReportPath = localReportPath;
 
-                var dataSource = new ICDataSet1TableAdapters.View_VacByDivision6TableAdapter().GetData();              
-                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ICDataSet1", (object)dataSource));                
+                var dataSource = new ItemCtrlDataSetTableAdapters.View_FVacByDivisionTableAdapter().GetData();          
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("VacByDivisionDataSet", (object)dataSource));                
 
                 // refresh the report
                 rptViewer.LocalReport.Refresh();             
