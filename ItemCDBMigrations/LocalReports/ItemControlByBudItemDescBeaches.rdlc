@@ -7226,7 +7226,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>ItemControlByBudItemDescBeachesDataSet</DataSetName>
+        <DataSetName>ItemCtrlByBudItemDescBeachesDataSet</DataSetName>
         <Left>0.00521in</Left>
         <Height>4.10417in</Height>
         <Width>10.37501in</Width>
@@ -7969,7 +7969,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>0.91102in</Height>
+      <Height>0.91103in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -8218,18 +8218,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ICDataSet18">
+    <DataSource Name="ItemCtrlDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>f9fc9bec-b5e9-4522-b30d-441c4b7ee3c9</rd:DataSourceID>
+      <rd:DataSourceID>f092781f-0829-4452-83e0-56e710a7f475</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="ItemControlByBudItemDescBeachesDataSet">
+    <DataSet Name="ItemCtrlByBudItemDescBeachesDataSet">
       <Query>
-        <DataSourceName>ICDataSet18</DataSourceName>
+        <DataSourceName>ItemCtrlDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -8295,12 +8295,12 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>ICDataSet18</rd:DataSetName>
-        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ICDataSet18.xsd</rd:SchemaPath>
-        <rd:TableName>View_ItemControlByBudItemDescForBeaches2</rd:TableName>
+        <rd:DataSetName>ItemCtrlDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ItemCtrlDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>View_FItemControlByBudItemDescForBeaches</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>View_ItemControlByBudItemDescForBeaches2TableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>View_FItemControlByBudItemDescForBeachesTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
