@@ -166,11 +166,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ICDataSet13.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ICDataSet14.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ICDataSet14.xsd</DependentUpon>
-    </Compile>
     <Compile Include="ICDataSet15.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -313,17 +308,6 @@
     </None>
     <Content Include="ICDataSet13.xss">
       <DependentUpon>ICDataSet13.xsd</DependentUpon>
-    </Content>
-    <Content Include="ICDataSet14.xsc">
-      <DependentUpon>ICDataSet14.xsd</DependentUpon>
-    </Content>
-    <None Include="ICDataSet14.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ICDataSet14.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="ICDataSet14.xss">
-      <DependentUpon>ICDataSet14.xsd</DependentUpon>
     </Content>
     <Content Include="ICDataSet15.xsc">
       <DependentUpon>ICDataSet15.xsd</DependentUpon>

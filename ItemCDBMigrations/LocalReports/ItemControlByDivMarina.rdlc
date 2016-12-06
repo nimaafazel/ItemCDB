@@ -10881,7 +10881,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>ItemControlByDivMarinaDataSet</DataSetName>
+        <DataSetName>ItemCtrlByDivMarinaDataSet</DataSetName>
         <Left>0.00001in</Left>
         <Height>5.79167in</Height>
         <Width>10.39062in</Width>
@@ -11820,18 +11820,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ICDataSet15">
+    <DataSource Name="ItemCtrlDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>958b2172-4aad-4a40-8375-9f28956e5109</rd:DataSourceID>
+      <rd:DataSourceID>edfcd637-9668-4459-90f4-6f7452b9e25f</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="ItemControlByDivMarinaDataSet">
+    <DataSet Name="ItemCtrlByDivMarinaDataSet">
       <Query>
-        <DataSourceName>ICDataSet15</DataSourceName>
+        <DataSourceName>ItemCtrlDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -11925,12 +11925,12 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>ICDataSet15</rd:DataSetName>
-        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ICDataSet15.xsd</rd:SchemaPath>
-        <rd:TableName>View_ItemControlByDivForMarina2</rd:TableName>
+        <rd:DataSetName>ItemCtrlDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ItemCtrlDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>View_FItemControlByDivForMarina</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>View_ItemControlByDivForMarina2TableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>View_FItemControlByDivForMarinaTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
