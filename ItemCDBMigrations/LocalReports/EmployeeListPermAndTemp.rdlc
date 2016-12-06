@@ -841,10 +841,10 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>EmployeeListPermTempDataSet</DataSetName>
+        <DataSetName>EmplListPermTempDataSet</DataSetName>
         <Top>0.02778in</Top>
         <Height>0.5in</Height>
-        <Width>10.38542in</Width>
+        <Width>10.38541in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1815,18 +1815,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="IC8DataSet">
+    <DataSource Name="ItemCtrlDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>567868a9-a0cd-4f04-8059-bfef83f22e83</rd:DataSourceID>
+      <rd:DataSourceID>f55e4c5f-dd87-4124-85ed-846caf4216d0</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="EmployeeListPermTempDataSet">
+    <DataSet Name="EmplListPermTempDataSet">
       <Query>
-        <DataSourceName>IC8DataSet</DataSourceName>
+        <DataSourceName>ItemCtrlDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -1884,12 +1884,12 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>IC8DataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\IC8DataSet.xsd</rd:SchemaPath>
-        <rd:TableName>View_EmployeeListTempAndPerm2</rd:TableName>
+        <rd:DataSetName>ItemCtrlDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ItemCtrlDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>View_FEmployeeListTempAndPerm</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>View_EmployeeListTempAndPerm2TableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>View_FEmployeeListTempAndPermTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
