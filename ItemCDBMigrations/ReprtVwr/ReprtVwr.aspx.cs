@@ -317,8 +317,8 @@ namespace ItemCDBMigrations.ReprtVwr
                 // set the report path
                 rptViewer.LocalReport.ReportPath = localReportPath;
 
-                var dataSource = new ICDataSet10TableAdapters.View_ItemControlByDiv4TableAdapter().GetData();
-                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ItemControlByDivDataSet3", (object)dataSource));
+                var dataSource = new ItemCtrlDataSetTableAdapters.View_FItemControlByDivTableAdapter().GetData();
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("ItemControlByDivisionDataSet", (object)dataSource));
 
                 // refresh the report
                 rptViewer.LocalReport.Refresh();

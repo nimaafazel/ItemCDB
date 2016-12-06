@@ -6372,7 +6372,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>ItemControlByDivDataSet3</DataSetName>
+        <DataSetName>ItemControlByDivisionDataSet</DataSetName>
         <Top>0in</Top>
         <Height>4.89583in</Height>
         <Width>9.96179in</Width>
@@ -7093,18 +7093,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ICDataSet10">
+    <DataSource Name="ItemCtrlDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>b2d42c1d-6104-44f9-826e-a6edbc1cd181</rd:DataSourceID>
+      <rd:DataSourceID>29987cc7-e55d-4803-922c-b68c2256d66b</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="ItemControlByDivDataSet3">
+    <DataSet Name="ItemControlByDivisionDataSet">
       <Query>
-        <DataSourceName>ICDataSet10</DataSourceName>
+        <DataSourceName>ItemCtrlDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -7190,12 +7190,12 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>ICDataSet10</rd:DataSetName>
-        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ICDataSet10.xsd</rd:SchemaPath>
-        <rd:TableName>View_ItemControlByDiv4</rd:TableName>
+        <rd:DataSetName>ItemCtrlDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ItemCtrlDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>View_FItemControlByDiv</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>View_ItemControlByDiv4TableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>View_FItemControlByDivTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

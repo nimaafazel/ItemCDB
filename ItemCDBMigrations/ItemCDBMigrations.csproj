@@ -214,11 +214,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ICDataSet19.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ICDataSet8.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ICDataSet8.xsd</DependentUpon>
-    </Compile>
     <Compile Include="ICDataSet9.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -440,17 +435,6 @@
     </None>
     <Content Include="ICDataSet19.xss">
       <DependentUpon>ICDataSet19.xsd</DependentUpon>
-    </Content>
-    <Content Include="ICDataSet8.xsc">
-      <DependentUpon>ICDataSet8.xsd</DependentUpon>
-    </Content>
-    <None Include="ICDataSet8.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ICDataSet8.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="ICDataSet8.xss">
-      <DependentUpon>ICDataSet8.xsd</DependentUpon>
     </Content>
     <Content Include="ICDataSet9.xsc">
       <DependentUpon>ICDataSet9.xsd</DependentUpon>
