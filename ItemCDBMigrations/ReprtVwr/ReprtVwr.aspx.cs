@@ -161,8 +161,8 @@ namespace ItemCDBMigrations.ReprtVwr
                 // set the report path
                 rptViewer.LocalReport.ReportPath = localReportPath;
 
-                var dataSource = new ICDataSet2TableAdapters.View_VacByBudItemDescription2TableAdapter().GetData();
-                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("VacByBudItemDescDataSet", (object)dataSource));
+                var dataSource = new ItemCtrlDataSetTableAdapters.View_FVacByBudItemDescTableAdapter().GetData();
+                rptViewer.LocalReport.DataSources.Add(new ReportDataSource("VacByBudgetItemDescDataSet", (object)dataSource));
 
                 // refresh the report
                 rptViewer.LocalReport.Refresh();
