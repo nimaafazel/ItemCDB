@@ -10881,7 +10881,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>ItemControlByDivBeachesDataSet</DataSetName>
+        <DataSetName>ItemCtrlByDivBeachesDataSet</DataSetName>
         <Left>0.00001in</Left>
         <Height>5.79167in</Height>
         <Width>10.39062in</Width>
@@ -11820,18 +11820,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ICDataSet14">
+    <DataSource Name="ItemCtrlDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>a8f1d8b3-9ab5-410a-a970-6a175e34d8cf</rd:DataSourceID>
+      <rd:DataSourceID>c94f8944-8342-4962-8f01-4b3431d31006</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="ItemControlByDivBeachesDataSet">
+    <DataSet Name="ItemCtrlByDivBeachesDataSet">
       <Query>
-        <DataSourceName>ICDataSet14</DataSourceName>
+        <DataSourceName>ItemCtrlDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -11925,12 +11925,12 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>ICDataSet14</rd:DataSetName>
-        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ICDataSet14.xsd</rd:SchemaPath>
-        <rd:TableName>View_ItemControlByDivForBeaches2</rd:TableName>
+        <rd:DataSetName>ItemCtrlDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ItemCtrlDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>View_FItemControlByDivForBeaches</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>View_ItemControlByDivForBeaches2TableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>View_FItemControlByDivForBeachesTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
