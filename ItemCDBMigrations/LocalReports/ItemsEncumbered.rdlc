@@ -949,7 +949,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>ItemsEncumberedDataSet</DataSetName>
+        <DataSetName>ItemsEncumberedFDataSet</DataSetName>
         <Top>0.01389in</Top>
         <Left>0.05729in</Left>
         <Height>0.52083in</Height>
@@ -1908,18 +1908,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ICDataSet3">
+    <DataSource Name="ItemCtrlDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>ae714d12-7a9b-4d7e-9e23-1a421c60cef4</rd:DataSourceID>
+      <rd:DataSourceID>d704a569-d7c2-45e5-bb3c-48c934893889</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="ItemsEncumberedDataSet">
+    <DataSet Name="ItemsEncumberedFDataSet">
       <Query>
-        <DataSourceName>ICDataSet3</DataSourceName>
+        <DataSourceName>ItemCtrlDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -1977,12 +1977,12 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>ICDataSet3</rd:DataSetName>
-        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ICDataSet3.xsd</rd:SchemaPath>
-        <rd:TableName>View_ItemsEncumbered2</rd:TableName>
+        <rd:DataSetName>ItemCtrlDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\VSProjects\BH\ItemCDBMigrations\ItemCDBMigrations\ItemCtrlDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>View_FItemsEncumbered</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>View_ItemsEncumbered2TableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>View_FItemsEncumberedTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
