@@ -641,9 +641,6 @@
     <EmbeddedResource Include="LocalReports\ItemControlByDivMarina.rdlc" />
     <EmbeddedResource Include="LocalReports\ItemsEncumbered.rdlc" />
     <EmbeddedResource Include="LocalReports\OrgCodesByEmplID.rdlc" />
-    <EmbeddedResource Include="LocalReports\VacancyByDiv.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="LocalReports\VacByBudItemDesc.rdlc" />
     <EmbeddedResource Include="LocalReports\VacByDivision.rdlc">
       <SubType>Designer</SubType>
