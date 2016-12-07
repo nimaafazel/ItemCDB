@@ -8,6 +8,13 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    @*Add this style on btn to prevent buttons from overflowing the div*@
+    <style type="text/css">
+        .btn {
+            white-space: normal;
+        }
+    </style>
+
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -25,8 +32,8 @@
                     <li>@Html.ActionLink("Budgeted Positions", "Index", "BudgetedP")</li>
                     <li>@Html.ActionLink("Actual Positions", "Index", "ActualP")</li>
                     <li>@Html.ActionLink("Reports", "Index", "Reports")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @*<li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@ 
                 </ul>
             </div>
         </div>
