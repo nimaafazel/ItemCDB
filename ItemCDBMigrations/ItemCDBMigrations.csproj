@@ -151,26 +151,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="IC8DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>IC8DataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ICDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ICDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ICDataSet13.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ICDataSet13.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ICDataSet19.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ICDataSet19.xsd</DependentUpon>
-    </Compile>
     <Compile Include="ItemCtrlDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -256,50 +236,6 @@
     <Content Include="ReprtVwr\ReprtVwr.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="ICDataSet.xsc">
-      <DependentUpon>ICDataSet.xsd</DependentUpon>
-    </Content>
-    <Content Include="IC8DataSet.xsc">
-      <DependentUpon>IC8DataSet.xsd</DependentUpon>
-    </Content>
-    <None Include="IC8DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>IC8DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="IC8DataSet.xss">
-      <DependentUpon>IC8DataSet.xsd</DependentUpon>
-    </Content>
-    <None Include="ICDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ICDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="ICDataSet.xss">
-      <DependentUpon>ICDataSet.xsd</DependentUpon>
-    </Content>
-    <Content Include="ICDataSet13.xsc">
-      <DependentUpon>ICDataSet13.xsd</DependentUpon>
-    </Content>
-    <None Include="ICDataSet13.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ICDataSet13.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="ICDataSet13.xss">
-      <DependentUpon>ICDataSet13.xsd</DependentUpon>
-    </Content>
-    <Content Include="ICDataSet19.xsc">
-      <DependentUpon>ICDataSet19.xsd</DependentUpon>
-    </Content>
-    <None Include="ICDataSet19.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ICDataSet19.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="ICDataSet19.xss">
-      <DependentUpon>ICDataSet19.xsd</DependentUpon>
-    </Content>
     <Content Include="ItemCtrlDataSet.xsc">
       <DependentUpon>ItemCtrlDataSet.xsd</DependentUpon>
     </Content>
