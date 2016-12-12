@@ -24,6 +24,8 @@
                     <li>@Html.ActionLink("Item Control By Budgeted Item Description (For Department)", "LocalReport", new { reportName = ReportsController.REPORT_ITEMCTRLBYBUDITEMDEPT }, new { target = "_blank" })</li>
                     <li>@Html.ActionLink("Item Control By Budgeted Item Description (For Beaches)", "LocalReport", new { reportName = ReportsController.REPORT_ITEMCTRLBYBUDITEMBEACHES }, new { target = "_blank" })</li>
                     <li>@Html.ActionLink("Item Control By Budgeted Item Description (For Marina)", "LocalReport", new { reportName = ReportsController.REPORT_ITEMCTRLBYBUDITEMMARINA }, new { target = "_blank" })</li>
+                    <li class="divider"></li>
+                    <li>@Html.ActionLink("Item Control By Division (For Budget Services)", "LocalReport", new { reportName = ReportsController.REPORT_ITEMCTRLBYDIV }, new { target = "_blank" })</li>
                 </ul>
             </li>
             <li class="dropdown active">
@@ -33,18 +35,10 @@
                 <ul class="dropdown-menu">
                     <li>@Html.ActionLink("Vacancy Report By Division", "LocalReport", new { reportName = ReportsController.REPORT_VACBYDIV }, new { target = "_blank" })</li>
                     <li>@Html.ActionLink("Vacancy Report By Budgeted Item Description", "LocalReport", new { reportName = ReportsController.REPORT_VACBYBUDITEMDESC }, new { target = "_blank" })</li>
+                    <li class="divider"></li>
                     <li>@Html.ActionLink("Items Encumbered By Persons Holding Other Titles", "LocalReport", new { reportName = ReportsController.REPORT_ITEMSENCUMBERED }, new { target = "_blank" })</li>
                 </ul>
-            </li>
-            <li class="dropdown active">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-                    Employee List <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li>@Html.ActionLink("Employee List Report", "LocalReport", new { reportName = ReportsController.REPORT_EMPLOYEELISTPERMTEMP }, new { target = "_blank" })</li>
-                    <li>@Html.ActionLink("Item Control By Division (For Budget Services)", "LocalReport", new { reportName = ReportsController.REPORT_ITEMCTRLBYDIV }, new { target = "_blank" })</li>
-                </ul>
-            </li>
+            </li>            
         </ul>
     </div>
     <div class="col-md-6">
@@ -58,8 +52,14 @@
                     <li>@Html.ActionLink("Budgeted Position By Division For Department", "LocalReport", new { reportName = ReportsController.REPORT_BUDPOSBYDIVDEPT }, new { target = "_blank" })</li>
                 </ul>
             </li>
-            <li class="active">
-                @Html.ActionLink("Org Codes By Employee ID No.", "LocalReport", new { reportName = ReportsController.REPORT_ORGCODES }, new { target = "_blank" })
+            <li class="dropdown active">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                    Other <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>@Html.ActionLink("Employee List Report", "LocalReport", new { reportName = ReportsController.REPORT_EMPLOYEELISTPERMTEMP }, new { target = "_blank" })</li>
+                    <li>@Html.ActionLink("Org Codes By Employee ID No.", "LocalReport", new { reportName = ReportsController.REPORT_ORGCODES }, new { target = "_blank" })</li>
+                </ul>
             </li>            
         </ul>
     </div>
