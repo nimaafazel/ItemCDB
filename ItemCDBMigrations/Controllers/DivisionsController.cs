@@ -10,6 +10,7 @@ using ItemCDBMigrations.Models;
 
 namespace ItemCDBMigrations.Controllers
 {
+    [Authorize(Roles = "RSG.DBH_ItemCtlAdmin, RSG.DBH_ItemCtlDBA")]
     public class DivisionsController : Controller
     {
         private ICContext db = new ICContext();

@@ -11,6 +11,7 @@ using PagedList;
 
 namespace ItemCDBMigrations.Controllers
 {
+    [Authorize(Roles = "RSG.DBH_ItemCtlAdmin, RSG.DBH_ItemCtlDBA")]
     public class ItemsController : Controller
     {
         private ICContext db = new ICContext();

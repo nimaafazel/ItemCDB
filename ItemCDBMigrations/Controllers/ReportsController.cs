@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace ItemCDBMigrations.Controllers
 {
+    [Authorize(Roles = "RSG.DBH_ItemCtlAdmin, RSG.DBH_ItemCtlDBA, RSG.DBH_ItemCtlReport")]
     public class ReportsController : Controller
     {
         public const string REPORT_VACBYDIV = "VacancyByDivision";
