@@ -191,6 +191,7 @@ namespace ItemCDBMigrations.Controllers
         }
 
         // POST: BudgetedP/Delete/5
+        [Authorize(Roles = "RSG.DBH_ItemCtlDBA")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
