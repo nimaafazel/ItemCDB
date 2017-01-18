@@ -15,8 +15,14 @@
         <h4>@Model.BudItemDesc</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.BudItemNum)
-
+        @Html.HiddenFor(model => model.BudItemNum)        
+        <div class="form-group">
+            @Html.Label("Budgeted Item Number", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.BudItemNum, new { htmlAttributes = new { @class = "control-label col-md-2" } })
+                @*@Html.EditorFor(model => model.BudItemNum, new { htmlAttributes = new { @class = "form-control", disabled="disabled" } })*@                
+            </div>
+        </div>
         <div class="form-group">
             @Html.LabelFor(model => model.BudItemDesc, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
