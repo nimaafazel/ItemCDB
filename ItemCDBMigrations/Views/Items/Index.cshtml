@@ -36,6 +36,9 @@
         <th>
             @Html.DisplayNameFor(model => model[0].BudNote)
         </th>
+        <th>
+            @Html.DisplayName("Budgeted Item Number")
+        </th>
         <th></th>
     </tr>
 
@@ -52,6 +55,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.BudNote)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BudItemNum)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.BudItemNum }) |
