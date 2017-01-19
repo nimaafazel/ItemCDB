@@ -38,8 +38,11 @@ namespace ItemCDBMigrations.Controllers
                 // search by employee
                 //tblPOSITIONACTUALs = tblPOSITIONACTUALs.Where(t => t.tblEMPLOYEELIST.LastName.Contains(searchString) || t.tblEMPLOYEELIST.FirstName.Contains(searchString));
 
-                // search by item name
-                tblPOSITIONACTUALs = tblPOSITIONACTUALs.Where(t => t.tblPOSITIONBUDGETED.tblBudItemNum.BudItemDesc.Contains(searchString));
+                // search by item name or employee name
+                tblPOSITIONACTUALs = tblPOSITIONACTUALs.Where(t => t.tblPOSITIONBUDGETED.tblBudItemNum.BudItemDesc.Contains(searchString)
+                                                                || t.tblPOSITIONBUDGETED.BudItemNum.Contains(searchString)
+                                                                || t.tblEMPLOYEELIST.LastName.Contains(searchString)
+                                                                || t.tblEMPLOYEELIST.FirstName.Contains(searchString));
             }
 
             switch(sortOrder)
