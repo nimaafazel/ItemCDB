@@ -19,6 +19,9 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayName("Budgeted Position Number")
+        </th>
+        <th>
             @Html.DisplayName("Item Number")            
         </th>
         <th>
@@ -61,6 +64,9 @@
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BudPosNum)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.BudItemNum)
         </td>
