@@ -23,42 +23,41 @@
 <table class="table">
     <tr>
         <th>
-            @*@Html.DisplayNameFor(model => model.tblBargainUnit.BargainUnitDesc)*@
-            @Html.ActionLink("Bargain Unit", "Index", new { sortOrder = ViewBag.BUnit, currentFilter = ViewBag.CurrentFilter })
+            @Html.DisplayName("Item Number")
         </th>
         <th>
-            @*@Html.DisplayNameFor(model => model.BudItemDesc)*@
             @Html.ActionLink("Description", "Index", new { sortOrder = ViewBag.ItemDesc, currentFilter = ViewBag.CurrentFilter })
         </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.tblBargainUnit.BargainUnitDesc)*@
+            @Html.ActionLink("Bargain Unit", "Index", new { sortOrder = ViewBag.BUnit, currentFilter = ViewBag.CurrentFilter })
+        </th>        
         <th>
             @Html.DisplayNameFor(model => model[0].BudSchedule)
         </th>
         <th>
             @Html.DisplayNameFor(model => model[0].BudNote)
-        </th>
-        <th>
-            @Html.DisplayName("Budgeted Item Number")
-        </th>
+        </th>        
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.tblBargainUnit.BargainUnitDesc)
+            @Html.DisplayFor(modelItem => item.BudItemNum)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.BudItemDesc)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.tblBargainUnit.BargainUnitDesc)
+        </td>        
+        <td>
             @Html.DisplayFor(modelItem => item.BudSchedule)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.BudNote)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BudItemNum)
-        </td>
+        </td>        
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.BudItemNum }) |
             @Html.ActionLink("Details", "Details", new { id=item.BudItemNum }) |
