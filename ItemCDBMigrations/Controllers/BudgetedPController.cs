@@ -137,7 +137,14 @@ namespace ItemCDBMigrations.Controllers
                 return HttpNotFound();
             }
             ViewBag.BudBud = new SelectList(db.tblBuds, "BudCode", "BudDesc", tblPOSITIONBUDGETED.BudBud);
-            ViewBag.BudItemNum = new SelectList(db.tblBudItemNums, "BudItemNum", "BudItemDesc", tblPOSITIONBUDGETED.BudItemNum);
+
+            var itemconcat = from x in db.tblBudItemNums
+                             let BudItemDesc = x.BudItemNum + " - " + x.BudItemDesc
+                             orderby x.BudItemDesc
+                             select new { x.BudItemNum, BudItemDesc };
+            ViewBag.BudItemNum = new SelectList(itemconcat, "BudItemNum", "BudItemDesc", tblPOSITIONBUDGETED.BudItemNum);
+
+            //ViewBag.BudItemNum = new SelectList(db.tblBudItemNums, "BudItemNum", "BudItemDesc", tblPOSITIONBUDGETED.BudItemNum);
             ViewBag.BudDivCode = new SelectList(db.tblDivisions, "DivCode", "DivDesc", tblPOSITIONBUDGETED.BudDivCode);
             ViewBag.BudFilled = new SelectList(db.tblFilleds, "FilledCode", "FilledDesc", tblPOSITIONBUDGETED.BudFilled);
             ViewBag.BudFunction = new SelectList(db.tblFunctions, "FuncCode", "FuncDesc", tblPOSITIONBUDGETED.BudFunction);
