@@ -93,20 +93,38 @@ namespace ItemCDBMigrations.Controllers
             ViewBag.BudItemNum = new SelectList(itemconcat, "BudItemNum", "BudItemDesc");
 
             //ViewBag.BudItemNum = new SelectList(db.tblBudItemNums, "BudItemNum", "BudItemDesc");
-            ViewBag.BudDivCode = new SelectList(db.tblDivisions, "DivCode", "DivDesc");
+
+            var divisions = from x in db.tblDivisions
+                            let DivDesc = x.DivDesc1 + " - " + x.DivCode 
+                            orderby x.DivDesc1
+                            select new { x.DivCode, DivDesc };
+            ViewBag.BudDivCode = new SelectList(divisions, "DivCode", "DivDesc");
+
+            //ViewBag.BudDivCode = new SelectList(db.tblDivisions, "DivCode", "DivDesc");
             ViewBag.BudFilled = new SelectList(db.tblFilleds, "FilledCode", "FilledDesc");
             ViewBag.BudFunction = new SelectList(db.tblFunctions, "FuncCode", "FuncDesc");
             ViewBag.BudOrd = new SelectList(db.tblOrds, "OrdCode", "OrdDesc");
             ViewBag.BudOrgCode = new SelectList(db.tblOrgCodes, "BudOrgCode", "BudOrgCodeDesc");
-            ViewBag.BudSecCode = new SelectList(db.tblSections, "SecCode", "SecDesc");
+
+            var sections = from x in db.tblSections
+                           let SecDesc = x.SecDesc1 + " - " + x.SecCode
+                           orderby x.SecDesc1
+                           select new { x.SecCode, SecDesc };
+            ViewBag.BudSecCode = new SelectList(sections, "SecCode", "SecDesc");            
+            //ViewBag.BudSecCode = new SelectList(db.tblSections, "SecCode", "SecDesc");
 
             var subconcat = from x in db.tblSubItems
                             let SubItemDesc = x.SubItemCode + " - " + x.SubItemDesc
                             select new { x.SubItemCode, SubItemDesc };
             ViewBag.BudSubItem = new SelectList(subconcat, "SubItemCode", "SubItemDesc");
-
             //ViewBag.BudSubItem = new SelectList(db.tblSubItems, "SubItemCode", "SubItemDesc");
-            ViewBag.BudUnitCode = new SelectList(db.tblUnits, "UnitCode", "UnitDesc");
+
+            var units = from x in db.tblUnits
+                        let UnitDesc = x.UnitDesc + " - " + x.UnitCode
+                        orderby x.UnitDesc
+                        select new { x.UnitCode, UnitDesc };
+            ViewBag.BudUnitCode = new SelectList(units, "UnitCode", "UnitDesc");
+            //ViewBag.BudUnitCode = new SelectList(db.tblUnits, "UnitCode", "UnitDesc");
             return View();
         }
 
@@ -126,7 +144,11 @@ namespace ItemCDBMigrations.Controllers
 
             ViewBag.BudBud = new SelectList(db.tblBuds, "BudCode", "BudDesc", tblPOSITIONBUDGETED.BudBud);
             ViewBag.BudItemNum = new SelectList(db.tblBudItemNums, "BudItemNum", "BudItemDesc", tblPOSITIONBUDGETED.BudItemNum);
-            ViewBag.BudDivCode = new SelectList(db.tblDivisions, "DivCode", "DivDesc", tblPOSITIONBUDGETED.BudDivCode);
+
+            var divisions = db.tblDivisions.OrderBy(t => t.DivDesc);
+
+            ViewBag.BudDivCode = new SelectList(divisions, "DivCode", "DivDesc", tblPOSITIONBUDGETED.BudDivCode);
+            //ViewBag.BudDivCode = new SelectList(db.tblDivisions, "DivCode", "DivDesc", tblPOSITIONBUDGETED.BudDivCode);
             ViewBag.BudFilled = new SelectList(db.tblFilleds, "FilledCode", "FilledDesc", tblPOSITIONBUDGETED.BudFilled);
             ViewBag.BudFunction = new SelectList(db.tblFunctions, "FuncCode", "FuncDesc", tblPOSITIONBUDGETED.BudFunction);
             ViewBag.BudOrd = new SelectList(db.tblOrds, "OrdCode", "OrdDesc", tblPOSITIONBUDGETED.BudOrd);
