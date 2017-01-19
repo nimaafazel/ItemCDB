@@ -85,7 +85,14 @@ namespace ItemCDBMigrations.Controllers
         public ActionResult Create()
         {
             ViewBag.BudBud = new SelectList(db.tblBuds, "BudCode", "BudDesc");
-            ViewBag.BudItemNum = new SelectList(db.tblBudItemNums, "BudItemNum", "BudItemDesc");
+
+            var itemconcat = from x in db.tblBudItemNums
+                             let BudItemDesc = x.BudItemNum + " - " + x.BudItemDesc
+                             orderby x.BudItemDesc
+                             select new { x.BudItemNum, BudItemDesc };
+            ViewBag.BudItemNum = new SelectList(itemconcat, "BudItemNum", "BudItemDesc");
+
+            //ViewBag.BudItemNum = new SelectList(db.tblBudItemNums, "BudItemNum", "BudItemDesc");
             ViewBag.BudDivCode = new SelectList(db.tblDivisions, "DivCode", "DivDesc");
             ViewBag.BudFilled = new SelectList(db.tblFilleds, "FilledCode", "FilledDesc");
             ViewBag.BudFunction = new SelectList(db.tblFunctions, "FuncCode", "FuncDesc");
