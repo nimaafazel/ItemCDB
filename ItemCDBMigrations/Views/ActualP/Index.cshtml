@@ -21,30 +21,13 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model[0].tblEMPLOYEELIST.FirstName)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model[0].tblEMPLOYEELIST.LastName)
         </th>
         <th>
-            @*@Html.DisplayNameFor(model => model.tblEmploymentType.EmplTypeDesc)*@
-            @Html.ActionLink("Employment Type", "Index", new { currentFilter = ViewBag.CurrentFilter, sortOrder = ViewBag.EmplType })
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model[0].tblPayPeriod.PayTypeDesc)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model[0].tblPOSITIONBUDGETED.BudItemNum)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model[0].tblStep.Step)
-        </th>
-        <th>
-            @*@Html.DisplayNameFor(model => model.EffectiveDate)*@
-            @Html.ActionLink("Effective Date", "Index", new { currentFilter = ViewBag.CurrentFilter, sortOrder = ViewBag.EffectiveDate })
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model[0].DeptHireDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model[0].tblEMPLOYEELIST.tblEmplStatu.EmplStatusDesc)
         </th>
         <th>
             @Html.DisplayNameFor(model => model[0].ActItemNum)
@@ -52,6 +35,29 @@
         <th>
             @Html.DisplayNameFor(model => model[0].ActSubItem)
         </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.EffectiveDate)*@
+            @Html.ActionLink("Effective Date", "Index", new { currentFilter = ViewBag.CurrentFilter, sortOrder = ViewBag.EffectiveDate })
+        </th>
+        <th>
+            @Html.DisplayName("Budgeted Position Number")
+        </th>        
+        <th>
+            @*@Html.DisplayNameFor(model => model.tblEmploymentType.EmplTypeDesc)*@
+            @Html.ActionLink("Employment Type", "Index", new { currentFilter = ViewBag.CurrentFilter, sortOrder = ViewBag.EmplType })
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[0].tblPayPeriod.PayTypeDesc)
+        </th>        
+        <th>
+            @Html.DisplayNameFor(model => model[0].tblStep.Step)
+        </th>        
+        <th>
+            @Html.DisplayNameFor(model => model[0].DeptHireDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[0].tblEMPLOYEELIST.tblEmplStatu.EmplStatusDesc)
+        </th>        
         <th>
             @Html.DisplayNameFor(model => model[0].PayRate)
         </th>
@@ -73,28 +79,13 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.tblEMPLOYEELIST.FirstName)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.tblEMPLOYEELIST.LastName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.tblEmploymentType.EmplTypeDesc)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.tblPayPeriod.PayTypeDesc)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.tblPOSITIONBUDGETED.BudItemNum)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.tblStep.Step)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EffectiveDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DeptHireDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ActEmplStatus)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ActItemNum)
@@ -102,6 +93,27 @@
         <td>
             @Html.DisplayFor(modelItem => item.ActSubItem)
         </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EffectiveDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblPOSITIONBUDGETED.BudPosNum)
+        </td>        
+        <td>
+            @Html.DisplayFor(modelItem => item.tblEmploymentType.EmplTypeDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblPayPeriod.PayTypeDesc)
+        </td>        
+        <td>
+            @Html.DisplayFor(modelItem => item.tblStep.Step)
+        </td>        
+        <td>
+            @Html.DisplayFor(modelItem => item.DeptHireDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblEMPLOYEELIST.tblEmplStatu.EmplStatusDesc)
+        </td>        
         <td>
             @Html.DisplayFor(modelItem => item.PayRate)
         </td>
