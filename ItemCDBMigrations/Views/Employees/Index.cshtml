@@ -26,18 +26,6 @@
 {
     <table class="table">
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model[0].tblEmplStatu.EmplStatusDesc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[0].tblEthnicity.EthnicDesc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[0].tblGender.GenderDesc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model[0].tblPayLocation.PayLocDesc)
-            </th>
             @*When we click an ActionLink for sorting, we are passing ONLY the sortOrder and the currentFilter values, so we can return to page 1*@
             <th>
                 @*@Html.DisplayNameFor(model => model[0].LastName)*@
@@ -54,9 +42,21 @@
                 @Html.DisplayNameFor(model => model[0].NameSuffix)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model[0].tblEmplStatu.EmplStatusDesc)
+            </th>
+            <th>
                 @*@Html.DisplayNameFor(model => model[0].SeniorityDate)*@
                 @Html.ActionLink("Seniority Date", "Index", new { sortOrder = ViewBag.SortDateSeniorParam, currentFilter = ViewBag.CurrentFilter })
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].tblEthnicity.EthnicDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].tblGender.GenderDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].tblPayLocation.PayLocDesc)
+            </th>                                   
             <th>
                 @Html.DisplayNameFor(model => model[0].BirthDate)
             </th>
@@ -76,18 +76,6 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(mod => item.tblEmplStatu.EmplStatusDesc)
-                </td>
-                <td>
-                    @Html.DisplayFor(mod => item.tblEthnicity.EthnicDesc)
-                </td>
-                <td>
-                    @Html.DisplayFor(mod => item.tblGender.GenderDesc)
-                </td>
-                <td>
-                    @Html.DisplayFor(mod => item.tblPayLocation.PayLocDesc)
-                </td>
-                <td>
                     @Html.DisplayFor(mod => item.LastName)
                 </td>
                 <td>
@@ -100,8 +88,20 @@
                     @Html.DisplayFor(mod => item.NameSuffix)
                 </td>
                 <td>
+                    @Html.DisplayFor(mod => item.tblEmplStatu.EmplStatusDesc)
+                </td>
+                <td>
                     @Html.DisplayFor(mod => item.SeniorityDate)
                 </td>
+                <td>
+                    @Html.DisplayFor(mod => item.tblEthnicity.EthnicDesc)
+                </td>
+                <td>
+                    @Html.DisplayFor(mod => item.tblGender.GenderDesc)
+                </td>
+                <td>
+                    @Html.DisplayFor(mod => item.tblPayLocation.PayLocDesc)
+                </td>                                
                 <td>
                     @Html.DisplayFor(mod => item.BirthDate)
                 </td>
