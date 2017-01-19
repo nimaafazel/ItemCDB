@@ -13,7 +13,7 @@
 </p>
 @using (Html.BeginForm("Index", "BudgetedP", FormMethod.Get))
 {
-    <p>Item Description: @Html.TextBox("searchString", ViewBag.CurrentFilter as string) 
+    <p>Item: @Html.TextBox("searchString", ViewBag.CurrentFilter as string) 
     <input type="submit" value="Search" /></p>
 }
 <table class="table">

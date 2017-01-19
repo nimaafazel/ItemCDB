@@ -38,7 +38,7 @@ namespace ItemCDBMigrations.Controllers
 
             if(!string.IsNullOrEmpty(searchString))
             {
-                tblPOSITIONBUDGETEDs = tblPOSITIONBUDGETEDs.Where(t => t.tblBudItemNum.BudItemDesc.Contains(searchString));
+                tblPOSITIONBUDGETEDs = tblPOSITIONBUDGETEDs.Where(t => t.tblBudItemNum.BudItemDesc.Contains(searchString) || t.BudItemNum.Contains(searchString));
             }
 
             switch (sortOrder)
@@ -99,7 +99,13 @@ namespace ItemCDBMigrations.Controllers
             ViewBag.BudOrd = new SelectList(db.tblOrds, "OrdCode", "OrdDesc");
             ViewBag.BudOrgCode = new SelectList(db.tblOrgCodes, "BudOrgCode", "BudOrgCodeDesc");
             ViewBag.BudSecCode = new SelectList(db.tblSections, "SecCode", "SecDesc");
-            ViewBag.BudSubItem = new SelectList(db.tblSubItems, "SubItemCode", "SubItemDesc");
+
+            var subconcat = from x in db.tblSubItems
+                            let SubItemDesc = x.SubItemCode + " - " + x.SubItemDesc
+                            select new { x.SubItemCode, SubItemDesc };
+            ViewBag.BudSubItem = new SelectList(subconcat, "SubItemCode", "SubItemDesc");
+
+            //ViewBag.BudSubItem = new SelectList(db.tblSubItems, "SubItemCode", "SubItemDesc");
             ViewBag.BudUnitCode = new SelectList(db.tblUnits, "UnitCode", "UnitDesc");
             return View();
         }
