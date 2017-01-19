@@ -144,7 +144,14 @@ namespace ItemCDBMigrations.Controllers
             ViewBag.BudOrd = new SelectList(db.tblOrds, "OrdCode", "OrdDesc", tblPOSITIONBUDGETED.BudOrd);
             ViewBag.BudOrgCode = new SelectList(db.tblOrgCodes, "BudOrgCode", "BudOrgCodeDesc", tblPOSITIONBUDGETED.BudOrgCode);
             ViewBag.BudSecCode = new SelectList(db.tblSections, "SecCode", "SecDesc", tblPOSITIONBUDGETED.BudSecCode);
-            ViewBag.BudSubItem = new SelectList(db.tblSubItems, "SubItemCode", "SubItemDesc", tblPOSITIONBUDGETED.BudSubItem);
+
+            // create a custom select to concat code and desc in the dropdown list
+            var alias = (from x in db.tblSubItems
+                         let SubItemDesc = x.SubItemCode + " - " + x.SubItemDesc
+                         select new { x.SubItemCode, SubItemDesc });
+            ViewBag.BudSubItem = new SelectList(alias, "SubItemCode", "SubItemDesc", tblPOSITIONBUDGETED.BudSubItem);
+
+            //ViewBag.BudSubItem = new SelectList(db.tblSubItems, "SubItemCode", "SubItemDesc", tblPOSITIONBUDGETED.BudSubItem);
             ViewBag.BudUnitCode = new SelectList(db.tblUnits, "UnitCode", "UnitDesc", tblPOSITIONBUDGETED.BudUnitCode);
             return View(tblPOSITIONBUDGETED);
         }
