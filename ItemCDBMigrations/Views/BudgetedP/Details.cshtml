@@ -11,21 +11,24 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
+            @Html.DisplayName("Item Number")
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BudItemNum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.tblBudItemNum.BudItemDesc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.tblBudItemNum.BudItemDesc)
+        </dd>
+        <dt>
             @Html.DisplayNameFor(model => model.tblBud.BudDesc)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.tblBud.BudDesc)
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.tblBudItemNum.BudItemDesc)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.tblBudItemNum.BudItemDesc)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.tblDivision.DivDesc)
         </dt>
@@ -79,7 +82,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.tblSubItem.SubItemDesc)
+            @Html.DisplayFor(model => model.BudSubItem) - @Html.DisplayFor(model => model.tblSubItem.SubItemDesc)
         </dd>
 
         <dt>
