@@ -19,15 +19,15 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayName("Budgeted Item Number")            
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model[0].tblBud.BudDesc)
+            @Html.DisplayName("Item Number")            
         </th>
         <th>
             @*@Html.DisplayNameFor(model => model.tblBudItemNum.BudItemDesc)*@
             @Html.ActionLink("Item Description", "Index", new { currentFilter = ViewBag.CurrentFilter, sortOrder = ViewBag.ItemD })
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model[0].tblBud.BudDesc)
+        </th>        
         <th>
             @Html.DisplayNameFor(model => model[0].tblDivision.DivDesc)
         </th>
@@ -65,11 +65,11 @@
             @Html.DisplayFor(modelItem => item.BudItemNum)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.tblBud.BudDesc)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.tblBudItemNum.BudItemDesc)
         </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblBud.BudDesc)
+        </td>        
         <td>
             @Html.DisplayFor(modelItem => item.tblDivision.DivDesc)
         </td>
