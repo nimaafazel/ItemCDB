@@ -81,8 +81,11 @@ namespace ItemCDBMigrations.Controllers
             return View(tblPOSITIONBUDGETED);
         }
 
-        // GET: BudgetedP/Create
-        public ActionResult Create()
+        /// <summary>
+        /// Fills the ViewBag with the information neccesary for the foorm fields.
+        /// </summary>
+        /// <returns></returns>
+        private ActionResult PrepareFields()
         {
             ViewBag.BudBud = new SelectList(db.tblBuds, "BudCode", "BudDesc");
 
@@ -94,7 +97,7 @@ namespace ItemCDBMigrations.Controllers
             //ViewBag.BudItemNum = new SelectList(db.tblBudItemNums, "BudItemNum", "BudItemDesc");
 
             var divisions = from x in db.tblDivisions
-                            let DivDesc = x.DivDesc1 + " - " + x.DivCode 
+                            let DivDesc = x.DivDesc1 + " - " + x.DivCode
                             orderby x.DivDesc1
                             select new { x.DivCode, DivDesc };
             ViewBag.BudDivCode = new SelectList(divisions, "DivCode", "DivDesc");
@@ -109,7 +112,7 @@ namespace ItemCDBMigrations.Controllers
                            let SecDesc = x.SecDesc1 + " - " + x.SecCode
                            orderby x.SecDesc1
                            select new { x.SecCode, SecDesc };
-            ViewBag.BudSecCode = new SelectList(sections, "SecCode", "SecDesc");            
+            ViewBag.BudSecCode = new SelectList(sections, "SecCode", "SecDesc");
             //ViewBag.BudSecCode = new SelectList(db.tblSections, "SecCode", "SecDesc");
 
             var subconcat = from x in db.tblSubItems
@@ -127,6 +130,12 @@ namespace ItemCDBMigrations.Controllers
             return View();
         }
 
+        // GET: BudgetedP/Create
+        public ActionResult Create()
+        {
+            return PrepareFields();
+        }
+
         // POST: BudgetedP/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -140,43 +149,8 @@ namespace ItemCDBMigrations.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
-            ViewBag.BudBud = new SelectList(db.tblBuds, "BudCode", "BudDesc");
-
-            var itemconcat = from x in db.tblBudItemNums
-                             let BudItemDesc = x.BudItemNum + " - " + x.BudItemDesc
-                             orderby x.BudItemDesc
-                             select new { x.BudItemNum, BudItemDesc };
-            ViewBag.BudItemNum = new SelectList(itemconcat, "BudItemNum", "BudItemDesc");
-
-            var divisions = from x in db.tblDivisions
-                            let DivDesc = x.DivDesc1 + " - " + x.DivCode
-                            orderby x.DivDesc1
-                            select new { x.DivCode, DivDesc };
-            ViewBag.BudDivCode = new SelectList(divisions, "DivCode", "DivDesc");
-
-            ViewBag.BudFilled = new SelectList(db.tblFilleds, "FilledCode", "FilledDesc");
-            ViewBag.BudFunction = new SelectList(db.tblFunctions, "FuncCode", "FuncDesc");
-            ViewBag.BudOrd = new SelectList(db.tblOrds, "OrdCode", "OrdDesc");
-            ViewBag.BudOrgCode = new SelectList(db.tblOrgCodes, "BudOrgCode", "BudOrgCodeDesc");
-
-            var sections = from x in db.tblSections
-                           let SecDesc = x.SecDesc1 + " - " + x.SecCode
-                           orderby x.SecDesc1
-                           select new { x.SecCode, SecDesc };
-            ViewBag.BudSecCode = new SelectList(sections, "SecCode", "SecDesc");
-
-            var subconcat = from x in db.tblSubItems
-                            let SubItemDesc = x.SubItemCode + " - " + x.SubItemDesc
-                            select new { x.SubItemCode, SubItemDesc };
-            ViewBag.BudSubItem = new SelectList(subconcat, "SubItemCode", "SubItemDesc");
-
-            var units = from x in db.tblUnits
-                        let UnitDesc = x.UnitDesc + " - " + x.UnitCode
-                        orderby x.UnitDesc
-                        select new { x.UnitCode, UnitDesc };
-            ViewBag.BudUnitCode = new SelectList(units, "UnitCode", "UnitDesc");
-            return View();            
+            // else, stay on page
+            return PrepareFields();
         }
 
         // GET: BudgetedP/Edit/5
