@@ -153,6 +153,46 @@ namespace ItemCDBMigrations.Controllers
             return PrepareFields();
         }
 
+        private ActionResult PrepareEditFields(tblPOSITIONBUDGETED tblPOSITIONBUDGETED)
+        {
+            ViewBag.BudBud = new SelectList(db.tblBuds, "BudCode", "BudDesc", tblPOSITIONBUDGETED.BudBud);
+
+            var itemconcat = from x in db.tblBudItemNums
+                             let BudItemDesc = x.BudItemNum + " - " + x.BudItemDesc
+                             orderby x.BudItemDesc
+                             select new { x.BudItemNum, BudItemDesc };
+            ViewBag.BudItemNum = new SelectList(itemconcat, "BudItemNum", "BudItemDesc", tblPOSITIONBUDGETED.BudItemNum);
+
+            var divisions = from x in db.tblDivisions
+                            let DivDesc = x.DivDesc1 + " - " + x.DivCode
+                            orderby x.DivDesc1
+                            select new { x.DivCode, DivDesc };
+            ViewBag.BudDivCode = new SelectList(divisions, "DivCode", "DivDesc", tblPOSITIONBUDGETED.BudDivCode);
+            ViewBag.BudFilled = new SelectList(db.tblFilleds, "FilledCode", "FilledDesc", tblPOSITIONBUDGETED.BudFilled);
+            ViewBag.BudFunction = new SelectList(db.tblFunctions, "FuncCode", "FuncDesc", tblPOSITIONBUDGETED.BudFunction);
+            ViewBag.BudOrd = new SelectList(db.tblOrds, "OrdCode", "OrdDesc", tblPOSITIONBUDGETED.BudOrd);
+            ViewBag.BudOrgCode = new SelectList(db.tblOrgCodes, "BudOrgCode", "BudOrgCodeDesc", tblPOSITIONBUDGETED.BudOrgCode);
+
+            var sections = from x in db.tblSections
+                           let SecDesc = x.SecDesc1 + " - " + x.SecCode
+                           orderby x.SecDesc1
+                           select new { x.SecCode, SecDesc };
+            ViewBag.BudSecCode = new SelectList(sections, "SecCode", "SecDesc", tblPOSITIONBUDGETED.BudSecCode);
+
+            // create a custom select to concat code and desc in the dropdown list
+            var alias = (from x in db.tblSubItems
+                         let SubItemDesc = x.SubItemCode + " - " + x.SubItemDesc
+                         select new { x.SubItemCode, SubItemDesc });
+            ViewBag.BudSubItem = new SelectList(alias, "SubItemCode", "SubItemDesc", tblPOSITIONBUDGETED.BudSubItem);
+
+            var units = from x in db.tblUnits
+                        let UnitDesc = x.UnitDesc + " - " + x.UnitCode
+                        orderby x.UnitDesc
+                        select new { x.UnitCode, UnitDesc };
+            ViewBag.BudUnitCode = new SelectList(units, "UnitCode", "UnitDesc", tblPOSITIONBUDGETED.BudUnitCode);
+            return View(tblPOSITIONBUDGETED);
+        }
+
         // GET: BudgetedP/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -165,31 +205,8 @@ namespace ItemCDBMigrations.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.BudBud = new SelectList(db.tblBuds, "BudCode", "BudDesc", tblPOSITIONBUDGETED.BudBud);
-
-            var itemconcat = from x in db.tblBudItemNums
-                             let BudItemDesc = x.BudItemNum + " - " + x.BudItemDesc
-                             orderby x.BudItemDesc
-                             select new { x.BudItemNum, BudItemDesc };
-            ViewBag.BudItemNum = new SelectList(itemconcat, "BudItemNum", "BudItemDesc", tblPOSITIONBUDGETED.BudItemNum);
-
-            //ViewBag.BudItemNum = new SelectList(db.tblBudItemNums, "BudItemNum", "BudItemDesc", tblPOSITIONBUDGETED.BudItemNum);
-            ViewBag.BudDivCode = new SelectList(db.tblDivisions, "DivCode", "DivDesc", tblPOSITIONBUDGETED.BudDivCode);
-            ViewBag.BudFilled = new SelectList(db.tblFilleds, "FilledCode", "FilledDesc", tblPOSITIONBUDGETED.BudFilled);
-            ViewBag.BudFunction = new SelectList(db.tblFunctions, "FuncCode", "FuncDesc", tblPOSITIONBUDGETED.BudFunction);
-            ViewBag.BudOrd = new SelectList(db.tblOrds, "OrdCode", "OrdDesc", tblPOSITIONBUDGETED.BudOrd);
-            ViewBag.BudOrgCode = new SelectList(db.tblOrgCodes, "BudOrgCode", "BudOrgCodeDesc", tblPOSITIONBUDGETED.BudOrgCode);
-            ViewBag.BudSecCode = new SelectList(db.tblSections, "SecCode", "SecDesc", tblPOSITIONBUDGETED.BudSecCode);
-
-            // create a custom select to concat code and desc in the dropdown list
-            var alias = (from x in db.tblSubItems
-                         let SubItemDesc = x.SubItemCode + " - " + x.SubItemDesc
-                         select new { x.SubItemCode, SubItemDesc });
-            ViewBag.BudSubItem = new SelectList(alias, "SubItemCode", "SubItemDesc", tblPOSITIONBUDGETED.BudSubItem);
-
-            //ViewBag.BudSubItem = new SelectList(db.tblSubItems, "SubItemCode", "SubItemDesc", tblPOSITIONBUDGETED.BudSubItem);
-            ViewBag.BudUnitCode = new SelectList(db.tblUnits, "UnitCode", "UnitDesc", tblPOSITIONBUDGETED.BudUnitCode);
-            return View(tblPOSITIONBUDGETED);
+            // otherwise, fill the fields with current values
+            return PrepareEditFields(tblPOSITIONBUDGETED);
         }
 
         // POST: BudgetedP/Edit/5
@@ -205,17 +222,7 @@ namespace ItemCDBMigrations.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.BudBud = new SelectList(db.tblBuds, "BudCode", "BudDesc", tblPOSITIONBUDGETED.BudBud);
-            ViewBag.BudItemNum = new SelectList(db.tblBudItemNums, "BudItemNum", "BudItemDesc", tblPOSITIONBUDGETED.BudItemNum);
-            ViewBag.BudDivCode = new SelectList(db.tblDivisions, "DivCode", "DivDesc", tblPOSITIONBUDGETED.BudDivCode);
-            ViewBag.BudFilled = new SelectList(db.tblFilleds, "FilledCode", "FilledDesc", tblPOSITIONBUDGETED.BudFilled);
-            ViewBag.BudFunction = new SelectList(db.tblFunctions, "FuncCode", "FuncDesc", tblPOSITIONBUDGETED.BudFunction);
-            ViewBag.BudOrd = new SelectList(db.tblOrds, "OrdCode", "OrdDesc", tblPOSITIONBUDGETED.BudOrd);
-            ViewBag.BudOrgCode = new SelectList(db.tblOrgCodes, "BudOrgCode", "BudOrgCodeDesc", tblPOSITIONBUDGETED.BudOrgCode);
-            ViewBag.BudSecCode = new SelectList(db.tblSections, "SecCode", "SecDesc", tblPOSITIONBUDGETED.BudSecCode);
-            ViewBag.BudSubItem = new SelectList(db.tblSubItems, "SubItemCode", "SubItemDesc", tblPOSITIONBUDGETED.BudSubItem);
-            ViewBag.BudUnitCode = new SelectList(db.tblUnits, "UnitCode", "UnitDesc", tblPOSITIONBUDGETED.BudUnitCode);
-            return View(tblPOSITIONBUDGETED);
+            return PrepareEditFields(tblPOSITIONBUDGETED);
         }
 
         // GET: BudgetedP/Delete/5
