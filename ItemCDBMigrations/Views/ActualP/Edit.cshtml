@@ -11,8 +11,7 @@
 {
     @Html.AntiForgeryToken()
     
-    <div class="form-horizontal">
-        <h4>@Model.ActItemNum</h4>
+    <div class="form-horizontal">        
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.ActPosAutoID)
@@ -28,7 +27,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.EmplID, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("EmplID", null, "Select Employee ID", htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("EmplID", null, "Select Employee", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.EmplID, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -52,7 +51,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.tblEMPLOYEELIST.EmplStatus, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ActEmplStatus, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownList("ActEmplStatus", null, "Select Status", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.ActEmplStatus, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -60,7 +59,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ActItemNum, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ActItemNum, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownList("ActItemNum", null, "Select Actual Item", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.ActItemNum, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -68,7 +67,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ActSubItem, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ActSubItem, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownList("ActSubItem", null, "Select SubItem", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.ActSubItem, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -92,7 +91,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.tblPayPeriod.PayTypeDesc, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("PayPeriod", null, "Select Pay Period",  htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("PayPeriod", null, "Select Pay Period", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.PayPeriod, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -108,7 +107,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.PreItemNum, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.PreItemNum, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownList("PreItemNum", null, "Select PreItem", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.PreItemNum, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -116,7 +115,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.PreSubItem, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.PreSubItem, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownList("PreSubItem", null, "Select Pre SubItem", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.PreSubItem, "", new { @class = "text-danger" })
             </div>
         </div>

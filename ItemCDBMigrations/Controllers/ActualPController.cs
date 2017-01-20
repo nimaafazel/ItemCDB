@@ -146,7 +146,6 @@ namespace ItemCDBMigrations.Controllers
         {
             var employees = from x in db.tblEMPLOYEELISTs
                             let myEmplID = x.EmplID + " - " + x.LastName + ", " + x.FirstName
-                            where x.EmplStatus == "A"
                             select new { x.EmplID, myEmplID };
 
             ViewBag.EmplID = new SelectList(employees, "EmplID", "myEmplID", tblPOSITIONACTUAL.EmplID);
@@ -155,7 +154,6 @@ namespace ItemCDBMigrations.Controllers
             ViewBag.PayPeriod = new SelectList(db.tblPayPeriods, "PayTypeID", "PayTypeDesc", tblPOSITIONACTUAL.PayPeriod);
 
             var budpos = from x in db.tblPOSITIONBUDGETEDs
-                         where x.BudFilled == 0
                          select new { x.BudPosNum };
             ViewBag.ActPosNum = new SelectList(budpos, "BudPosNum", "BudPosNum", tblPOSITIONACTUAL.ActPosNum);
             ViewBag.Step = new SelectList(db.tblSteps, "Step", "Step", tblPOSITIONACTUAL.Step);
