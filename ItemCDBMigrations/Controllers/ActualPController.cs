@@ -85,15 +85,44 @@ namespace ItemCDBMigrations.Controllers
             return View(tblPOSITIONACTUAL);
         }
 
+        private ActionResult FillFields()
+        {
+            var employees = from x in db.tblEMPLOYEELISTs
+                            let myEmplID = x.EmplID + " - " + x.LastName + ", " + x.FirstName
+                            where x.EmplStatus == "A"
+                            select new { x.EmplID, myEmplID };
+
+            ViewBag.EmplID = new SelectList(employees, "EmplID", "myEmplID");
+            ViewBag.ActEmplStatus = new SelectList(db.tblEmplStatus, "EmplStatusCode", "EmplStatusDesc");
+            ViewBag.EmplType = new SelectList(db.tblEmploymentTypes, "EmplType", "EmplTypeDesc");
+            ViewBag.PayPeriod = new SelectList(db.tblPayPeriods, "PayTypeID", "PayTypeDesc");
+
+            var budpos = from x in db.tblPOSITIONBUDGETEDs
+                         where x.BudFilled == 0
+                         select new { x.BudPosNum };
+            ViewBag.ActPosNum = new SelectList(budpos, "BudPosNum", "BudPosNum");
+            ViewBag.Step = new SelectList(db.tblSteps, "Step", "Step");
+
+            var items = from x in db.tblBudItemNums
+                        let itemInfo = x.BudItemNum + " - " + x.BudItemDesc
+                        orderby x.BudItemNum
+                        select new { x.BudItemNum, itemInfo };
+            ViewBag.ActItemNum = new SelectList(items, "BudItemNum", "itemInfo");
+            ViewBag.PreItemNum = new SelectList(items, "BudItemNum", "itemInfo");
+
+            var subitems = from x in db.tblSubItems
+                           let subinfo = x.SubItemCode + " - " + x.SubItemDesc
+                           orderby x.SubItemCode
+                           select new { x.SubItemCode, subinfo };
+            ViewBag.ActSubItem = new SelectList(subitems, "SubItemCode", "subinfo");
+            ViewBag.PreSubItem = new SelectList(subitems, "SubItemCode", "subinfo");
+            return View();
+        }
+
         // GET: ActualP/Create
         public ActionResult Create()
         {
-            ViewBag.EmplID = new SelectList(db.tblEMPLOYEELISTs, "EmplID", "EmplID");
-            ViewBag.EmplType = new SelectList(db.tblEmploymentTypes, "EmplType", "EmplTypeDesc");
-            ViewBag.PayPeriod = new SelectList(db.tblPayPeriods, "PayTypeID", "PayTypeDesc");
-            ViewBag.ActPosNum = new SelectList(db.tblPOSITIONBUDGETEDs, "BudPosNum", "BudPosNum");
-            ViewBag.Step = new SelectList(db.tblSteps, "Step", "Step");
-            return View();
+            return FillFields();
         }
 
         // POST: ActualP/Create
@@ -110,12 +139,7 @@ namespace ItemCDBMigrations.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.EmplID = new SelectList(db.tblEMPLOYEELISTs, "EmplID", "EmplID", tblPOSITIONACTUAL.EmplID);
-            ViewBag.EmplType = new SelectList(db.tblEmploymentTypes, "EmplType", "EmplTypeDesc", tblPOSITIONACTUAL.EmplType);
-            ViewBag.PayPeriod = new SelectList(db.tblPayPeriods, "PayTypeID", "PayTypeDesc", tblPOSITIONACTUAL.PayPeriod);
-            ViewBag.ActPosNum = new SelectList(db.tblPOSITIONBUDGETEDs, "BudPosNum", "BudPosNum", tblPOSITIONACTUAL.ActPosNum);
-            ViewBag.Step = new SelectList(db.tblSteps, "Step", "Step", tblPOSITIONACTUAL.Step);
-            return View(tblPOSITIONACTUAL);
+            return FillFields();
         }
 
         // GET: ActualP/Edit/5
