@@ -85,8 +85,8 @@ namespace ItemCDBMigrations.Controllers
             return View(tblPOSITIONACTUAL);
         }
 
-        private ActionResult FillFields()
-        {
+        private ActionResult FillFields(tblPOSITIONACTUAL defaultValues)
+        {            
             var employees = from x in db.tblEMPLOYEELISTs
                             let myEmplID = x.EmplID + " - " + x.LastName + ", " + x.FirstName
                             where x.EmplStatus == "A"
@@ -116,13 +116,16 @@ namespace ItemCDBMigrations.Controllers
                            select new { x.SubItemCode, subinfo };
             ViewBag.ActSubItem = new SelectList(subitems, "SubItemCode", "subinfo");
             ViewBag.PreSubItem = new SelectList(subitems, "SubItemCode", "subinfo");
-            return View();
+            return View(defaultValues);
         }
 
         // GET: ActualP/Create
         public ActionResult Create()
         {
-            return FillFields();
+            tblPOSITIONACTUAL defaultValues = new tblPOSITIONACTUAL();
+            defaultValues.ActEmplStatus = "A";
+            defaultValues.EffectiveDate = DateTime.Now;
+            return FillFields(defaultValues);
         }
 
         // POST: ActualP/Create
@@ -130,7 +133,7 @@ namespace ItemCDBMigrations.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ActPosAutoID,ActPosNum,EmplID,EffectiveDate,DeptHireDate,ActEmplStatus,ActItemNum,ActSubItem,Step,PayRate,PayPeriod,EmplType,PreItemNum,PreSubItem,ReasonOfChange,Comments")] tblPOSITIONACTUAL tblPOSITIONACTUAL)
+        public ActionResult Create([Bind(Include = "ActPosAutoID,ActPosNum,EmplID,EffectiveDate,DeptHireDate,ActEmplStatus,ActItemNum,ActSubItem,Step,PayRate,PayPeriod,EmplType,PreItemNum,PreSubItem,ReasonOfChange,Comments")] tblPOSITIONACTUAL tblPOSITIONACTUAL)        
         {
             if (ModelState.IsValid)
             {
@@ -139,7 +142,7 @@ namespace ItemCDBMigrations.Controllers
                 return RedirectToAction("Index");
             }
 
-            return FillFields();
+            return FillFields(tblPOSITIONACTUAL);
         }
 
         private ActionResult FillFieldsEdit(tblPOSITIONACTUAL tblPOSITIONACTUAL)
