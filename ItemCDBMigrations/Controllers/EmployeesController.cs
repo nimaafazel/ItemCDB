@@ -16,6 +16,8 @@ namespace ItemCDBMigrations.Controllers
     {
         private ICContext db = new ICContext();
 
+        // I leave the progression of Index commented for future reference.
+
         // GET: Employees
         //public ActionResult Index()
         //{
@@ -51,7 +53,7 @@ namespace ItemCDBMigrations.Controllers
         //}
 
 
-        ///// Search and sort
+        /// Search and sort
         //public ActionResult Index(string searchString, string sortOrder)
         //{
         //    // fill the list of properties to search by
@@ -180,6 +182,11 @@ namespace ItemCDBMigrations.Controllers
 
 
         // GET: Employees/Details/5
+        /// <summary>
+        /// Displays the Employee Details.
+        /// </summary>
+        /// <param name="id">The Employee ID</param>
+        /// <returns>A View with the tblEMPLOYEELIST model if Id found, or a HTTP error if not found.</returns>
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -195,8 +202,13 @@ namespace ItemCDBMigrations.Controllers
         }
 
         // GET: Employees/Create
+        /// <summary>
+        /// Prepares the model to display the Create View for a new Employee
+        /// </summary>
+        /// <returns>A View</returns>
         public ActionResult Create()
         {
+            // Set up the list of options for each DropDownList
             ViewBag.EmplStatus = new SelectList(db.tblEmplStatus, "EmplStatusCode", "EmplStatusDesc");
             ViewBag.Ethnicity = new SelectList(db.tblEthnicities, "EthnicCode", "EthnicDesc");
             ViewBag.Gender = new SelectList(db.tblGenders, "GenderCode", "GenderDesc");
@@ -207,17 +219,23 @@ namespace ItemCDBMigrations.Controllers
         // POST: Employees/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        /// <summary>
+        /// Saves the new Employee created if all the validations pass, otherwise, prepares the model to repopulate the view with the recent values.
+        /// </summary>
+        /// <param name="tblEMPLOYEELIST">The new Employee model instance.</param>
+        /// <returns>A redirect to Index if succesful, or a retry on the same view with the validation messages.</returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "EmplID,LastName,FirstName,MiddleName,NameSuffix,EmplStatus,SeniorityDate,PayLoc,BirthDate,Gender,Ethnicity,Comments,ehrPositionID,ehrUnitNumber,SSMA_TimeStamp")] tblEMPLOYEELIST tblEMPLOYEELIST)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid)  // check the model validations
             {
-                db.tblEMPLOYEELISTs.Add(tblEMPLOYEELIST);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                db.tblEMPLOYEELISTs.Add(tblEMPLOYEELIST);  // add the new entry to the context
+                db.SaveChanges();                          // save the changes to the database
+                return RedirectToAction("Index");          // go back to index
             }
 
+            // prepare the model with the values already picked by the user
             ViewBag.EmplStatus = new SelectList(db.tblEmplStatus, "EmplStatusCode", "EmplStatusDesc", tblEMPLOYEELIST.EmplStatus);
             ViewBag.Ethnicity = new SelectList(db.tblEthnicities, "EthnicCode", "EthnicDesc", tblEMPLOYEELIST.Ethnicity);
             ViewBag.Gender = new SelectList(db.tblGenders, "GenderCode", "GenderDesc", tblEMPLOYEELIST.Gender);
@@ -226,6 +244,11 @@ namespace ItemCDBMigrations.Controllers
         }
 
         // GET: Employees/Edit/5
+        /// <summary>
+        /// Displays the Edit Form for an existent Employee.
+        /// </summary>
+        /// <param name="id">The Employee ID</param>
+        /// <returns>A View with the found Employee values populated on the model, or a HTTP error if not found. </returns>
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -247,6 +270,11 @@ namespace ItemCDBMigrations.Controllers
         // POST: Employees/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        /// <summary>
+        /// Saves the new Employee changes if all the validations pass, otherwise, prepares the model to repopulate the view with the recent values.
+        /// </summary>
+        /// <param name="tblEMPLOYEELIST">The Employee model instance with the values from the View.</param>
+        /// <returns>A redirect to Index if succesful, or a retry on the same view with the validation messages.</returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "EmplID,LastName,FirstName,MiddleName,NameSuffix,EmplStatus,SeniorityDate,PayLoc,BirthDate,Gender,Ethnicity,Comments,ehrPositionID,ehrUnitNumber")] tblEMPLOYEELIST tblEMPLOYEELIST)        
@@ -265,6 +293,11 @@ namespace ItemCDBMigrations.Controllers
         }
 
         // GET: Employees/Delete/5
+        /// <summary>
+        /// Displays the information for the Employee to be deleted.
+        /// </summary>
+        /// <param name="id">The Employee ID</param>
+        /// <returns>A View with the tblEMPLOYEELIST model if ID is found, or a HTTP error if not found.</returns>
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -280,6 +313,11 @@ namespace ItemCDBMigrations.Controllers
         }
 
         // POST: Employees/Delete/5
+        /// <summary>
+        /// Deletes an Employee from the database. This method has the Authorize attribute for a specific Role. Only Users in this role can execute this method.
+        /// </summary>
+        /// <param name="id">The Employee ID</param>
+        /// <returns>A redirect to Index.</returns>
         [Authorize(Roles = "RSG.DBH_ItemCtlDBA")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
