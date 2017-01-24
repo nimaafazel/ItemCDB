@@ -17,6 +17,12 @@
         <dd>
             @Html.DisplayFor(model => model.tblEMPLOYEELIST.LastName)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.tblEMPLOYEELIST.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.tblEMPLOYEELIST.FirstName)
+        </dd>
 
         <dt>
             @Html.DisplayNameFor(model => model.tblEmploymentType.EmplTypeDesc)
@@ -39,7 +45,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.tblPOSITIONBUDGETED.BudItemNum)
+            @Html.DisplayFor(model => model.tblPOSITIONBUDGETED.BudItemNum) - @Html.DisplayFor(model => model.tblPOSITIONBUDGETED.tblBudItemNum.BudItemDesc)
         </dd>
 
         <dt>
@@ -69,9 +75,8 @@
         <dt>
             @Html.DisplayNameFor(model => model.ActEmplStatus)
         </dt>
-
         <dd>
-            @Html.DisplayFor(model => model.ActEmplStatus)
+            @Html.DisplayFor(model => model.tblEMPLOYEELIST.tblEmplStatu.EmplStatusDesc)
         </dd>
 
         <dt>
@@ -79,7 +84,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ActItemNum)
+            @ViewBag.ActItemNum
         </dd>
 
         <dt>
@@ -103,7 +108,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PreItemNum)
+            @ViewBag.PreItemNum
         </dd>
 
         <dt>
