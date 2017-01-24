@@ -226,6 +226,12 @@ namespace ItemCDBMigrations.Controllers
             {
                 return HttpNotFound();
             }
+            var items = from x in db.tblBudItemNums
+                        let itemInfo = x.BudItemNum + " - " + x.BudItemDesc
+                        orderby x.BudItemNum
+                        select new { x.BudItemNum, itemInfo };
+            ViewBag.ActItemNum = items.FirstOrDefault(x => tblPOSITIONACTUAL.ActItemNum == x.BudItemNum).itemInfo;
+            ViewBag.PreItemNum = tblPOSITIONACTUAL.PreItemNum != null ? items.FirstOrDefault(x => tblPOSITIONACTUAL.PreItemNum == x.BudItemNum).itemInfo : "";
             return View(tblPOSITIONACTUAL);
         }
 

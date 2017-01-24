@@ -14,122 +14,100 @@
         <dt>
             @Html.DisplayNameFor(model => model.tblEMPLOYEELIST.LastName)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.tblEMPLOYEELIST.LastName)
         </dd>
-
+        <dt>
+            @Html.DisplayNameFor(model => model.tblEMPLOYEELIST.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.tblEMPLOYEELIST.FirstName)
+        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.tblEmploymentType.EmplTypeDesc)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.tblEmploymentType.EmplTypeDesc)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.tblPayPeriod.PayTypeDesc)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.tblPayPeriod.PayTypeDesc)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.tblPOSITIONBUDGETED.BudItemNum)
         </dt>
-
         <dd>
-            @Html.DisplayFor(model => model.tblPOSITIONBUDGETED.BudItemNum)
+            @Html.DisplayFor(model => model.tblPOSITIONBUDGETED.BudItemNum) - @Html.DisplayFor(model => model.tblPOSITIONBUDGETED.tblBudItemNum.BudItemDesc)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.tblStep.Step)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.tblStep.Step)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.EffectiveDate)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.EffectiveDate)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.DeptHireDate)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.DeptHireDate)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.ActEmplStatus)
         </dt>
-
         <dd>
-            @Html.DisplayFor(model => model.ActEmplStatus)
+            @Html.DisplayFor(model => model.tblEMPLOYEELIST.tblEmplStatu.EmplStatusDesc)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.ActItemNum)
         </dt>
-
         <dd>
-            @Html.DisplayFor(model => model.ActItemNum)
+            @ViewBag.ActItemNum
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.ActSubItem)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.ActSubItem)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.PayRate)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.PayRate)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.PreItemNum)
         </dt>
-
         <dd>
-            @Html.DisplayFor(model => model.PreItemNum)
+            @ViewBag.PreItemNum
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.PreSubItem)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.PreSubItem)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.ReasonOfChange)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.ReasonOfChange)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Comments)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.Comments)
-        </dd>        
+        </dd>
+
     </dl>
 
     @using (Html.BeginForm()) {
