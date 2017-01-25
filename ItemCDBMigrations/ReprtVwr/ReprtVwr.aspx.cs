@@ -9,6 +9,10 @@ using ItemCDBMigrations.Controllers;
 
 namespace ItemCDBMigrations.ReprtVwr
 {
+    /// <summary>
+    /// Used an aspx Page to get the ReportViewer working on MVC.
+    /// This Page takes the id of the report and displays the appropiate report.
+    /// </summary>
     public partial class ReprtVwr : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
