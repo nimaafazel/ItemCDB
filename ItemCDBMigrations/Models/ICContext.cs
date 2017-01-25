@@ -5,6 +5,9 @@ namespace ItemCDBMigrations.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
+    /// <summary>
+    /// The DbContext for the ItemControl Database. Contains the reference to all the tables on it.
+    /// </summary>
     public partial class ICContext : DbContext
     {
         public ICContext()

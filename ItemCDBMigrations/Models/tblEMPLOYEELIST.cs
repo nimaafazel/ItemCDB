@@ -6,6 +6,11 @@ namespace ItemCDBMigrations.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
+    /// <summary>
+    /// The Model Table for the Employees 'tblEMPLOYEELIST'.
+    /// It has all the fields and relationships.
+    /// All the models are named exactly as their respective Tables on the Database.    
+    /// </summary>
     [Table("tblEMPLOYEELIST")]
     public partial class tblEMPLOYEELIST
     {
@@ -71,6 +76,7 @@ namespace ItemCDBMigrations.Models
         [StringLength(5)]
         public string ehrUnitNumber { get; set; }
 
+        // REMOVED this column because it was creating bugs and it was not needed.
         /*[Column(TypeName = "timestamp")]
         [MaxLength(8)]
         [Timestamp]
