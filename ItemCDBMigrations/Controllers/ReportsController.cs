@@ -6,6 +6,9 @@ using System.Web.Mvc;
 
 namespace ItemCDBMigrations.Controllers
 {
+    /// <summary>
+    /// Everybody on any of the groups have access to the Reports section.
+    /// </summary>
     [Authorize(Roles = "RSG.DBH_ItemCtlAdmin, RSG.DBH_ItemCtlDBA, RSG.DBH_ItemCtlReport")]
     public class ReportsController : Controller
     {
